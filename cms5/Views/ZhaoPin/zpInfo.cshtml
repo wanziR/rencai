@@ -1,0 +1,119 @@
+﻿@model Models.ZhaoGong
+
+@{
+    ViewBag.Title = "招聘信息";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<style>
+    .btnfuli,
+    .btnxinzi {
+        border-radius: 30px;
+        height: 25px;
+        line-height: 15px;
+    }
+</style>
+<div class="container">
+    <div class="box visible-xs mt10 pl15">
+        <i class="glyphicon glyphicon-home"></i>
+        <a href="#">首页</a><em> / </em><a href="#"> ViewBag.Title</a>
+    </div>
+    <div class="box hidden-xs">
+        <div class="page-header" style="padding-top: 10px">
+            <i class="glyphicon glyphicon-home"></i>
+            <a href="#">首页</a><em> / </em><a href="#"> @ViewBag.Title</a>
+        </div>
+        <!-- start 工种城市-->
+        @Html.Action("_GzCity", "zhaogong")
+        <!-- start 工种城市-->
+    </div>
+</div>
+
+<div class="container mt10">
+    <div class="row">
+
+
+        <div class="col-xs-12  col-lg-9 pr0">
+            <div class="box pl15">
+                @if (ViewBag.List != null)
+                {
+
+                    foreach (var alist in ViewBag.list)
+                    {  //zpId, zpXuqiu, zpZhuTilei, zpZhuti, zpArea, zpGangwei, zpNum, zpPayL, zpPayH, zpFuli,
+                       //zpDetail, zpUser, zpPhone, zpFaburen, zpAddtime, zpEndtime, isTuijian, isRemen
+                        <div class="row">
+                            <div class="col-xs-12 col-lg-8 text-left" style="overflow:initial">
+                                <a href="/zhaopin/GetDetail?id=@alist.zpId"><h4 style="color:#145fa8;margin-left:-10px">【@alist.zpArea - @alist.zpXuqiu - @alist.zpGangwei】</h4></a>
+                                <p>联系人：@alist.zpUser</p>
+                                <p>@alist.zpZhuTilei：@alist.zpZhuti</p>
+                                <p style="color: darkgray">
+                                
+                                    @{
+                                        string str = alist.zpFuli;
+                                        string[] sArray = str.Split(',');
+                                        foreach (string i in sArray)
+                                        {
+                                            <button type="button" class="btnfuli btn btn-default btn-sm">@i</button>
+                                        }
+                                    }
+                                发布时间：@alist.zpAddtime.ToString("yyyy-MM-dd HH:mm") </p>
+
+                            </div>
+                            <div class="col-xs-12 col-lg-4 text-right">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+                                            title="该用户已经通过实名认证">
+                                        <i class="glyphicon  glyphicon-check"></i>实名
+                                    </button>
+                                    @*<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+                                                title="VIP认证用户">
+                                            <i class="glyphicon  glyphicon-check"></i>VIP
+                                        </button>*@
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+                                            title="该信息已审核">
+                                        <i class="glyphicon  glyphicon-check"></i>已核
+                                    </button>
+                                    <a href="/zhaopin/GetDetail?id=@alist.zpId" class="btn btn-default">查看详情</a>
+                                </div>
+                                <br><br>
+                                <!-- start 平台信用星级-->
+                                @Html.Action("_Xin", "zhaogong", "2")
+                                <!-- start 平台信用星级-->
+                                <br><br>
+                                <span style="color:#f0ad4e;font-weight:bold;font-size:1.8rem"> @alist.zpPayL- @alist.zpPayH</span> 元/月
+                            </div>
+                        </div>
+                        <hr class="simple" color="#6f5499" />
+                    }
+
+                }
+
+
+            </div>
+            <script>
+	$(function () {
+		$("[data-toggle='tooltip']").tooltip();
+	});
+            </script>
+            <div class="box mt10 text-center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">上一页</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">下一页</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        @Html.Partial("/Views/Shared/_ZgRight.cshtml")
+    </div>
+
+</div>

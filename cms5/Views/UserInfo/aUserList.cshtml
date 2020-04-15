@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "用户信息管理";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<!--城市-->
+<script type="text/javascript" src="/script/City_data.js"></script>
+<script type="text/javascript" src="/script/areadata.js"></script>
+<script type="text/javascript" src="/script/auto_area.js"></script>
+
+<div class="container mt10">
+    <div class="row">
+        <!--start left -->
+        @Html.Action("UCLeft", "zhaogong")
+        <!--end left -->
+        <!--start right -->
+
+        <div class="col-xs-12  col-lg-9" style="margin-top:0px">
+            <div class="box">
+                <div class="page-header" style="padding-top: 10px;">
+                    <i class="glyphicon glyphicon-th-list"></i>&nbsp;<a href="#">@ViewBag.Title</a>
+                    @*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/zhaogong/zgFabu" class="btn btn-success">发布信息</a>*@
+                    <span style="color:green;font-weight:bold">
+                        <a id="DelMsg"></a>
+                    </span>
+                </div>
+
+                <div class="my_fabu">
+                    <span class="label label-success">@ViewBag.info</span>
+                    <div class="panel-body table-responsive">
+
+                        <table id="example" class="table display">
+                            <thead>
+                                <tr>
+                                    <th>姓名 </th>
+                                    <th>电话</th>
+                                    <th>权限</th>
+                                    <th>详细信息</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.List != null)
+                {
+                    foreach (var alist in ViewBag.list)
+                    {//userId, userName, userPwd, userPhone, userArea, userXin, userRole,
+                     //isVIP, isShiming, isCompany, isSGgd, isGeren, userAddtime
+                        <tr id="@alist.userId">
+                            <td> <a target="_blank" href="#">@alist.userName </a></td>
+                            <td>@alist.userPhone</td>
+                            <td>@(alist.userRole == 1 ? "管理员" : "普通用户")</td>
+                            <td>
+                                @{
+                    if (alist.userRole == 1)
+                    {
+                        <a href="/userInfo/isNoGly?id=@alist.userId" onclick="if (confirm('确定取消管理员?') == false) return false"><span style="color:#0c5daa">取消管理员</span> </a>
+    }
+    else
+    {
+                <a href="/userInfo/isGly?id=@alist.userId" onclick="if (confirm('确定设为管理员?') == false) return false"><span style="color:#0c5daa">设为管理员</span> </a>
+}
+                                }
+
+                                &nbsp;&nbsp;<a href="/userInfo/del/?id=@alist.userId" name="@alist.userId" onclick="if(confirm('确定删除?')==false)return false" ; class="delu"><span style="color:red">删除</span></a>
+                            </td>
+                        </tr>
+
+    }
+}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--end right -->
+    </div>
+
+</div>

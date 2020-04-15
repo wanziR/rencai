@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/font-awesome.min.css"><!-- http://www.fontawesome.com.cn/  图标库-->
+    <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+    <!-- <img src="holder.js/300x200">  占位图片生成器-->
+    <link href="https://cdn.bootcss.com/bootstrap-switch/4.0.0-alpha.1/css/bootstrap-switch.min.css" rel="stylesheet">
+    <!--Switch 选择框开关控制 -->
+    <script src="https://cdn.bootcss.com/bootstrap-switch/4.0.0-alpha.1/js/bootstrap-switch.min.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/CityList.css">
+    <link rel="stylesheet" href="/css/cityIcon.css">
+    <link rel="stylesheet" href="/css/styleu.css">
+    <link rel="stylesheet" href="/css/bootstrap-select.min.css"><!-- select-->
+    <title>@ViewBag.Title</title>
+
+</head>
+
+<body>
+
+   
+    <!--start Top -->
+    @Html.Action("Logined", "UserInfo")
+    <!-- header -->
+    @Html.Partial("~/Views/Shared/_ZgHeader.cshtml")
+    <!--end Top -->
+    <!--start box -->
+    @RenderBody()
+    <!--end box -->
+    <!--start footer-->
+    @Html.Partial("~/Views/Shared/_ZgFooter.cshtml")
+    <!--end footer-->
+</body>
+
+</html>

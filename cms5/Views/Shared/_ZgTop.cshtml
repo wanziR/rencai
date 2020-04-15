@@ -1,0 +1,375 @@
+﻿@model Models.UserInfo
+<div class="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3 text-left">
+                <div class="ver-location" data-city-list data-city-hot="兰州市,西安市,上海市,北京市,天津市"
+                     data-city-default="兰州市">
+                </div>
+                <script src="/script/CityList.js"></script>
+                <script>
+						new verCity({});
+                </script>
+            </div>
+            <div class="col-xs-9 text-right">
+                <a href="#" style="padding-left: 10px"><i class="glyphicon glyphicon-phone-alt"></i> 0931-2133283</a>
+                <em> | </em>&nbsp;&nbsp;
+                @{
+                    if (this.User.Identity.IsAuthenticated)
+                    {
+                        <a href="/ZhaoGong/UserCenter">
+
+                            <span class="glyphicon glyphicon-user"></span>
+                            @*@Session["UserName"]*@
+                            @this.User.Identity.Name
+                            <span style="background-color: brown"
+                                  class="badge">2</span>
+                        </a>
+                        <a href="/userInfo/Exit">
+                            <span class="glyphicon glyphicon-log-in"></span>
+                            退出
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="" data-toggle="modal" data-target="#register">
+                            <span class="glyphicon glyphicon-user"></span>
+                            注册 &nbsp;
+                        </a>
+                        <a href="" data-toggle="modal" data-target="#login">
+                            <span class="glyphicon glyphicon-log-in"></span>
+                            登录
+                        </a>
+
+                    }
+                }
+
+
+
+
+                &nbsp;&nbsp;<em> | </em>&nbsp;&nbsp;
+                @{if (this.User.Identity.IsAuthenticated)
+                    { <a href="/zhaogong/userCenter"><i class="glyphicon glyphicon-new-window"></i> 免费发布</a> }
+                    else
+                    {
+                        <a href="" data-toggle="modal" data-target="#login"><i class="glyphicon glyphicon-new-window"></i> 免费发布</a>
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----start   模态框 登录注册---->
+<!--登录窗口 -->
+<div id="login" class="modal fade bs-example-modal-sm">
+    <div class="modal-dialog modal-sm" role="document">
+        @using (Ajax.BeginForm("userLogin", "UserInfo", new AjaxOptions { UpdateTargetId = "msgLogin", OnSuccess = "loginSuccess" }))
+        {
+            <div>
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h2 class="text-center" style="font-size:18px;font-weight:bold">用&nbsp;户&nbsp;登&nbsp;录&nbsp;</h2>
+                        <div class="input-group" style="margin-top:15px">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input class="form-control" name="userName" type="text" autocomplete="off" placeholder="姓名/呢称/公司名" />
+                        </div>
+                        <div class="input-group" style="margin-top:15px">
+                            <span class="input-group-addon"><i class="fa fa-lock" style="margin:0;"></i></span>
+                            <input class="form-control" id="userPwd" name="userPwd" type="password" autocomplete="off" placeholder="请输入密码" />
+                        </div>
+                        <div id="msgLogin" style="color:red"></div>
+                        <br>
+                        <p>
+                            <input type="checkbox" checked />&nbsp;<span style="color:#808080">自动登录</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" data-toggle="modal" data-dismiss="modal" data-target="#fgPwd"><span style="color:#808080">忘记密码</span> </a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" data-toggle="modal" data-dismiss="modal" data-target="#register"><span style="color:#808080">注册</span></a>
+
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="submit">登录</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--登录窗口 -->
+<!-- 注册窗口 -->
+<div id="register" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        @using (Ajax.BeginForm("userReg", "UserInfo", new AjaxOptions { UpdateTargetId = "msgReg", OnSuccess = "regSuccess", HttpMethod = "post" }))
+        {
+            <div style="margin-top: 40px">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h2 class="text-center" style="font-size:18px;font-weight:bold">用&nbsp;户&nbsp;注&nbsp;册</h2><br>
+                        <div id="msgReg" class="text-center" style="color:red">@*@Html.ValidationMessage("userPwd")*@</div>
+                        <div class="modal_content">
+                            <div class="input-group" style="margin:15px auto 0 auto;">
+                                <input name="isCompany" type="checkbox" />
+                            </div>
+                            <!-- # 给选择开关应用样式 -->
+                            <script type="text/javascript">
+                                //$(function () {
+                                //    $('#company').hide();
+                                //})
+                                $("[name='isCompany']").bootstrapSwitch({
+                                    onText: "个人",
+                                    offText: "企业",
+                                    onColor: "success",
+                                    offColor: "primary",
+                                    size: "Large",
+                                    onSwitchChange: function () {
+                                        $('#company').toggle();
+                                    }
+                                });
+                            </script>
+                            <div class="input-group" style="margin-top:15px">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input class="form-control" name="userName" type="text" autocomplete="off" placeholder="请输入呢称" />
+                            </div>
+                            <div class="input-group" id="company" style="margin-top:15px">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <input class="form-control" name="cName" type="text" autocomplete="off" placeholder="请输入公司名" />
+                            </div>
+                            <div class="input-group" style="margin-top:15px">
+                                <span class="input-group-addon"> <i class="fa fa-lock" style="margin:0;"></i></span>
+                                <input class="form-control" id="userPwd" name="userPwd" type="password" autocomplete="off" placeholder="请输入密码" />
+                            </div>
+                            <div class="input-group" style="margin-top:15px">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign" style="margin:0;"></i></span>
+                                <input class="form-control" id="userPwdag" name="userPwdag" type="password" autocomplete="off" placeholder="请再次输入密码" />
+                            </div>
+                            <div class="input-group" style="margin-top:15px">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone" style="margin:0;"></i></span>
+                                <input class="form-control" id="TelPhone1" name="userPhone" type="text" autocomplete="off" placeholder="请输入手机号" />
+                            </div>
+                            <div class="input-group " style="margin-top:15px">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-option-horizontal" style="margin:0;"></i></span>
+                                <input id="code1" name="Code" class="form-control" type="text" autocomplete="off" placeholder="请输入短信验证码" />
+                                <span class="input-group-btn">
+                                    <input id="btnSendCode1" type="button" class="btn btn-primary" value="获取验证码" onClick="sendMessage1()" />
+                                </span>
+                            </div>
+                            <br>
+                            <p>
+                                <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
+                            </p>
+                        </div>
+                        <script>
+        var phoneReg1 = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/; //手机号正则
+        var count1 = 60; //间隔函数，1秒执行
+        var InterValObj1; //timer变量，控制时间
+        var curCount1; //当前剩余秒数
+        /*第一*/
+        function sendMessage1() {
+            curCount1 = count1;
+            var phone1 = $.trim($('#TelPhone1').val());
+            if (!phoneReg1.test(phone1)) {
+                alert(" 请输入有效的手机号码");
+                return false;
+            }
+            //设置button效果，开始计时
+            $("#btnSendCode1").attr("disabled", "true");
+            $("#btnSendCode1").val(+curCount1 + "秒再获取");
+            InterValObj1 = window.setInterval(SetRemainTime1, 1000); //启动计时器，1秒执行一次
+            //向后台发送处理数据
+            var telphone1 = $('#TelPhone1').val();
+            $.post("/UserInfo/SendSms", { "TelPhone": telphone1 });
+
+        }
+
+        function SetRemainTime1() {
+            if (curCount1 == 0) {
+                window.clearInterval(InterValObj1); //停止计时器
+                $("#btnSendCode1").removeAttr("disabled"); //启用按钮
+                $("#btnSendCode1").val("重新发送");
+            } else {
+                curCount1--;
+                $("#btnSendCode1").val(+curCount1 + "秒再获取");
+            }
+        }
+
+                        </script>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary uReg">注册</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        }
+
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- 忘记密码窗口 -->
+<div id="fgPwd" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        @using (Ajax.BeginForm("fgPwd", "UserInfo", new AjaxOptions { UpdateTargetId = "msgFg", OnSuccess = "regSuccess", HttpMethod = "post" }))
+        {
+            <div style="margin-top: 40px">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h2 class="text-center" style="font-size:18px;font-weight:bold">忘&nbsp;记&nbsp;密&nbsp;码</h2><br>
+                        <div id="msgFg" class="text-center" style="color:red"></div>
+                        <div class="modal_content">
+                            <div class="input-group" style="margin-top:15px">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                <input class="form-control" id="TelPhone2" name="userPhone" type="text" autocomplete="off" placeholder="请输入手机号" />
+                            </div>
+                            <div class="input-group " style="margin-top:15px">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-option-horizontal" style="margin:0;"></i></span>
+                                <input id="code1" name="Code" class="form-control" type="text" autocomplete="off" placeholder="请输入短信验证码" />
+                                <span class="input-group-btn">
+                                    <input id="btnSendCode2" type="button" class="btn btn-primary" value="获取验证码" onClick="sendMessage1()" />
+                                </span>
+                            </div>
+                            <div class="input-group" style="margin-top:15px">
+                                <span class="input-group-addon"> <i class="fa fa-lock" style="margin:0;"></i></span>
+                                <input class="form-control" name="userPwd" type="password" autocomplete="off" placeholder="请输入新密码" />
+                            </div>
+                            <div class="input-group" style="margin-top:15px">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign" style="margin:0;"></i></span>
+                                <input class="form-control" name="userPwdag" type="password" autocomplete="off" placeholder="请再次输入新密码" />
+                            </div>
+
+                            <br>
+                            <p>
+                                <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
+                            </p>
+                        </div>
+                        <script>
+        var phoneReg2 = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/; //手机号正则
+        var count2 = 60; //间隔函数，1秒执行
+        var InterValObj2; //timer变量，控制时间
+        var curCount2; //当前剩余秒数
+        /*第一*/
+        function sendMessage2() {
+            curCount2 = count2;
+            var phone2 = $.trim($('#TelPhone2').val());
+            if (!phoneReg2.test(phone2)) {
+                alert(" 请输入有效的手机号码");
+                return false;
+            }
+            //设置button效果，开始计时
+            $("#btnSendCode2").attr("disabled", "true");
+            $("#btnSendCode2").val(+curCount2 + "秒再获取");
+            InterValObj2 = window.setInterva2(SetRemainTime2, 1000); //启动计时器，1秒执行一次
+            //向后台发送处理数据
+            var telphone2 = $('#TelPhone2').val();
+            $.post("/UserInfo/SendSms", { "TelPhone": telphone2 });
+
+        }
+        function SetRemainTime1() {
+            if (curCount1 == 0) {
+                window.clearInterval(InterValObj1); //停止计时器
+                $("#btnSendCode2").removeAttr("disabled"); //启用按钮
+                $("#btnSendCode2").val("重新发送");
+            } else {
+                curCount1--;
+                $("#btnSendCode2").val(+curCount1 + "秒再获取");
+            }
+        }
+                        </script>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary uReg">确定</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        }
+
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!----end   模态框 登录注册---->
+<!--start Modal 添加成功-->
+<div class="modal fade" id="addSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body" style="text-align: center;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span style="text-align: center;vertical-align: middle;color: #60b760;">
+                    <i class="glyphicon glyphicon-ok-sign" style="font-size: 3.0rem;"></i>
+                </span>
+                <span style="color: #60b760;font-weight: bold;">添加成功！</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end Modal 添加成功 -->
+<!--start Modal 请先登录-->
+<div class="modal fade" id="nologin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body" style="text-align: center;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span style="text-align: center;vertical-align: middle;color: #d75453;">
+                    <i class="glyphicon glyphicon-info-sign" style="font-size: 3.0rem;"></i>
+                </span>
+                <span style="color: #d75453;font-weight: bold;">请先登录！</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end Modal 请先登录！ -->
+<!--start Modal 成功提示-->
+<script>
+    function success(sText) { $('#successText').text(sText); $('#success').modal({ show: true, backdrop: 'static' }) }
+</script>
+<div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body" style="text-align: center;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span style="text-align: center;vertical-align: middle;color: #60b760;">
+                    <i class="glyphicon glyphicon-ok-sign" style="font-size: 3.0rem;"></i>
+                </span>
+                <span id="successText" style="color: #60b760;font-weight: bold;"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end Modal 成功提示 -->
+<!--start Modal 警告提示-->
+<script>
+    function warning(wText) { $('#warningText').text(wText); $('#warning').modal({ show: true, backdrop: 'static' }) }
+</script>
+<div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body" style="text-align: center;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span style="text-align: center;vertical-align: middle;color: #d75453;">
+                    <i class="glyphicon glyphicon-info-sign" style="font-size: 3.0rem;"></i>
+                </span>
+                <span id="warningText" style="color: #d75453;font-weight: bold;"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end Modal 警告提示！ -->

@@ -1,0 +1,40 @@
+﻿<!--start Modal 成功提示-->
+<script>
+    function success(sText) { $('#successText').text(sText); $('#success').modal({ show: true, backdrop: 'static' }) }
+</script>
+<div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body" style="text-align: center;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span style="text-align: center;vertical-align: middle;color: #60b760;">
+                    <i class="glyphicon glyphicon-ok-sign" style="font-size: 3.0rem;"></i>
+                </span>
+                <span id="successText" style="color: #60b760;font-weight: bold;"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end Modal 成功提示 -->
+<!--start Modal 警告提示-->
+<script>
+    function warning(wText) { $('#warningText').text(wText); $('#warning').modal({ show: true, backdrop: 'static' }) }
+</script>
+<div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body" style="text-align: center;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span style="text-align: center;vertical-align: middle;color: #d75453;">
+                    <i class="glyphicon glyphicon-info-sign" style="font-size: 3.0rem;"></i>
+                </span>
+                <span id="warningText" style="color: #d75453;font-weight: bold;"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end Modal 警告提示！ -->

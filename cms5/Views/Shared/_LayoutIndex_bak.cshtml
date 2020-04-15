@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport" content="">
+    <meta http-equiv="Content-Type" content="" />
+    <meta name="format-detection" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="甘肃建设人力网（www.gsjtrlzy.com/）甘肃建投旗下人力资源招聘网站。">
+    <meta name="keywords" content="甘肃人力资源网,甘肃建投人力资源,甘肃建投招工平台,甘肃人力,建投人力资源,甘肃,兰州,招聘培训,首页,人才,兰州人才,兰州人力资源,兰州招聘,兰州求职,甘肃招聘,甘肃求职">
+    <title>甘肃建设人力网</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/font-awesome.min.css"><!-- http://www.fontawesome.com.cn/  图标库-->
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/default.css" />
+    <script type="text/javascript" src="/script/index.js"></script>
+    <script type="text/javascript" src="/script/index.js"></script>
+    <!--Ajax-->
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/CityList.css">
+    <link rel="stylesheet" href="/css/cityIcon.css">
+    <link rel="stylesheet" href="/css/styleu.css">
+    <!--Switch 选择框开关控制 -->
+    <link href="https://cdn.bootcss.com/bootstrap-switch/4.0.0-alpha.1/css/bootstrap-switch.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap-switch/4.0.0-alpha.1/js/bootstrap-switch.min.js"></script>
+
+    <script type="text/javascript">
+
+		$(function () {
+			jQuery(".txtScroll-top").slide({
+				mainCell: ".bd ul",
+				autoPage: true,
+				effect: "topLoop",
+				autoPlay: true,
+				vis: 1,
+				interTime: 1500
+			})
+		});
+    </script>
+    <style>
+        body {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <!--遮罩层-->
+    <div id="TB_overlayBG"></div>
+    <!--回到顶部-->
+    <div class="rightFixBar">
+        <div class="quick_toggle">
+            <ul>
+                <li class="gotop"></li>
+            </ul>
+        </div>
+    </div>
+    <!--start Top -->
+    @Html.Partial("~/Views/Shared/_ZgTop.cshtml")
+    <!--end Top -->
+    <!--start header -->
+    @Html.Partial("~/Views/Shared/_ZgHeader.cshtml")
+    <!--end header -->
+    <!--banner-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" style="background-color:#0f1037">
+                <img src="~/imgs/banner.jpg" alt="..." style="margin:0 auto;">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item" style="background-color:#0f1037">
+                <img src="~/imgs/banner.jpg" alt="..." style="margin:0 auto;">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!--新闻-->
+    <div class="headlinesWrap clearfix">
+        <div class="headlines w1200 cleafix">
+            <div class="headlinesL fl">新闻<i><img src="/imgs/ico_btn4.png"></i></div>
+            <div class="txtScroll-top fr">
+                <div class="bd fl">
+                    <ul class="infoList">
+                        <li>甘肃建投招工平台上线了-1！</li>
+                        @*<li>甘肃建投招工平台上线了-2！</li>
+                            <li>甘肃建投招工平台上线了-3！</li>*@
+                    </ul>
+                </div>
+                <div class="hd fr">
+                    <a class="next"></a>
+                    <a class="prev"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页面主体部分-->
+    @RenderBody()
+    <!--start footer-->
+    @Html.Partial("~/Views/Shared/_ZgFooter.cshtml")
+
+    <!--end footer-->
+
+</body>
+
+</html>

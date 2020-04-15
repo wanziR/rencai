@@ -1,0 +1,2382 @@
+
+@media screen and (min-width:750px) and (max-width: 1199px){
+	.w1200{
+		width: 98%;
+	}
+	.nav .list ul{
+		width: 100%;
+	}
+	.nav .list ul li{
+		margin-right: 4%;
+	}
+	.header .webchat{
+		display: none;
+	}
+	.header .head_C{
+		width: 85%;
+		float: right;
+		margin-right: 0;
+	}
+	
+	.footer .foWeb{
+		display: block;
+		right: 1%;
+	}
+	.plan .planServer ul li{
+		width: 32.5%;
+		margin-right: 1.25%;
+	}
+	.productTitle h2{
+		width: 98%;
+	}
+	.rightFixBar{
+		right: 2%;
+		bottom: 240px;
+	}
+	.footerWrap{
+		padding: 15px 0 25px;
+	}
+	.company .companL,
+	.company .newTab{
+		width: 78%;
+	}
+	.company .been i img{
+		width: 90%;
+	}
+	.honor i img{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.solution ul li .dirTxt h3 a{
+		margin-top: 12px;
+	}
+	.company .train .trainI img{
+		width: 90%;
+	}
+	.company .train h5 span{
+		width: 95%;
+	}
+}
+
+@media screen and (min-width:750px) and (max-width: 1055px){
+	.header .logo{
+		position: absolute;
+		left: 1%;
+		top: 0;
+		padding-top: 0;
+	}
+	.box{
+		top: 100px;
+	}
+	.plan .planBom .planBL{
+		width: 49%;
+		padding-bottom: 12px;
+		background: url(/imgs/ico_btn5.png) right 0px no-repeat;
+	}
+	.plan .planBom .planBC{
+		float: right;
+		width: 46%;
+		padding-right: 1%;
+		background: none;
+		padding-bottom: 12px;
+	}
+	.plan .planBom .planBR{
+		width: 100%;
+	}
+	.plan .planBom .planBR h2{
+		padding-left: 0;
+	}
+	.plan .planBom .planBC .plancTxt{
+		padding: 10px 5%;
+		margin-top: 15px;
+	}
+	.plan .planBom .planBC ul{
+		margin-top: 8px;
+	}
+	.plan .planBom .planBR ul li{
+		margin-left: 0;
+		width: 22%;
+		margin-right: 4%;
+	}
+	.plan .planBom .planBR ul li:nth-child(4n){
+		margin-right: 0;
+	}
+	.plan .planBom .planBC ul li a{
+		height: 34px;
+		line-height: 34px;
+	}
+	.honor .honorTab .tab_box > div ol li{
+		padding: 25px 0.7678% 19px;
+	}
+	.news .newL{
+		width: 85%;
+	}
+	.company .companR .imporNew ul li .imML{
+		width: 20%;
+	}
+	.company .companR .imporNew ul li .imMR{
+		width: 79%;
+	}
+	.company .welfare .trainUl li{
+		width: 24%;
+		margin-right: 1.3333%;
+	}
+	.company .welfare .trainUl li .trainUM{
+		padding-top: 15px;
+		height: 185px;
+	}
+	.company .welfare .trainUl li .trainUM em,
+	.company .welfare .trainUl li .trainUM em.ico{
+		width: 90%;
+		padding-left: 10%;
+		background: url(/imgs/ico_btn24.png) 6% 10px no-repeat;
+	}
+}
+@media screen and (min-width:750px) and (max-width: 1063px){
+	.been .beenInfo .beenIL em{
+		padding-top: 20px;
+	}
+	.company .companL .comLM .comLML{
+		width: 100%;
+		text-align: center;
+	}
+	.company .companL .comLM .comLMR{
+		width: 100%;
+		text-align: center;
+	}
+	.company .companL .comLM .comLML em, 
+	.company .companL .comLM .comLMR em {
+	    display: inline-block;
+	    width: 80%;
+	}
+	.company .newTab .tab_box > div .newsOl li h1 a{
+		width: 92%;
+	}
+}
+@media screen and (min-width:750px) and (max-width: 995px){
+	.beenTab .tab .tab_div{
+		width: 25%;
+	}
+	#tabDown .tab_boxD .downM .downMR .MrM p em{
+		width: 110px;
+	}
+	.honor .honorTab .tab_box > div ol li {
+	    width: 15%;
+	    height: auto;
+	    padding: 20px 0.8333% 12px;
+	    float: left;
+	    border-bottom: 1px dashed #d5d5d5;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+13){
+		display: none;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+7){
+		border-bottom: none;
+	}
+	.company .leave .leavUl{
+		width: 100%;
+	}
+	.radio{
+		width: 93%;
+	}
+	.product .proMay .proMayR{
+		width: 34%;
+	}
+	.product .proMay .proMayL{
+		width: 66%;
+	}
+	.product .proMay .proMayL ul{
+		width: 45%;
+		margin-right: 2%;
+	}
+	.product .proMay .proMayR ul li{
+		width: 42%;
+		margin-left: 8%;
+	}
+	.solution ul li .dirTxt h2, 
+	.solution ul li .dirTxt p{
+		width: 96%;
+	}
+	.solution ul li .dirTxt h3 {
+	    width: 96%;
+	    padding: 15px 2% 0;
+	}
+	.solution ul li .dirTxt h3 em{
+		width: 70%;
+	}
+	.product .soluOl .soluOlL h6{
+		width: 90%;
+	}
+}
+@media screen and (min-width:1280px) and (max-width: 1600px){
+	.main_image{
+		height: 400px;
+	}
+	.main_image li.ima1{
+		background-size: 110%;
+	}
+	.main_image li.ima2{
+		background-size: 110%;
+	}
+	.main_image li.ima3{
+		background-size: 110%;
+	}
+}
+@media screen and (min-width:1120px) and (max-width: 1279px){
+	.main_image{
+		height: 350px;
+	}
+}
+@media screen and (min-width:1056px) and (max-width: 1119px){
+	.main_image{
+		height: 330px;
+	}
+}
+@media screen and (min-width:810px) and (max-width: 1055px){
+	.main_image{
+		height: 310px;
+	}
+	.header .logo{
+		width: 17%;
+		top: 30px;
+	}
+	.header .head_C .headc_T{
+		margin-top: 20px;
+	}
+	.nav{
+		margin-top: 15px;
+	}
+	.txtScroll-top{
+		width: 95.5%;
+	}
+}
+@media screen and (min-width:750px) and (max-width: 809px){
+	.box{
+		top: 80px;
+	}
+	.header .logo{
+		width: 18%;
+		top: 25px;
+	}
+	.header .head_C .headc_T{
+		margin-top: 15px;
+	}
+	.nav{
+		margin-top: 0px;
+	}
+	.product .soluDl dd{
+		width: 32%;
+		margin-right: 2%;
+	}
+	.company .welfare .trainUl li{
+		width: 47%;
+		margin-right: 6%;
+		margin-bottom: 25px;
+	}
+	.company .welfare .trainUl li:nth-child(2n){
+		margin-right: 0;
+	}
+	.company .welfare .trainUl li .trainUM{
+		padding-top: 15px;
+		height: 140px;
+	}
+	.company .welfare .trainUl li .trainUM em,
+	.company .welfare .trainUl li .trainUM em.ico{
+		width: 40%;
+		padding-left: 10%;
+		background: url(/imgs/ico_btn24.png) 15px 10px no-repeat;
+	}
+	.company .welfare .trainUl li .trainUM em.ico{
+		width: 90%;
+	}
+}
+@media screen and (min-width:896px) and (max-width: 991px){
+	.main_image{
+		height: 280px;
+	}
+	.nav .list ul li{
+		margin-right: 3%;
+	}
+	.txtScroll-top{
+		width: 95%;
+	}
+	.company .contac ul li .tacUlR p{
+		left: 10%;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg em{
+		background: url(/imgs/ico_btn52.png) 59px 2px no-repeat;
+	}
+}
+@media screen and (min-width:801px) and (max-width: 895px){
+	.main_image{
+		height: 250px;
+	}
+	
+	.nav .list ul li{
+		margin-right: 2.4%;
+	}
+	.txtScroll-top{
+		width: 94.5%;
+	}
+	.plan .planTitle{
+		margin-top: 18px;
+	}
+	.company .companR{
+		width: 20.5%;
+	}
+	.company .contac ul li .tacUlR p{
+		left: 6%;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg em{
+		background: url(/imgs/ico_btn52.png) 59px 2px no-repeat;
+	}
+	.company .newTab .tab_box > div .newsOl li h3 em{
+		width: 100%;
+	}
+	.company .newTab .tab_box > div .newsOl li h3 span{
+		width: 100%;
+		float: left;
+	}
+	.case ul li{
+		padding: 20px 0;
+	}
+	.case ul li .caseUlR h3{
+		margin-top: 3px;
+	}
+	.case ul li .caseUlR h3 span{
+		width: 100%;
+		float: left;
+	}
+	
+}
+@media screen and (min-width:750px) and (max-width: 800px){
+	.main_image{
+		height: 230px;
+	}
+	.nav .list ul li{
+		margin-right: 1.7%;
+	}
+	#btn_prev,
+	#btn_next {
+		width: 25px!important;
+		height: 49px!important;
+		margin-top: -24px;
+	}
+	.txtScroll-top{
+		width: 94%;
+	}
+	.plan .planTitle{
+		margin-top: 12px;
+	}
+	.plan .planTitle ul li{
+		padding: 0 5px;
+	}
+	.plan .planTitle ul li a{
+		padding: 0 15px;
+	}
+	.beenTab .tab .tab_div{
+		width: 33.3333%;
+	}
+	.company .companR .comWeb h2{
+		font-size: 14px;
+	}
+	.company .contac ul li{
+		width: 49.5%;
+	}
+	.company .contac ul li .tacUlR p{
+		left: 6%;
+		font-size: 13px;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg em{
+		background: url(/imgs/ico_btn52.png) 59px 2px no-repeat;
+	}
+	.company .newTab .tab_box > div .newsOl li h1 a{
+		width: 90%;
+	}
+	.company .newTab .tab_box > div .newsOl li h3 em{
+		width: 100%;
+	}
+	.company .newTab .tab_box > div .newsOl li h3 span{
+		width: 100%;
+		float: left;
+	}
+	.company .companR{
+		width: 20.5%;
+	}
+	.company .companR1{
+		width: 21%;
+	}
+	.solution ul li .dirTxt h3 em{
+		width: 68%;
+	}
+	.product .soluOl .soluOlL h6{
+		width: 88%;
+	}
+	.case ul li{
+		padding: 20px 0;
+	}
+	.case ul li .caseUlR h3{
+		margin-top: 3px;
+	}
+	.case ul li .caseUlR h3 span{
+		width: 100%;
+		float: left;
+	}
+	.proBanner img{
+		width: 120%;
+		position: relative;
+		left: -10%;
+	}
+}
+
+
+@media screen and (min-width:320px) and (max-width: 749px){
+	.company .companL .map{
+		margin-top: 30px;
+	}
+	.productTitle{
+		display: none;
+	}
+	.company .course h2{
+		display: none;
+	}
+	.company .course .tab_box h2{
+		display: block;
+	}
+	.company .welfare .trainUl{
+		padding-top: 15px;
+	}
+	.company .course .tab_box > div h2{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.product .soluOl li{
+		margin-bottom: 0;
+	}
+	.product .soluOl .soluOlL em{
+		width: 18px;
+		height: 18px;
+		line-height: 18px;
+		font-size: 14px;
+		margin-top: 4px;
+	}
+	.honor .honorTab .tab_box > div{
+		padding-top: 15px;
+	}
+	.company .companL h2{
+		font-size: 16px;
+		display: none;
+	}
+	.product h2{
+		font-size: 18px;
+	}
+	.product h1{
+		height: 29px;
+	}
+	.product h1 em{
+		width: 26px;
+		height: auto;
+	}
+	.product h1 span{
+		line-height: 29px;
+	}
+	.beenTab .tab_box > div p{
+		line-height: 24px;
+	}
+	.company .train h3{
+		font-size: 16px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.company .culture .colOl li h1{
+		font-size: 16px;
+	}
+	.proBanner img{
+		width: 130%;
+		position: relative;
+		left: -15%;
+	}
+	.company .companR .comNav h2 em{
+		display: inline-block;
+		width: 19px;
+		height: 11px;
+		background: url(/imgs/ico_btn54.png) no-repeat;
+		background-size: 100%;
+		margin-left: 15px;
+		margin-top: 1px;
+		-moz-transition: all 0.3s ease-in;
+		-webkit-transition: all 0.3s ease-in;
+		-o-transition: all 0.3s ease-in;
+		transition: all 0.3s ease-in;
+	}
+	.company .companR .comNav h2.navH2 em{
+		transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+	}
+	.proBanner1{
+		margin-top: 77px;
+	}
+	.company .companL h2.comH2{
+		margin-top: -18px;
+		font-size: 18px;
+	}
+	.company .companL .comUl li:nth-child(n+5){
+		margin-bottom: 0;
+	}
+	.company .companR .comNav{
+		position: absolute;
+		float: left;
+		top: 107px;
+		width: 98%;
+	}
+	.company .companR .comNav1{
+		top: 174px;
+	}
+	.company .welfare .trainUl li{
+		width: 24%;
+		margin-right: 1.3333%;
+	}
+	.company .welfare .trainUl li .trainUM{
+		padding-top: 15px;
+		height: 185px;
+	}
+	.company .welfare .trainUl li .trainUM em,
+	.company .welfare .trainUl li .trainUM em.ico{
+		width: 90%;
+		padding-left: 10%;
+		background: url(/imgs/ico_btn24.png) 6% 10px no-repeat;
+	}
+	.company .train .trainI img{
+		width: 90%;
+	}
+	.company .train h5 span{
+		width: 93%;
+	}
+	.product .soluOl .soluOlL{
+		width: 100%;
+	}
+	.product .soluOl .soluOlL h6{
+		width: 96%;
+	}
+	.solution ul li .dirTxt h3 em{
+		width: 100%;
+	}
+	.product .proMay .proMayL{
+		width: 100%;
+		background: none;
+	}
+	.product .proMay .proMayL ul{
+		width: 47%;
+		margin: 0 1%;
+	}
+	.product .proMay .proMayR{
+		width: 100%;
+	}
+	.product .proMay .proMayR ul{
+		width: 80%;
+		margin: 0 10%;
+	}
+	.product .proMay .proMayR ul li{
+		width: 30%;
+		margin: 0 10%;
+	}
+	.w1200{
+		width: 98%;
+	}
+	.directory h1 img{
+		width: 100%;
+	}
+	.company .newTab .tab_box > div .newsOl li h1 a{
+		width: 90%;
+	}
+	.company .companR .comNew{
+		width: 48%;
+		float: left;
+	}
+	.company .companR .comNew:nth-child(2){
+		float: right;
+	}
+	.company .companR .imporNew ul li .imML{
+		width: 28px;
+	}
+	.company .companR .imporNew ul li .imMR{
+		float: right;
+		width: 93%;
+		padding-top: 8px;
+	}
+	.company .companR .imporNew ul li .imMR p{
+		line-height: 20px;
+		height: auto;
+	}
+	.company .leave .leavUl,
+	.radio{
+		width: 85%;
+	}
+	.plan .planTitle ul li{
+		padding: 0 5px;
+	}
+	.plan .planTitle ul li a{
+		padding: 0 10px;
+	}
+	.plan .planBom .planBL{
+		width: 47%;
+		padding-bottom: 12px;
+		background: url(/imgs/ico_btn5.png) right 0px no-repeat;
+	}
+	.plan .planBom .planBC{
+		float: right;
+		width: 48%;
+		padding-right: 1%;
+		background: none;
+		padding-bottom: 12px;
+	}
+	.plan .planBom .planBR{
+		width: 100%;
+	}
+	.plan .planBom .planBR h2{
+		padding-left: 0;
+	}
+	.plan .planBom .planBC .plancTxt{
+		padding: 10px 5%;
+		margin-top: 15px;
+	}
+	.plan .planBom .planBC ul{
+		margin-top: 8px;
+	}
+	.plan .planBom .planBR ul li{
+		margin-left: 0;
+		width: 22%;
+		margin-right: 4%;
+	}
+	.plan .planBom .planBR ul li:nth-child(4n){
+		margin-right: 0;
+	}
+	.plan .planBom .planBC ul li a{
+		height: 34px;
+		line-height: 34px;
+	}
+	.main_image{
+		height: 230px;
+	}
+	.main_image li.ima1{
+		background-size: 120%;
+	}
+	.main_image li.ima2{
+		background-size: 120%;
+	}
+	.main_image li.ima3{
+		background-size: 120%;
+	}
+	#btn_prev,
+	#btn_next {
+		width: 25px!important;
+		height: 49px!important;
+		margin-top: -24px;
+		left: 15%;
+	}
+	#btn_next{
+		left: auto;
+		right: 15%;
+	}
+	.txtScroll-top{
+		width: 93%;
+	}
+	.headerWrap{
+		border-bottom: none;
+	}
+	.header .logo{
+		width: 177px;
+		position: initial;
+		padding: 15px 0 8px;
+	}
+	.header #slide{
+		display: block;
+	}
+	.header .webchat{
+		display: none;
+	}
+	.header .head_C .headc_T{
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		height: auto;
+		background: #fff;
+		z-index: 200;
+		box-shadow: 0 -3px 5px rgba(230,230,230,0.8);
+		margin-top: 0;
+	}
+	.header .head_C .headc_T ul li{
+		width: 25%;
+		margin-left: 0;
+		text-align: center;
+		padding: 15px 0;
+	}
+	.header .head_C .headc_T ul li a{
+		display: inline-block;
+	}
+	.box{
+		display: none;
+	}
+	.nav{
+		position: fixed;
+		top: 0;
+		right: -240px;
+		width: 240px;
+		height: 100%;
+		z-index: 1000;
+		background: #005bac;
+		padding: 0;
+		margin-top: 0;
+	}
+	.nav .list ul{
+		width: 100%;
+	}
+	.nav .list ul li{
+		width: 96%;
+		height: auto;
+		margin-right: 0;
+		padding: 0 2%;
+	}
+	.nav .list ul li:last-child{
+		display: block;
+	}
+	.nav .list ul li h2 a{
+		font-size: 18px;
+		height: 50px;
+		line-height: 50px;
+		border-bottom: none;
+		margin-top: 5px;
+		font-weight: 800;
+	}
+	.nav .list ul li h2 a:hover{
+		border-bottom: none;
+	}
+	.nav .list ul li a{
+		width: 100%;
+		height: 46px;
+		line-height: 46px;
+		border-bottom: 1px solid rgba(255,255,255,0.5);
+		color: #e6e6e6;
+		text-align: center;
+	}
+	.nav .list ul li a:hover,
+	.nav .list ul li a.cur{
+		border-bottom: 1px solid rgba(255,255,255,0.5);
+	}
+	.footerEndWrap{
+		margin-bottom: 52px;
+	}
+	.footer .foWeb{
+		display: block;
+	}
+	.productTitle h2{
+		width: 98%;
+	}
+	.company .companR{
+		width: 100%;
+		padding-top: 15px;
+	}
+	.company .companR .comNav ul{
+		display: none;
+	}
+	.company .companR .comWeb{
+		width: 30%;
+		margin: 15px auto 0;
+		float: left;
+		margin-right: 4.5%;
+	}
+	.company .companR .comWeb:last-child{
+		margin-right: 0;
+		float: right;	
+	}
+	.company .companR .comWeb img{
+		width: 70%;
+	}
+	.company .companL{
+		width: 100%;
+	}
+	.beenTab .tab .tab_div{
+		width: 25%;
+	}
+	.company .been i img{
+		width: 90%;
+	}
+	.rightFixBar {
+	    right: 2%;
+	    bottom: 150px;
+	}
+	.footer .foWeb{
+		display: none;
+	}
+	.footer ul{
+		width: 96%;
+		margin: 0 2%;
+	}
+	.case ul{
+		margin-bottom: 25px;
+	}
+	.case ul li{
+		position: relative;
+		padding: 20px 0 42px;
+	}
+	.case ul li .caseUlL{
+		width: 25%;
+		margin-bottom: 10px;
+	}
+	.case ul li .caseUlR{
+		width: 73%;
+	}
+	.case ul li .caseUlR h2{
+		margin-bottom: 2px;
+	}
+	.case ul li .caseUlR h3{
+		position: absolute;
+		bottom: 15px;
+		left: 0;
+	}
+	.case ul li .caseUlR h3 span{
+		width: auto;
+		float: right;
+	}
+	.company .companL .comLM .comLML{
+		width: 100%;
+		text-align: center;
+	}
+	.company .companL .comLM .comLMR{
+		width: 100%;
+		text-align: center;
+	}
+	.company .companL .comLM .comLML em, 
+	.company .companL .comLM .comLMR em {
+	    display: inline-block;
+	    width: 80%;
+	}
+	.company .contac ul li{
+		width: 49%;
+		margin-right: 2%;
+	}
+	.company .contac ul li:last-child{
+		margin-right: 0;
+	}
+	.company .contac ul li .tacUlR p{
+		left: 10%;
+		width: 90%;
+	}
+	.company .companL, .company .newTab{
+		width: 100%;
+	}
+	.company .newTab{
+		padding-top: 20px;
+	}
+	.company .course{
+		padding-top: 68px;
+	}
+	.company .companL{
+		margin-top: 40px;
+	}
+	.company .companL h2.serMH2{
+		height: 38px;
+		line-height: 38px;
+	}
+	#tabDown .tab_boxD .downM .downMR .MrM p{
+		padding: 18px 3%;
+	}
+	#tabDown .tab_boxD .downM .downMR .MrM p em{
+		width: 110px;
+		padding-left: 8px;
+	}
+	.honor i img{
+		width: 80%;
+	}
+	.honor .honorTab .tab_box > div ol li {
+	    width: 19%;
+	    padding: 20px 0.5% 12px;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+11){
+		display: none;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+6){
+		border-bottom: none;
+	}
+	.news .newNav,
+	.news .newL{
+		position: relative;
+		width: 100%;
+	}
+	.news .newL .industry{
+		position: absolute;
+		right: 28px;
+	}
+	.news .newL form input {
+	    margin: 8px 0 8px 10px;
+	}
+	.company .culture h3{
+		font-size: 16px;
+		line-height: 30px;
+		height: auto;
+	}
+	.company .culture h4, 
+	.company .team h4, 
+	.company .contac h4, 
+	.company .train h4, 
+	.company .welfare h4, 
+	.company .been h4{
+		margin-bottom: 2px;
+		font-size: 18px;
+		display: none;
+	}
+	.honor .honorTab .tab b{
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: block;
+		width: 20px;
+		height: 36px;
+		background:#005bac url(/imgs/ico_btn56.gif) center 1px no-repeat;
+		background-size: 100%;
+		z-index: 1000;
+	}
+	.honor .honorTab .tab .tab_div:last-child{
+		margin-right: 35px;
+	}
+	.honor .honorTab .tab .tab_div:first-child{
+		margin-left: 2%;
+	}
+	.honor .honorTab .tab .tab_div{
+		width: 14.5%;
+		text-align: center;
+		padding: 0;
+		margin-right: 1%;
+	}
+	.honor .honorTab .tab .tab_div span{
+		display: inline-block;
+		width: 100%;
+		padding: 0;
+	}
+	.honor .honorTab .tab .tab_div em{
+		display: none;
+	}
+	.company .contac h3.contacH3{
+		line-height: 24px;
+		/*margin-top: 5px;*/
+	}
+	.company .contac ul{
+		margin: 18px 0;
+		padding-bottom: 20px;
+	}
+}
+@media screen and (min-width:320px) and (max-width: 667px){
+	.directoryT .tab .tab_ul{
+		float: left;
+		width: 99%;
+	}
+	.company .problem{
+		position: relative;
+	}
+	.directoryT span,
+	.company .problem b{
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: block;
+		width: 20px;
+		height: 34px;
+		background:#fff url(/imgs/ico_btn55.gif) no-repeat;
+		background-size: 100%;
+		z-index: 999;
+	}
+	.company .problem b{
+		height: 40px;
+		top: 0;
+		background:#fff url(/imgs/ico_btn55.gif) 0 3px no-repeat;
+	}
+	.tab .tab_div{
+		width: 22%;
+		margin-right: 2%;
+		padding: 0;
+		text-align: center;
+	}
+	.tab .tab_div:last-child{
+		margin-right: 30px;
+	}
+	.directoryT .tab .tab_div{
+		width: 19.8%;
+		margin-right:1.5%;
+		padding: 0 2%;
+	}
+	.directoryT .tab .tab_div:last-child{
+		margin-right: 5%;
+	}
+	.product{
+		padding-top: 20px;
+	}
+	.company .companL .comLM{
+		margin-bottom: 5px;
+	}
+	.company .culture h4, 
+	.company .team h4, 
+	.company .contac h4, 
+	.company .train h4, 
+	.company .welfare h4, 
+	.company .been h4{
+		font-size: 18px;
+		margin-bottom:2px;
+		margin-top: 5px;
+	}
+	.company .companL h2.comH2{
+		font-size: 18px;
+		margin-top: -15px;
+	}
+	.company .companL{
+		padding-top: 10px;
+	}
+	.company .companL{
+		margin-top: 60px;
+	}
+	.company .companL h5:last-child{
+		margin-bottom: 0;
+	}
+	.solution ol li h2{
+		width: 120px;
+		height: 120px;
+	}
+	.company .welfare .trainUl li{
+		width: 49%;
+		margin-right: 2%;
+		margin-bottom: 15px;
+	}
+	.company .welfare .trainUl li:nth-child(2n){
+		margin-right: 0;
+	}
+	.directoryT a{
+		width: 23%;
+		padding: 0;
+		text-align: center;
+		margin-right: 2%;
+	}
+	
+	.product .soluDl dd{
+		width: 30%;
+		margin-right: 5%;
+	}
+	.solution ul li .dirTxt h3 em{
+		width: 68%;
+	}
+	.company .serMain .serMainUl li dl dd{
+		width: 40%;
+		margin: 0 5% 15px;
+	}
+	.product .proI{
+		margin-top: 10px;
+	}
+	.product h1{
+		margin-top: 18px;
+	}
+	.product h3{
+		text-align: center;
+	}
+	.product h3 em{
+		width: 80%;
+		text-align: right;
+		margin-left: 0;
+	}
+	.directory ul {
+	    margin-top: 30px;
+	    padding-top: 30px;
+	}
+	.directory ul li{
+		width: 49%;
+		margin-right: 2%;
+		margin-bottom: 18px;
+	}
+	.directory ul li:nth-child(2n){
+		margin-right: 0;
+	}
+	.tab_box > div ul li h3 span{
+		width: 93%;
+	}
+	.company .newTab .tab_box > div .newsOl{
+		padding-bottom: 20px;
+	}
+	.company .newTab .tab_box > div .newsOl li{
+		padding: 20px 0 12px;
+	}
+	.company .newTab .tab_box > div .newsOl li h3 span{
+		width: 100%;
+		float: left;
+	}
+	.company .leave .leavUl,
+	.radio{
+		width: 100%;
+	}
+	.main_image{
+		height: 200px;
+	}
+	.main_image li.ima1{
+		background-size: 130%;
+	}
+	.main_image li.ima2{
+		background-size: 130%;
+	}
+	.main_image li.ima3{
+		background-size: 130%;
+	}
+	#btn_prev,
+	#btn_next {
+		left: 12%;
+	}
+	#btn_next{
+		left: auto;
+		right: 12%;
+	}
+	.plan .planBom{
+		padding-top: 15px;
+	}
+	.plan .planBom .planBL,
+	.plan .planBom .planBC{
+		width: 100%;
+		margin-right: 0;
+		background: none;
+	}
+	.plan .planBom .planBC{
+		padding-right: 0;
+	}
+	.plan .planBom .planBC .plancTxt {
+	    background-size: 8%;
+	}
+	.plan .planBom .planBL .planBImg{
+		width: 100%;
+	}
+	.plan .planTitle{
+		position: relative;
+		height: auto;
+		padding-bottom: 10px;
+		margin-top: 0px;
+	}
+	.plan .planTitle h2{
+		width: 100%;
+		font-size: 18px;
+	}
+	.plan .planTitle h3{
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.plan .planTitle ul{
+		width: 100%;
+		margin-left: 0;
+		margin-top: 0;
+	}
+	.plan .planTitle ul li{
+		padding: 0;
+	}
+	.plan .planTitle ul li span{
+		margin: 2px 5px;
+	}
+	.plan .planTitle ul li a{
+		padding: 0 15px;
+	}
+	.txtScroll-top{
+		width: 92%;
+	}
+	.txtScroll-top .hd{
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 30%;
+	}
+	.footerEnd{
+		position: relative;
+		height: 90px;
+	}
+	.footerEnd .footerL{
+		width: 100%;
+		text-align: center;
+	}
+	.footerEnd .footerR{
+		width: 176px;
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		margin-left: -88px;
+	}
+	.header .head_C .headc_T ul li{
+		position: relative;
+		width: 33.3333%;
+		height: auto;
+		padding: 0;
+	}
+	.header .head_C .headc_T ul li:nth-child(3){
+		display: none;
+	}
+	.header .head_C .headc_T ul li a{
+		width: 100%;
+		text-align: center;
+		padding: 10px 0 4px;
+	}
+	.header .head_C .headc_T ul li a.qq{
+		display: none;
+	}
+	.header .head_C .headc_T ul li #QQ{
+		display: block;
+	}
+	.header .head_C .headc_T ul li i{
+		width: 30px;
+		float: none;
+	}
+	.header .head_C .headc_T ul li em{
+		display: none;
+	}
+	.header .head_C .headc_T ul li .webLayer {
+	    position: absolute;
+	    top: -125px;
+	    left: 50%;
+	    margin-left: -64px;
+	    width: 120px;
+	    padding: 4px;
+	    border: 1px solid #e6e6e6;
+	    border-radius: 5px;
+	    background: #fff;
+	    box-shadow: 2px 2px 5px rgba(210,210,210,0.5);
+	    display: none;
+	}
+	.header .head_C .headc_T ul li .QQlayer{
+		position: absolute;
+		top: -53px;
+		left: 50%;
+		margin-left: -47px;
+		width: 80px;
+		padding: 6px;
+		border: 1px solid #e6e6e6;
+		border-radius: 5px;
+		background: #fff;
+		box-shadow: 2px 2px 5px rgba(210,210,210,0.5);
+		display: none;
+	}
+	.header .head_C .headc_T ul li .QQlayer a{
+		padding: 0;
+	}
+	.header .head_C .headc_T ul li .webLayer img{
+		display: block;
+		width: 100%;
+	}
+	.been .beenInfo .beenIL{
+		width: 100%;
+	}
+	.been .beenInfo .beenIR{
+		width: 100%;
+	}
+	.been .beenInfo .beenIL em{
+		float: left;
+		width: 40px;
+		padding: 6px 0;
+		margin-left: 39%;
+	}
+	.been .beenInfo .beenIL p{
+		float: right;
+		height: 48px;
+		line-height: 48px;
+		margin-right: 38%;
+		font-size: 16px;
+	}
+	.been .beenInfo .beenIR h3{
+		padding: 0 0 10px;
+	}
+	.been .beenInfo .beenIR h3 span {
+	    margin-top: 10px;
+	}
+	.beenTab .tab_box > div .beenResu .beenP1 em{
+		display: inline-block;
+	}
+	
+	.company .contac ul li .tacUlR{
+		height: auto;
+		padding: 15px 0 ;
+		height: 140px;
+	}
+	.company .contac ul li .tacUlL{
+		height: 60px;
+		background: #005bac url(/imgs/ico_btn32.png) 37% center no-repeat;
+		background-size: none;
+	}
+	.company .contac ul li .tacUlL1{
+		background: #005bac url(/imgs/ico_btn33.png) 37% center no-repeat;
+	}
+	.company .contac ul li .tacUlL p{
+		float: left;
+		height: 60px;
+		line-height: 60px;
+		padding-top: 0;
+		padding-left: 50%;
+	}
+	.company .contac ul li .tacUlL,
+	.company .contac ul li .tacUlR{
+		width: 100%;
+	}
+	.company .contac ul li .tacUlL em{
+		right: 50%;
+		margin-right: -8px;
+		top: auto;
+		bottom: -15px;
+		transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	    -moz-transform: rotate(90deg);
+	    -webkit-transform: rotate(90deg);
+	    -o-transform: rotate(90deg);
+	}
+	.company .contac ul li .tacUlR p{
+		position: inherit;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg img{
+		width: 25%;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg em{
+		left: -75px;
+		background: url(/imgs/ico_btn52.png) 55px 2px no-repeat;
+	}
+	.company .course .tab_box > div .couseUl li .couUTxt{
+		width: 100%;
+	}
+	.company .culture .colOl {
+	    margin: 15px 0 20px;
+	    padding-bottom: 10px;
+	}
+	.company .companL i{
+		margin-bottom: 20px;
+	}
+	.company .companL i.comI{
+		margin-bottom: 0;
+	}
+	.company .serMain .serMainUl li p.serMp{
+		line-height: 28px;
+		margin-top: 3px;
+	}
+	.company .serMain .serMainUl li dl{
+		padding: 20px 0 5px;
+	}
+	.company .serMain .serMainUl li:last-child{
+		padding-bottom: 0;
+	}
+	.honor .honorTab .tab_box > div ol li {
+	    width: 23%;
+	    padding: 20px 1% 12px;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+9){
+		display: none;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+5){
+		border-bottom: none;
+	}
+}
+@media screen and (min-width:320px) and (max-width: 500px){
+	.company .course .tab_box > div h2{
+		margin-top: 5px;
+		margin-bottom:5px;
+	}
+	.company .leave .leavUl{
+		margin-bottom: 20px;
+	}
+	.radio{
+		margin-top: 8px;
+	}
+	.radio .leaveTxt textarea{
+		height: 155px;
+	}
+	.tab .tab_div{
+		width: 20%;
+		margin-right: 3.5%;
+	}
+	.company .contac ul{
+		padding-bottom: 10px;
+	}
+	.company .contac ul li .tacUlR{
+		height: auto;
+	}
+	.company .contac ul li .tacUlL{
+		height: 40px;
+		background: #005bac url(/imgs/ico_btn32.png) 37% center no-repeat;
+		background-size: 8%;
+	}
+	.company .contac ul li .tacUlL1{
+		background: #005bac url(/imgs/ico_btn33.png) 37% center no-repeat;
+		background-size: 8%;
+	}
+	.company .contac ul li .tacUlL p{
+		height: 40px;
+		line-height: 40px;
+	}
+	.headlines .headlinesL i,
+	.company .newTab .tab_box > div .newsOl li h1 em i{
+		right: -4px;
+	}
+	.company .team ul li .ulImg{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.company .team ul li .ulImg em{
+		width: 30%;
+	}
+	.company .team ul li .ulTxt{
+		width: 100%;
+	}
+	.company .team ul li .ulTxt h3{
+		margin-bottom: 0;
+	}
+	.product .soluDl{
+		padding-top: 5px;
+	}
+	.product .soluDl dd{
+		width: 90%;
+		margin: 0 5% 20px;
+	}
+	.product .soluDl dd p{
+		margin-top: 5px;
+	}
+	.product .proMay .proMayL{
+		width: 96%;
+	}
+	.product .proMay .proMayR{
+		padding-top: 18px;
+	}
+	.product .proMay .proMayL ul{
+		width: 96%;
+		margin-bottom: 15px;
+	}
+	.company .newTab .tab_box > div .newsOl li h1 a{
+		width: 87%;
+		line-height: 20px;
+		margin-top: -2px;
+	}
+	.company .companR .imporNew ul li .imMR{
+		width: 90%;
+	}
+	.mainWrap{
+		padding-bottom: 30px;
+	}
+	.footerWrap{
+		display: none;
+	}
+	.company .companR .comWeb{
+		width: 80%;
+		margin-right: 0;
+		margin: 15px auto 0;
+		float: none;
+	}
+	.company .companR .comWeb:last-child{
+		margin-right: auto;
+		float: none;	
+	}
+	.been .beenInfo .beenIL em{
+		margin-left: 34%;
+	}
+	.been .beenInfo .beenIL p{
+		margin-right: 37%;
+	}
+	.beenTab .tab_box > div .beenResu .resulL{
+		width: 75%;
+	}
+	.beenTab .tab_box > div .beenResu .resuR{
+		float: left;
+	}
+	.beenTab .tab_box > div .beenResu .beenP1{
+		text-align: left;
+	}
+	.beenTab .tab_box > div .beenResu .beenP1 em{
+		float: left;
+	}
+	.case ul{
+		margin-bottom: 20px;
+	}
+	.case ul li{
+		padding: 15px 0;
+	}
+	.case ul li .caseUlL a{
+		width: 25%;
+	}
+	.company .contac ul li{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.company .culture dl dd{
+		margin-top: 5px;
+	}
+	#tabDown .tab_menuD li{
+		width: 16%;
+	}
+	#tabDown .tab_boxD .downM .downML{
+		width: 16%;
+	}
+	#tabDown .tab_boxD .downM .downMR{
+		width: 84%;
+	}
+}
+@media screen and (min-width:320px) and (max-width: 432px){
+	.company .newTab .tab_box > div .newsOl li p{
+		padding: 8px 15px;
+	}
+	
+	.company .companL{
+		margin-top: 50px;
+	}
+	.company .contac ul{
+		margin: 12px 0;
+	}
+	.honor .honorTab .tab .tab_div{
+		width: 17%;
+		text-align: center;
+		padding: 0;
+		margin-right: 1.7%;
+	}
+	.header .head_C .headc_T ul li .webLayer {
+	    position: absolute;
+	    top: -105px;
+	    left: 50%;
+	    margin-left: -54px;
+	    width: 100px;
+	    padding: 4px;
+	    border: 1px solid #e6e6e6;
+	    border-radius: 5px;
+	    background: #fff;
+	    box-shadow: 2px 2px 5px rgba(210,210,210,0.5);
+	    display: none;
+	}
+	.directoryT span{
+		top: -4px;
+		right: -1%;
+		background:#fff url(/imgs/ico_btn55.gif) right 4px no-repeat;
+		background-size: 90%;
+	}
+	.company .companL h2.comH2{
+		margin-top: -18px;
+	}
+	.header #slide{
+		padding: 13px 0 0;
+	}
+	.directory ul li{
+		width: 92%;
+		margin: 0 4% 15px;
+	}
+	.directory ul li:nth-child(4){
+		margin-right: 4%;
+	}
+	.header .logo{
+		padding-top: 10px;
+		width: 130px;
+	}
+	.directoryT .tab .tab_div {
+	    margin-right: 18px;
+	    height: 30px;
+	    padding: 0 15px;
+	    line-height: 30px;
+	}
+	#btn_prev,
+	#btn_next {
+		width: 18px!important;
+		height: 38px!important;
+		margin-top: -19px;
+	}
+	.footer ul li{
+		width: 33.3333%;
+	}
+	.footer ul li .fooA{
+		min-height: 96px;
+	}
+	.footer ul li a{
+		width: 90%;
+	}
+	.footerEnd .footerL{
+		width: 80%;
+		padding: 6px 10%;
+		height: 36px;
+		line-height: 18px;
+	}
+	.footerEnd .footerR{
+		top: 35px;
+	}
+	.beenTab .tab_box > div .beenResu{
+		position: relative;
+	}
+	.beenTab .tab_box > div .beenResu .resulL{
+		width: 100%;
+	}
+	.beenTab .tab_box > div .beenResu .resuR{
+		width: 50%;
+		position: absolute;
+		right: 2%;
+		top: 8px;
+	}
+	.beenTab .tab_box > div .beenResu .resuR input{
+		margin-top: 0;
+	}
+	.case ul li .caseUlL a{
+		width: 30%;
+	}
+	.directoryT a{
+		margin-right: 10px;
+		padding: 0 10px;
+	}
+	.company .culture .colOl{
+		margin-top: 5px;
+	}
+	.company .culture .colOl li{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	.company .culture .colOl li h1{
+		text-align: left;
+		margin: 0;
+	}
+	.company .culture .colOl li p{
+		text-align: left;
+	}
+}
+@media screen and (min-width:320px) and (max-width: 375px){
+	.honor .honorTab .tab b{
+		width: 23px;
+		background-size: 80%;
+		background:#005bac url(/imgs/ico_btn56.gif) 5px 1px no-repeat;
+	}
+	.honor .honorTab .tab .tab_div{
+		width: 17%;
+		text-align: center;
+		padding: 0;
+		margin-right: 1.5%;
+	}
+	.header .head_C .headc_T ul li .webLayer {
+	    position: absolute;
+	    top: -95px;
+	    left: 50%;
+	    margin-left: -49px;
+	    width: 90px;
+	    padding: 4px;
+	    border: 1px solid #e6e6e6;
+	    border-radius: 5px;
+	    background: #fff;
+	    box-shadow: 2px 2px 5px rgba(210,210,210,0.5);
+	    display: none;
+	}
+	.beenTab .swiper-button-next, .beenTab .swiper-button-prev {
+	    width: 38px;
+	    height: 70px;
+	    background:#005bac url(/imgs/next3.png) 6px top no-repeat;
+	    background-size: 75%;
+	}
+	.beenTab .swiper-button-next {
+	    right: -2px;
+	    background:#005bac url(/imgs/next3.png) 6px bottom no-repeat;
+	    background-size: 75%;
+	}
+	.directoryT .tab .tab_div{
+		width: 26%;
+		margin-right:3%;
+		padding: 0 1.5%;
+	}
+	.directoryT1 .tab .tab_div{
+		width: 43%;
+	}
+	.company .problem b{
+		right: -3px;
+	}
+	.tab .tab_div{
+		width: 29%;
+		margin-right:2.2%;
+	}
+	#tabDown .tab_boxD ul li h3 span{
+		width: 68%;
+		padding-left: 3%;
+	}
+	#tabDown .tab_boxD ul li h3 em{
+		width: 28%;
+	}
+	.solution ol{
+		padding-top: 30px;
+	}
+	.solution ol li{
+		width: 50%;
+	}
+	.solution ol li h2{
+		width: 100px;
+		height: 100px;
+	}
+	.solution ol li h2 i img{
+		width: 70%;
+		margin: 0 auto;
+	}
+	.solution ol li h2 em{
+		height: 32px;
+		line-height: 32px;
+		font-size: 20px;
+	}
+	.news .newL{
+		height: auto;
+		margin: 0;
+	}
+	.news .newL .industry{
+		right: 0;
+		top: 42px;
+	}
+	.news .newL .industry .indeLayer{
+		right: 0;
+	}
+	.news .newL .search{
+		width: 96.3%;
+		margin-top: 5px;
+	}
+	.news .newL form{
+		width: 100%;
+		margin-left: 0;
+		margin-top: 5px;
+	}
+	.news .newL form input {
+	    margin: 8px 0 8px 0;
+	}
+	.news .newL form label{
+		margin-right: 25px;
+		margin-left: 8px;
+	}
+	.industry{
+		right: 0;
+	}
+	.industry .indeLayer{
+		right: 0;
+	}
+	.company .welfare .trainUl li{
+		width: 92%;
+		margin: 0 4%;
+		margin-bottom: 15px;
+	}
+	.company .welfare .trainUl li .trainUM{
+		height: auto;
+		padding-bottom: 10px;
+	}
+	.company .welfare .trainUl li .trainUM em, .company .welfare .trainUl li .trainUM em.ico {
+	    width: 40%;
+	    padding-left: 10%;
+	    background: url(/imgs/ico_btn24.png) 15px 10px no-repeat;
+	}
+	.company .welfare .trainUl li .trainUM em.ico {
+		width: 90%;
+	}
+	.company .train h5 span{
+		width: 90%;
+	}
+	.company .team ul li .ulImg em{
+		width: 40%;
+	}
+	.product .soluOl .soluOlL h6{
+		width: 92%;
+	}
+	.company .serMain .serMainUl li dl dd{
+		width: 80%;
+		margin: 0 10% 15px;
+	}
+	.product h3 em{
+		width: 100%;
+	}
+	.tab_box > div ul li h3 span{
+		width: 87%;
+	}
+	.company .newTab .tab_box > div .newsOl li h1 a{
+		width: 83%;
+	}
+	.company .companR .imporNew ul li .imMR{
+		width: 88%;
+	}
+	.company .leave .leavUl li{
+		width: 100%;
+	}
+	.radio .radioM{
+		width: 150px;
+	}
+	.plan .planServer ul li{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.plan .planServer ul li .serverM{
+		padding: 15px 0;
+	}
+	.plan .planBom .planBR ul li{
+		width: 32%;
+		margin-right: 2%;
+	}
+	.plan .planBom .planBR ul li:nth-child(3n){
+		margin-right: 0;
+	}
+	.plan .planBom .planBR ul li:nth-child(4n){
+		margin-right: 2%;
+	}
+	.plan .planBom .planBR ul li:last-child{
+		margin-right: 0;
+	}
+	.main_image{
+		height:130px;
+	}
+	.main_image li.ima1{
+	background: url(/imgs/banner.jpg) center 0 no-repeat;
+		background-size: 180%;
+	}
+	.main_image li.ima2{
+	background: url(/imgs/banner1.jpg) center -10px no-repeat;
+		background-size: 180%;
+	}
+	.main_image li.ima3{
+		background: url(/imgs/banner2.jpg) 70% -20px no-repeat;
+		background-size: 180%;
+	}
+	#btn_prev,
+	#btn_next {
+		left: 2%;
+	}
+	#btn_next{
+		left: auto;
+		right: 2%;
+	}
+	.plan .planBom .planBC .plancTxt {
+	    background-size: 14%;
+	}
+	.plan .planTitle ul li:nth-child(2n){
+		display: none;
+	}
+	.plan .planTitle ul li a{
+		padding: 0 6px;
+		margin-right: 3px;
+	}
+	.txtScroll-top{
+		width: 86%;
+	}
+	.main_image li a img{
+		height: 118px;
+	}
+	.been .beenInfo .beenIL p{
+		margin-right: 31%;
+	}
+	.been .beenInfo .beenIL em{
+		float: left;
+		width: 40px;
+		padding: 5px 0;
+		margin-left: 31%;
+	}
+	.beenTab .tab .tab_div{
+		width: 100%;
+	}
+	.top .topL {
+	    height: 26px;
+	    line-height: 26px;
+	}
+	.top .topR{
+		width: 100%;
+		padding: 0 0 3px;
+		float: left;
+	}
+	.top .topR em{
+		margin: 4px 5px;
+	}
+	.top .topR a.china{
+		margin-left: 5px;
+		margin-right: -2px;
+	}
+	.case ul li .caseUlL a{
+		width: 35%;
+	}
+	.company .companL .comUl li{
+		width: 48%;
+		margin-right: 4%;
+		margin-bottom: 15px;
+	}
+	.company .companL .comUl li:nth-child(n+7){
+		margin-top: 16px;
+	}
+	.company .companL .comUl li:nth-child(2n){
+		margin-right: 0;
+	}
+	.company .course .tab_box > div .couseUl li{
+		margin-left: 4%;
+		width: 96%;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg img{
+		width: 50%;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg em{
+		left: -69px;
+		background: url(/imgs/ico_btn52.png) 48px 2px no-repeat;
+	}
+	#tabDown .tab_menuD li{
+		width: 20%;
+	}
+	#tabDown .tab_boxD .downM .downML{
+		width: 20%;
+	}
+	#tabDown .tab_boxD .downM .downMR{
+		width: 80%;
+	}
+	#tabDown .tab_boxD .downM .downMR .MrM p em{
+		width: 100px;
+		padding-left: 6px;
+	}
+	#tabDown .tab_boxD ul li h3{
+		width: 90%;
+	}
+	.honor .honorTab .tab_box > div ol{
+		padding-top: 0;
+	}
+	.honor .honorTab .tab_box > div ol li {
+	    width: 47%;
+	    padding: 20px 1.5% 8px;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+5){
+		display: none;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+3){
+		border-bottom: none;
+	}
+}
+@media screen and (min-width:568px) and (max-width: 667px){
+	.company .companR .comWeb{
+		margin-right: 4.2%;
+	}
+	.beenTab .tab .tab_div{
+		width: 33.3333%;
+	}
+}
+@media screen and (min-width:414px) and (max-width: 567px){
+	
+	.directoryT .tab .tab_div{
+		width: 27%;
+		margin-right:1%;
+		padding: 0 2%;
+	}
+	.company .companR .comNav{
+		top: 124px;
+	}
+	.company .companR .comNav1{
+		top:184px ;
+	}
+	.solution ol{
+		padding-top: 30px;
+	}
+	.solution ol li{
+		width: 40%;
+		margin: 0 5%;
+	}
+	.news .newL{
+		height: auto;
+		margin: 0;
+	}
+	.news .newL .search{
+		margin-top: 5px;
+	}
+	.news .newL form{
+		width: 100%;
+		margin-left: 0;
+		margin-top: 5px;
+	}
+	.news .newL form input {
+	    margin: 8px 0 8px 0;
+	}
+	.news .newL form label{
+		margin-right: 25px;
+		margin-left: 8px;
+	}
+	.product .soluOl .soluOlL h6{
+		width: 94%;
+	}
+	.company .leave .leavUl li{
+		width: 100%;
+	}
+	.radio .radioM{
+		width: 118px;
+	}
+	.plan .planServer ul li{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.plan .planServer ul li .serverM{
+		padding: 15px 0;
+	}
+	.main_image{
+		height: 180px;
+	}
+	.main_image li.ima1{
+		background-size: 140%;
+	}
+	.main_image li.ima2{
+		background-size: 140%;
+	}
+	.main_image li.ima3{
+		background-size: 140%;
+	}
+	#btn_prev,
+	#btn_next {
+		left: 10%;
+	}
+	#btn_next{
+		left: auto;
+		right: 12%;
+	}
+	.plan .planBom .planBC .plancTxt {
+	    background-size: 10%;
+	}
+	.plan .planTitle ul li a{
+		padding: 0 10px;
+	}
+	.txtScroll-top{
+		width: 91%;
+	}
+	.top .topL{
+		height: 26px;
+		line-height: 26px;
+	}
+	.company .companR .comWeb{
+		width: 32%;
+		margin-right: 1.3%;
+	}
+	.beenTab .tab .tab_div{
+		width: 33.3333%;
+	}
+	.footerWrap{
+		padding: 10px 0 15px;
+	}
+	.footer ul{
+		width: 100%;
+		margin: 0;
+	}
+	.footer ul li a{
+		width: 100%;
+	}
+	.top .topR{
+		width: 100%;
+		padding: 0 0 3px;
+		float: left;
+	}
+	.company .companL .comUl li{
+		width: 47%;
+		margin-right: 6%;
+		margin-bottom: 25px;
+	}
+	.company .companL .comUl li:nth-child(n+7){
+		margin-top: 24px;
+	}
+	.company .companL .comUl li:nth-child(2n){
+		margin-right: 0;
+	}
+	.company .course .tab_box > div .couseUl li{
+		margin-left: 4%;
+		width: 96%;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg img{
+		width: 30%;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg em{
+		left: -75px;
+		background: url(/imgs/ico_btn52.png) 48px 2px no-repeat;
+	}
+}
+@media screen and (min-width:414px) and (max-width: 500px){
+	
+	.directoryT .tab .tab_div{
+		width: 27%;
+		margin-right:2.5%;
+		padding: 0 1.5%;
+	}
+	.main_image{
+		height: 160px;
+	}
+	.main_image li.ima1{
+		background-size: 145%;
+	}
+	.main_image li.ima2{
+		background-size: 145%;
+	}
+	.main_image li.ima3{
+		background-size: 145%;
+	}
+	#btn_prev,
+	#btn_next {
+		left: 8%;
+	}
+	#btn_next{
+		left: auto;
+		right: 8%;
+	}
+	.plan .planBom .planBC .plancTxt {
+	    background-size: 12%;
+	}
+	.txtScroll-top{
+		width: 89%;
+	}
+	.company .companR .comWeb{
+		width: 80%;
+		margin-right: 0;
+		margin: 15px auto 0;
+		float: none;
+	}
+	.company .companR .comWeb:last-child{
+		margin-right: auto;
+		float: none;	
+	}
+	.beenTab .tab .tab_div{
+		width: 50%;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg em{
+		left: -75px;
+		background: url(/imgs/ico_btn52.png) 50px 2px no-repeat;
+	}
+	.honor .honorTab .tab_box > div ol li {
+	    width: 32%;
+	    padding: 20px 0.6666% 8px;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+7){
+		display: none;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+4){
+		border-bottom: none;
+	}
+	
+}
+@media screen and (min-width:376px) and (max-width: 413px){
+	.directoryT .tab .tab_div{
+		width: 25%;
+		margin-right:3%;
+		padding: 0 1.5%;
+	}
+	.directoryT1 .tab .tab_div{
+		width: 43%;
+	}
+	#tabDown .tab_boxD ul li h3 span{
+		width: 70%;
+		padding-left: 3%;
+	}
+	#tabDown .tab_boxD ul li h3 em{
+		width: 24%;
+	}
+	.solution ol{
+		padding-top: 30px;
+	}
+	.solution ol li{
+		width: 50%;
+	}
+	.solution ol li h2{
+		width: 100px;
+		height: 100px;
+	}
+	.solution ol li h2 i img{
+		width: 80%;
+		margin: 0 auto;
+	}
+	.solution ol li h2 em{
+		height: 32px;
+		line-height: 32px;
+	}
+	.news .newL{
+		height: auto;
+		margin: 0;
+	}
+	.news .newL .search{
+		margin-top: 5px;
+	}
+	.news .newL .industry{
+		right: 0;
+		margin-top: 6px;
+	}
+	.news .newL .industry .indeLayer{
+		right: 0;
+	}
+	.news .newL form{
+		width: 100%;
+		margin-left: 0;
+		margin-top: 5px;
+	}
+	.news .newL form input {
+	    margin: 8px 0 8px 0;
+	}
+	.news .newL form label{
+		margin-right: 25px;
+		margin-left: 8px;
+	}
+	.product .soluOl .soluOlL h6{
+		width: 92%;
+	}
+	.tab_box > div ul li h3 span{
+		width: 90%;
+	}
+	.company .leave .leavUl li{
+		width: 100%;
+	}
+	.radio .radioM{
+		width: 150px;
+	}
+	.plan .planServer ul li{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.plan .planServer ul li .serverM{
+		padding: 15px 0;
+	}
+	.plan .planBom .planBR ul li{
+		width: 32%;
+		margin-right: 2%;
+	}
+	.plan .planBom .planBR ul li{
+		width: 32%;
+		margin-right: 2%;
+	}
+	.plan .planBom .planBR ul li:nth-child(3n){
+		margin-right: 0;
+	}
+	.plan .planBom .planBR ul li:nth-child(4n){
+		margin-right: 2%;
+	}
+	.plan .planBom .planBR ul li:last-child{
+		margin-right: 0;
+	}
+	.main_image{
+		height:140px;
+	}
+	.main_image li.ima1{
+	background: url(/imgs/banner.jpg) center -10px no-repeat;
+		background-size: 160%;
+	}
+	.main_image li.ima2{
+	background: url(/imgs/banner1.jpg) center -10px no-repeat;
+		background-size: 160%;
+	}
+	.main_image li.ima3{
+	background: url(/imgs/banner2.jpg) 70% -10px no-repeat;
+		background-size: 160%;
+	}
+	#btn_prev,
+	#btn_next {
+		left: 5%;
+	}
+	#btn_next{
+		left: auto;
+		right: 5%;
+	}
+	.plan .planBom .planBC .plancTxt {
+	    background-size: 13%;
+	}
+	.plan .planTitle ul li span{
+		margin: 2px 2px;
+	}
+	.plan .planTitle ul li a{
+		padding: 0 8px;
+	}
+	.txtScroll-top{
+		width: 88%;
+	}
+	.beenTab .tab .tab_div{
+		width: 50%;
+	}
+	.top .topL {
+	    height: 26px;
+	    line-height: 26px;
+	}
+	.top .topR{
+		width: 100%;
+		padding: 0 0 3px;
+		float: left;
+	}
+	.company .companL .comUl li{
+		width: 47%;
+		margin-right: 6%;
+	}
+	.company .companL .comUl li:nth-child(n+7){
+		margin-top: 24px;
+	}
+	.company .companL .comUl li:nth-child(2n){
+		margin-right: 0;
+	}
+	.company .course .tab_box > div .couseUl li{
+		margin-left: 4%;
+		width: 96%;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg img{
+		width: 40%;
+	}
+	.company .course .tab_box > div .couseUl li .couUImg em{
+		left: -70px;
+		background: url(/imgs/ico_btn52.png) 46px 2px no-repeat;
+	}
+	#tabDown .tab_boxD ul li h3{
+		width: 90%;
+	}
+	.honor .honorTab .tab_box > div ol{
+		padding-top: 0;
+	}
+	.honor .honorTab .tab_box > div ol li {
+	    width: 32%;
+	    padding: 20px 0.6666% 12px;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+7){
+		display: none;
+	}
+	.honor .honorTab .tab_box > div ol li:nth-child(n+4){
+		border-bottom: none;
+	}
+}
+@media screen and (min-width:320px) and (max-width: 432px){
+	.company .companL i.leaI{
+		margin-bottom: 10px;
+	}
+	.company .companR .comNav{
+		top: 104px;
+	}
+	.company .companR .comNav1{
+		top:167px ;
+	}
+}
+@media screen and (min-width:320px) and (max-width: 676px){
+	.case ul li{
+		padding-bottom: 64px;
+	}
+	.case ul li .caseUlL{
+		width: 20%;
+	}
+	.case ul li .caseUlR{
+		width: 78%;
+	}
+	.case ul li .caseUlR h3{
+		height: auto;
+	}
+	.case ul li .caseUlR h3 span{
+		width: 100%;
+		float: left;
+	}
+}
+@media screen and (min-width:320px) and (max-width: 573px){
+	.case ul li{
+		padding-bottom: 15px;
+		padding-top: 20px;
+	}
+	.case ul li .caseUlL{
+		width: 100%;
+	}
+	.case ul li .caseUlL a{
+		width: 25%;
+	}
+	.case ul li .caseUlR{
+		width: 100%;
+	}
+	.case ul li .caseUlR h3{
+		position: initial;
+	}
+	.case ul li .caseUlR h2{
+		position: absolute;
+		top: 26px;
+		left: 28%;
+		width: 69%;
+	}
+}

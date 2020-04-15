@@ -1,0 +1,172 @@
+﻿@model Models.ZhaoGong
+@using BLL
+@{
+    ViewBag.Title = "主页-招工平台";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+<div class="mainWrap">
+    <div class="main w1200" style="border-bottom:solid 1px #e1e1e1; padding-bottom: 10px">
+        <!--解决方案-->
+        <div class="plan">
+            <div class="planTitle cleafix">
+                <h2>今日招工</h2>
+                <ul>
+                    <li class="cur"><a href="/zhaogong/zginfo">找工人</a></li>
+                    <li><span></span></li>
+                    <li><a href="/zhaoHuo/zhinfo">找施工队</a></li>
+                    @*<li><span></span></li>
+                        <li><a href="#">找企业</a></li>*@
+                    <li><span></span></li>
+                    <li><a href="/zhaogong/xminfo">找项目</a></li>
+                    <li><span></span></li>
+                    <li><a href="/zhaogong/sgzl">施工资料</a></li>
+                    <li><span></span></li>
+
+                </ul>
+                @{if (Session["UserName"] != null)
+                    { <a href="/zhaogong/userCenter" class="btn btn-danger pull-right" style="margin-top: 10px">
+                            <i class="glyphicon glyphicon-pencil"></i> 发布招工
+                        </a> }
+                    else
+                    {
+                        <a href="" data-toggle="modal" data-target="#register" class="btn btn-danger pull-right" style="margin-top: 10px">
+                            <i class="glyphicon glyphicon-pencil"></i> 发布招工
+                        </a>
+                    }
+                }
+
+            </div>
+            <div class="planBom cleafix row">
+                <div class="planBL fl">
+                    <div class="planBImg"><a href="#"><img src="/imgs/img1.jpg"></a></div>
+                    <h2><a href="#">甘肃建投招工信息</a></h2>
+                    <p>
+                        甘肃省建设投资（控股）集团总公司（简称“甘肃建投”），创建于1953年，是中国500强企业、ENR全球最大250家国际承包商、中国承包商80强企业和中国建筑业竞争力百强企业，所属全资控股子（分）公司50余家...
+                    </p>
+                    <h3><a href="/zhaogong/zginfo/?strWord=甘肃建投">查看建投招工信息<b>&gt;&gt;</b></a></h3>
+                </div>
+
+                <div class="planBC fl">
+                    <h2>今日招工信息</h2>
+                    <div class="plancTxt">
+                        <h3>邀请工友得积分!</h3>
+                        <p>分享招工链接给工友，工友注册获得积分...</p>
+                    </div>
+                    <ul>
+                        @{
+                            //标题长度
+                            string SubStr(string sString, int nLeng)
+                            {
+                                if (sString.Length <= nLeng)
+                                {
+                                    return sString;
+                                }
+                                string sNewStr = sString.Substring(0, nLeng);
+                                sNewStr = sNewStr + "..."; return sNewStr;
+                            }
+                        }
+                        @if (ViewBag.List != null)
+                        {
+
+                            foreach (var alist in ViewBag.list)
+                            {//// zgId, zgTitle, zgUser, zgPhone, zgArea, zgGz, zgDetail, zgAddtime
+                                <li>
+                                    <a href="/zhaogong/GetDetail?id=@alist.zgId">
+                                        @alist.zgArea   @SubStr(alist.zgTitle, 10) [@alist.zgAddtime.ToString("yyyy-MM-dd HH:mm") ]
+                                    </a>
+                                </li>
+
+                            }
+                        }
+
+                    </ul>
+                </div>
+
+                <div class="planBR fr">
+                    <h2>在建项目招工</h2>
+                    <ul class="cleafix">
+                        <li><a href="#"><img src="/imgs/img2.jpg"></a></li>
+                        <li><a href="#"><img src="/imgs/img3.jpg"></a></li>
+                        <li><a href="#"><img src="/imgs/img4.jpg"></a></li>
+                        <li><a href="#"><img src="/imgs/img5.jpg"></a></li>
+                        <li><a href="#"><img src="/imgs/img6.jpg"></a></li>
+                        <li><a href="#"><img src="/imgs/img7.jpg"></a></li>
+                        <li><a href="#"><img src="/imgs/img8.jpg"></a></li>
+                        <li><a href="#"><img src="/imgs/img9.jpg"></a></li>
+                        <li><a href="#"><img src="/imgs/img10.jpg"></a></li>
+                        <li><a href="#"><img src="/imgs/img11.jpg"></a></li>
+                        <li><a href="#"><img src="/imgs/img12.jpg"></a></li>
+                        <li><a href="#"><img src="/imgs/img13.jpg"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!---友情链接-->
+
+<div class="container" style="margin-top: -15px">
+    <div class="row form-group">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <select class="selectpicker form-control" name="link1" style="margin-left:0"
+                    onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+                <option value="">--建设相关单位链接--</option>
+                <option value="http://www.gstsks.com/index.shtml">甘肃省特种设备作业人员考核管理平台</option>
+                <option value="http://www.gsjs.com.cn/index.aspx?tabid=1">甘肃省住房和城乡建设厅</option>
+                <option value="http://www.gstzsb.com/">甘肃省特种设备安全监察工作专网</option>
+                <option value="http://www.gsjtw.cc">甘肃建投</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <select class="selectpicker form-control" name="link1"
+                    onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+                <option value="">--政府部门网站链接--</option>
+                <option value="http://www.gsszczx.com/">甘肃省建设厅职业资格注册中心</option>
+                <option value="http://www.gstsks.com/index.shtml">甘肃省特种设备作业人员考核管理平台</option>
+                <option value="http://zscx.osta.org.cn/">国家职业资格证书全国联网查询</option>
+                <option value="http://www.gsjs.com.cn/index.aspx?tabid=1">甘肃省住房和城乡建设厅</option>
+                <option value="http://www.gstzsb.com/">甘肃省特种设备安全监察工作专网</option>
+                <option value="http://www.rst.gansu.gov.cn/">甘肃省人力资源和社会保障厅</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <select class="selectpicker form-control" name="link1"
+                    onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+                <option value="">--政府和集团中心的链接--</option>
+
+            </select>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <select class="selectpicker form-control" name="link1"
+                    onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+                <option value="">--集团内部链接--</option>
+                <option value="http://www.jtdzpt.com/">甘肃建投大宗平台</option>
+                <option value="http://www.gsjtxqglgs.com/html/index.htm">甘肃建投兰州新区建设管理有限公司</option>
+                <option value="http://www.gsjtgjg.com/html/index.htm">甘肃建投钢结构有限公司</option>
+                <option value="http://www.gsazjsjt.com/">甘肃省安装建设集团公司</option>
+                <option value="http://www.gsjtw.cc/">甘肃建投网</option>
+                <option value="http://www.gcctravel.com/">甘肃建投国际旅行社</option>
+                <option value="http://www.gsjtst.com/">甘肃建投商品混凝土有限公司</option>
+                <option value="http://www.cgicop.com/">中国甘肃国际经济技术合作总公司</option>
+                <option value="http://www.gsjtzcb.com/Feiye.html">甘肃建投建设公司</option>
+                <option value="http://www.gcigcem.com.cn/w/Default.htm">甘肃建投装备制造有限公司</option>
+                <option value="http://www.gsjky.com.cn/index.asp">甘肃省建筑科学研究院</option>
+                <option value="http://www.gsjtsd.com/">甘肃建投隧道工程有限公司</option>
+                <option value="http://www.gjtsst.com/">甘肃建投天水混凝土有限公司</option>
+                <option value="http://www.gsya.com.cn/">甘肃第一安装工程有限公司</option>
+                <option value="http://www.gs9j.com/">甘肃第九建设集团公司</option>
+                <option value="http://www.gs8j.com/">甘肃省第八建设集团有限责任公司</option>
+                <option value="http://www.gs7j.com.cn/index.html">甘肃第七建设集团股份有限公司</option>
+                <option value="http://www.gsljw.com/">甘肃第六建设集团股份有限公司</option>
+                <option value="http://www.gs5j.com/">甘肃第五建设集团公司</option>
+                <option value="http://www.gssjjt.com/">甘肃第四建设集团有限责任公司</option>
+                <option value="http://www.gssanjian.com/w/Default.htm">甘肃第三建设集团公司</option>
+                <option value="http://www.gsejjt.com.cn/">甘肃第二建设集团有限责任公司</option>
+                <option value="http://www.gsyj.com.cn/">甘肃第一建设集团有限责任公司</option>
+            </select>
+        </div>
+    </div>
+
+</div>

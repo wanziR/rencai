@@ -1,0 +1,24 @@
+﻿@model Models.Article
+
+@{
+    ViewBag.Title = Model.aName;
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+
+<div class="container mt10" style="">
+    <div class="row">
+        <div class="box">
+            <div class="page-header" style="padding-top: 10px">
+                <i class="glyphicon glyphicon-home"></i>
+                您当前位置：<a href="/">首页</a><em> > </em><a href="/article/list/?kWord=@Model.acName">@Model.acName</a><em> > </em><a href="#">@Model.aName</a>
+            </div>
+            <h3 class="text-center">@Model.aName</h3>
+            <h5 style="font-size:13px;color:darkgray;" class="text-center" >【作者：@Model.aAuthor  浏览次数：@Model.aPV 添加时间：@Model.aAddtime.ToString("yyyy-MM-dd")】</h5>
+            <div class="Content" style="line-height:30px">
+            @Html.Raw(Model.aContent)
+             </div>
+        </div>
+    </div>
+</div>
+
+

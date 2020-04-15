@@ -1,0 +1,17 @@
+﻿@model Models.SysAdmin
+
+@{
+    ViewBag.Title = "用户登录";
+    Layout = "~/Views/Shared/_Null.cshtml";
+}
+@ViewBag.AdminName
+@using (Html.BeginForm("AdminLogin", "SysAdmin", FormMethod.Post, new { name = "", @class = "class1" }))
+{
+    <label>用户名 ：</label>
+    <input name="admin_name" type="text" />
+    <label>密  码 ：</label>
+    <input name="admin_pwd" type="text" />
+    <input type="submit" value="提交" />
+    <br>@ViewBag.info
+}
+

@@ -1,0 +1,228 @@
+﻿@model Models.ZhaoGong
+
+@{
+    ViewBag.Title = "发布招工信息";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<!--验证-->
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<!--Ajax-->
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<!--城市-->
+<script type="text/javascript" src="/script/City_data.js"></script>
+<script type="text/javascript" src="/script/areadata.js"></script>
+<script type="text/javascript" src="/script/auto_area.js"></script>
+
+<!--开始结束日期-->
+<script src="~/script/jedate.min.js"></script>
+<link href="~/css/jedate.css" rel="stylesheet" />
+<div class="container">
+    <div class="row margin-t-5">
+        <!--start left -->
+        @Html.Action("UCLeft", "zhaogong")
+        <!--end left -->
+        <!--start right -->
+        <form action="/ZhaoGong/getZgFabu" method="post">
+            <div class="col-xs-12  col-lg-9" style="margin-top:0px">
+                <div class="box">
+                    <div class="page-header" style="padding-top: 10px">
+                        <i class="glyphicon glyphicon-th-list"></i>&nbsp;<a href="#">@ViewBag.Title</a>
+                        <span id="AddMsg" style="color:green;font-weight:bold"> @ViewBag.info </span>
+                    </div>
+                    @*zgId, zgTitle, zgXuqiu, zgZhuTilei, zgZhuti, zgArea, zgGz, zgNum, zgDetail, zgUser, zgPhone,
+                        zgFaburen, zgStarttime, zgEndtime, zgAddtime, zgImg1, zgImg2, zgImg3, isTuijian, isRemen*@
+                    <div class="zg_fabu">
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>需&nbsp;&nbsp;&nbsp;&nbsp;求 </b></div>
+                            <div class="col-lg-10">
+                                <select name="zgXuqiu" style="height:30px;border-radius: 5px;">
+                                    <option value="需要">需要</option>
+                                    <option value="提供">提供</option>
+                                </select>
+                                <span style="color:red">@Html.ValidationMessage("userName")</span>
+                            </div>
+
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>所需工种</b></div>
+                            <div class="col-lg-10">
+                                <input id="zgGz" name="zgGz" class=" form-control" type="text" data-toggle="modal" data-target="#myModal">
+                            </div>
+                        </div>
+                        <div class="row " style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>招工主体</b></div>
+                            <div class="col-lg-10">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <select name="zgZhuTilei" style="height:30px;border-radius: 5px;">
+                                            <option value="企业">企业</option>
+                                            <option value="项目">项目</option>
+                                            <option value="队伍">队伍</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input style="height:30px;border-radius: 5px;" id="zgZhuTi" name="zgZhuTi" class=" form-control" type="text"
+                                               placeholder="请输入企业/项目/或队伍名称">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>需要人数</b></div>
+                            <div class="col-lg-10">
+                                <input name="zgNum" type="text" class=" form-control" value="" data-value="" />
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>选择地区</b></div>
+                            <div class="col-lg-10">
+
+                                <input name="zgArea" type="text" class="area-danxuan form-control" value="" data-value="" />
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>工&nbsp;&nbsp;&nbsp;&nbsp;期</b></div>
+                            <div class="col-lg-10">
+                                <div class="form-inline">
+                                    <label>
+                                        开始时间
+                                        <input class=" form-control" type="" name="zgStarttime" id="startTime" value="" readonly="" />
+                                    </label>
+                                    <label>
+                                        结束时间
+                                        <input class=" form-control" type="" name="zgEndtime" id="endTime" value="" readonly />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>联&nbsp;系&nbsp;人</b></div>
+                            <div class="col-lg-10">
+                                <input name="zgUser" class="form-control" type="text" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>联系电话</b></div>
+                            <div class="col-lg-10">
+                                <span style="color:red">@Html.ValidationMessage("zgPhone")</span>
+                                <input name="zgPhone" class="form-control" type="text" value="@this.User.Identity.Name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>招工详情</b></div>
+                            <div class="col-lg-10">
+
+                                <textarea name="zgDetail" style="width:100%" rows="5"
+                                          placeholder="请输入详情（如招工要求、工作内容、工资待遇、结款方式/周期等），有助于您更快、更准确的招到好工人~" lay-verify="required"></textarea>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-8 text-right" style="letter-spacing:8px"></div>
+                            <div class="col-lg-4 text-right">
+                                <button class="btn btn-primary " type="submit">提交</button>
+                                <button class="btn btn-default ">取消</button>
+                            </div>
+                        </div>
+                        <input name="zgFaburen" value="@this.User.Identity.Name" class="form-control" type="hidden">
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!--end right -->
+</div>
+
+<!-- Modal 工种-->
+@Html.Action("GongZhong", "zhaogong")
+<!-- Modal 工种结束-->
+
+<!--开始结束日期 -->
+<script>
+   $(document).ready(function () {
+     jeDate('#startTime', {
+       minDate: '1990-01-01',
+       isinitVal: true,
+       format: 'YYYY-MM-DD',
+       onClose: false,
+       donefun: function (obj) {
+         // console.log(obj)
+         var saliDate = obj.val.split("-");
+         // console.log(saliDate)
+         var riNum = 0;
+         var yueNum = 0;
+         var nianNum = saliDate[0];
+         // console.log(saliDate[1]-1)
+         // //判断月 同时判断年
+         if (saliDate[1] - 1 <= 0 && saliDate[2] == "01") {
+           yueNum = 12;
+           riNum = 31;
+           nianNum = nianNum;
+           // console.log(nianNum,yueNum,riNum)
+           $("#endTime").val(nianNum + "-" + yueNum + "-" + riNum)
+           return false;
+         } else {
+           yueNum = saliDate[1];
+           nianNum = nianNum - 0 + 1;
+         }
+         //当 日 是01 的时候要判断当前下一个月是否为31 还是30天  在判断一个是否为闰年  2月份是29 还是28
+         if (saliDate[2] == "01") {
+           switch (saliDate[1] - 1) {
+             case 1:
+             case 3:
+             case 5:
+             case 7:
+             case 8:
+             case 10:
+             case 0: //0就是12月  因为是只有点击的是2019-01-01  才会是2018-12-31
+               riNum = 31;
+               yueNum = "0" + (saliDate[1] - 1);
+               break;
+             case 4:
+             case 6:
+             case 9:
+             case 11:
+               riNum = 30;
+               yueNum = "0" + (saliDate[1] - 1);
+               break;
+           }
+           if (saliDate[1] - 1 == 2) {
+             yueNum = "0" + (saliDate[1] - 1);
+             //判断是否为闰年
+             if (isLeap(saliDate[0]) == 1) {
+               riNum = 29;
+             } else {
+               riNum = 28;
+             }
+           }
+         } else {
+           if (saliDate[2] - 1 <= 9) {
+             riNum = "0" + (saliDate[2] - 1);
+           } else {
+             riNum = saliDate[2] - 1;
+           }
+         }
+         $("#endTime").val(nianNum + "-" + yueNum + "-" + riNum)
+         // console.log(nianNum,yueNum,riNum)
+       }
+     });
+     jeDate('#endTime', {
+       minDate: '1990-01-01',
+       isinitVal: true,
+       format: 'YYYY-MM-DD',
+       onClose: false
+     });
+
+     //判断是否为闰年  若为闰年，返回1，反之则返回0
+     function isLeap(year) {
+       if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+         return 1;
+       }
+       return 0;
+     }
+   })
+</script>

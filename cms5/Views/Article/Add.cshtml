@@ -1,0 +1,95 @@
+﻿@model Models.Article
+
+@{
+    ViewBag.Title = "添加文章";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<script src="~/script/bootstrap-select.min.js"></script>
+<script src="~/Scripts/ueditor/ueditor.config.js"></script>
+<script src="~/Scripts/ueditor/ueditor.all.min.js"></script>
+<script src="~/Scripts/ueditor/lang/zh-cn/zh-cn.js"></script>
+<link href="~/Scripts/ueditor/themes/iframe.css" rel="stylesheet" />
+<script type="text/javascript">
+ var editor = new baidu.editor.ui.Editor({
+     UEDITOR_HOME_URL: '/Scripts/ueditor/',//配置编辑器路径
+     initialContent: '',//初始化编辑器内容
+     autoHeightEnabled: true,//高度自动增长
+     minFrameHeight: 500,//最小高度
+     initialFrameHeight: 300
+ });
+ editor.render('editor');
+</script>
+
+<div class="container mt10">
+    <div class="row">
+        <!--start left -->
+        @Html.Action("UCLeft", "zhaogong")
+        <!--end left -->
+        <!--start right -->
+
+        <div class="col-xs-12  col-lg-9" style="margin-top:0px">
+            <div class="box">
+                <div class="page-header" style="padding-top: 10px;">
+                    <i class="glyphicon glyphicon-th-list"></i>&nbsp;<a href="#">@ViewBag.Title</a>
+                    <span class="label label-success">@ViewBag.info</span>
+                    @*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/zhaogong/zgFabu" class="btn btn-success">发布信息</a>*@
+                    <span style="color:green;font-weight:bold">
+                        <a id="DelMsg"></a>
+                    </span>
+                </div>
+
+                <div class="my_fabu">
+                    <form class="form-horizontal" action="/Article/GetAdd/?kWord=@ViewBag.kWord" method="post">
+                        @*aName, aContent, acId, aAuthor, aPV, aAddtime*@
+                        <div class="form-group">
+                            <label for="inputaName" class="col-sm-2 control-label">栏目</label>
+                            <div class="col-sm-10">
+                                @*<input type="text" name="acId" class="form-control hidden" value="2">*@
+                                <select class="selectpicker form-control" name="acId" style="margin-left:0">
+                                    <option value="@ViewBag.acId">===== @ViewBag.kWord ==== </option>
+
+                                    @if (ViewBag.List != null)
+                                    {
+                                    foreach (var ACList in ViewBag.List)
+                                    {
+                                    <option value="@ACList.acId ">@ACList.acName</option>
+                                   
+                                    }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputaName" class="col-sm-2 control-label">标题</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="aName" class="form-control" id="inputaName" placeholder="请输入标题">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputaAuthor" class="col-sm-2 control-label">作者</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="aAuthor" class="form-control"  id="inputaAuthor" placeholder="请输入作者">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputaAuthor" class="col-sm-2 control-label">内容</label>
+                            <div class="col-sm-10">
+                                <textarea id="editor" name="aContent" placeholder="请输入文章内容"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!--end right -->
+    </div>
+
+</div>
+

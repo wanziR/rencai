@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "User";
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
+
+<!-- 内容框 -->
+<div class="zy_module-content">
+    <!-- 消息 -->
+    <div class="zy_content zy_vipbox">
+        <div class="vip_head mb6">
+            <div class="head pb10">
+                <i><img src="/mobile/images/common_img/man.png"></i>
+                <span>普通雇主</span>
+                <h2>甘肃建投人力资源有限责任公司</h2>
+                <!-- <div class="state"><em class="on">正找工作</em><em>不找工作</em></div> -->
+            </div>
+            <div class="exit">退出</div>
+        </div>
+        <div class="vip_menu">
+            <ul class="mb6">
+                <li>
+                    <a href="#">
+                        <img src="/mobile/images/common_img/vip_icon_01.png">
+                        <span>资料设置</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/mobile/fabu">
+                        <img src="/mobile/images/common_img/vip_icon_02.png">
+                        <span>发布招聘/项目</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/mobile/images/common_img/vip_icon_03.png">
+                        <span>我的发布</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/mobile/images/common_img/vip_icon_04.png">
+                        <span>收到的求职简历</span>
+                        <em class="n r gr">12</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/mobile/images/common_img/vip_icon_05.png">
+                        <span>我的定制</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/mobile/images/common_img/vip_icon_06.png">
+                        <span>我的收藏</span>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="/mobile/images/common_img/vip_icon_07.png">
+                        <span>我的人才库</span>
+                        <em class="n r g9">需开通入驻</em>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 返回顶部 -->
+    <div class="go_top">
+        <a class="btn_top"></a>
+    </div>
+
+    <!-- 底部 -->
+    @Html.Partial("~/Views/Shared/_mFoot.cshtml")
+    <!-- 底部导航 -->
+    @Html.Partial("~/Views/Shared/_mFootMenu.cshtml")
+</div>
+<!-- 搜索框 -->
+@Html.Partial("~/Views/Shared/_mSearch.cshtml")

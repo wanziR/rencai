@@ -12,7 +12,18 @@ namespace cms5.Controllers
         {
             return View();
         }
-
+        public ActionResult List()
+        {
+            return View();
+        }
+        public ActionResult zp()
+        {
+            return View();
+        }
+        public ActionResult xq()
+        {
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -26,5 +37,7 @@ namespace cms5.Controllers
 
             return View();
         }
+        
+
     }
 }

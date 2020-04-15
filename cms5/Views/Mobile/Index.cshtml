@@ -1,0 +1,252 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
+
+<!--
+Start Preloader加载
+==================================== -->
+<div id="loading-mask">
+    <div class="loading-img">
+        <img alt="预加载" src="/mobile/images/preloader01.gif" />
+        <p>找人才，找项目，甘肃建设人力...</p>
+    </div>
+</div>
+<!--
+End Preloader
+==================================== -->
+<!--头部-->
+<header class="module-layer">
+    <div class="module-layer-content">
+        <div class="module-layer-bg"></div>
+        <div class="search-box-cover"></div>
+        <p class="layer-logo"><img src="/mobile/images/logo.png"></p>
+        <h1 class="layer-head-name">
+            <div class="pr search-box">
+                <img class="shop-search" src="/mobile/images/icon_search_w.png" />
+                <input id="shop-input" type="text" placeholder="请输入关键词搜索" value="" />
+            </div>
+        </h1>
+        <p class="layer-login"><img src="/mobile/images/pin.png"><a href="#">兰州</a></p>
+    </div>
+</header>
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+		var n=0;
+		//监听滚动条事件，改变背景透明度
+	    $(window).scroll(function() {
+	        var top = $(document).scrollTop();
+	        if ((top/150) >= 0.9) {
+	        	n=0.9;
+	        }else{
+	        	n=(top/150);
+	        }
+	        $(".search-box-cover").css("opacity",n);
+
+	        // 搜索框背景色和搜索图标
+	        if (n>0.4) {
+	        	 $(".search-box").css("background","#ffffff");
+                 $(".shop-search").attr("src", "/mobile/images/icon_search.png");
+            }else{
+	        	 $(".search-box").css("background","rgba(255,255,255,0)");
+                 $(".shop-search").attr("src", "/mobile/images/icon_search_w.png");
+            }
+
+	    });
+	});
+</script>
+
+<div class="module-content">
+    <!--banner图 640px X 360px-->
+    <div class="swiper-container banner">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <img src="/mobile/images/banner01.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/mobile/images/banner01.jpg">
+            </li>
+        </ul>
+        <div class="swiper-pagination sp01"></div>
+        <script>
+		    var swiper = new Swiper('.banner', {
+		        pagination: '.sp01',
+		        paginationClickable: true,
+		        autoplay:"3000",
+		        loop:"ture",
+		        speed:500,
+		        autoplayDisableOnInteraction : false,
+		    });
+        </script>
+    </div>
+
+    <!-- 图标导航icon -->
+    @Html.Partial("~/Views/Shared/_mIconMenu.cshtml")
+
+    <!-- 公告信息 -->
+    @Html.Partial("~/Views/Shared/_mGonggao.cshtml")
+
+    <!-- 推荐项目 -->
+    <div class="tuij_box bgwh mb6">
+        <div class="title">
+            <h2><img src="/mobile/images/company_img/icon_xmhz.png" /><span style="color: #fc0d1b;">招工信息</span></h2>
+            <a href="#">查看更多></a>
+        </div>
+        <!-- <div class="title hot_tit1">
+            <h2><span>招工信息</span></h2>
+            <a href="rc_list.html">查看更多></a>
+        </div> -->
+        <ul>
+
+
+            @if (ViewBag.zplist != null)
+            {
+                foreach (var zglist in ViewBag.zplist)
+                {
+
+                    <li>
+                        @*//zpId, zpXuqiu, zpZhuTilei, zpZhuti, zpArea, zpGangwei, zpNum, zpPayL, zpPayH, zpFuli,
+                        //zpDetail, zpUser, zpPhone, zpFaburen, zpAddtime, zpEndtime, isTuijian, isRemen*@
+                        <a href="/mobile/GetZgXq?id=@zglist.zpId">
+                            <div class="item_tit fix">
+                                <h2 class="l pct80">@zglist.zpZhuTilei：<b class="g3 n">@zglist.zpZhuti</b></h2>
+                                <span class="r">20小时前</span>
+                            </div>
+                            <div class="item_tit">
+                                <h2>
+                                    需求：
+                                    @{
+                                        if (zglist.zpXuqiu == "需要")
+                                        {
+                                            <span style="color: green;">@zglist.zpXuqiu</span>
+                                        }
+                                        else
+                                        {
+                                            <span style="color: red;">@zglist.zpXuqiu</span>
+                                        }
+                                    }
+                                    &nbsp;&nbsp;<b class="g3 n">@zglist.zpGangwei @zglist.zpNum 人</b>
+                                </h2>
+                            </div>
+                            <div class="item_tit fix">
+                                <h2 class="l">薪资待遇：@zglist.zpPayL &nbsp;~&nbsp;@zglist.zpPayH</h2>
+                                <em class="r n">已认证</em>
+                            </div>
+                        </a>
+                    </li>
+
+                }
+            }
+
+        </ul>
+    </div>
+
+    <!-- 企业招聘 -->
+    <div class="tuij_box tuij_gz bgwh mb6">
+        <div class="title hot_tit">
+            <h2><span>企业招聘</span></h2>
+            <a href="#">查看更多></a>
+        </div>
+        <ul>
+
+            @if (ViewBag.zglist != null)
+            {
+                foreach (var zglist in ViewBag.zglist)
+                {
+
+                    <li>
+                        <a href="/mobile/GetZgXq?id=@zglist.zgId">
+                            <div class="item_tit rc_tit fix">
+                                0
+                                <h2 class="l pct80"><b>@zglist.zgZhuti</b></h2>
+                                <span class="r">20小时前</span>
+                            </div>
+                            <div class="item_tit">
+                                <h2><b>招聘职位：</b><b class="gr">@zglist.zgGz</b></h2>
+                            </div>
+                            <div class="item_tit fix">
+                                <h2 class="l">工作地点：@zglist.zgArea</h2>
+                                <em class="r n">已认证</em>
+                            </div>
+                        </a>
+                    </li>
+                }
+            }
+
+        </ul>
+
+    </div>
+    <!-- 个人求职 -->
+    <div class="tuij_box tuij_gz bgwh mb6">
+        <div class="title hot_tit">
+            <h2><span>个人求职</span></h2>
+            <a href="#">查看更多></a>
+        </div>
+        <ul>
+            @if (ViewBag.lwlist != null)
+            {
+
+                foreach (var llist in ViewBag.lwlist)
+                {
+                    // lwId, lwTitle, lwName, lwSex, lwage, lwPhone, lwArea, lwGz, lwDetail, lwAddtime, lwZhuangtai, isTuijian, isRemen
+
+                    <li>
+                        <a href="/mobile/GetLwXq?id=@llist.lwId">
+                            <div class="item_tit rc_tit fix">
+                                <h2 class="l pct80"><b>@llist.lwName</b><b>@llist.lwSex</b><b>@llist.lwage</b><b>求职</b><b>@llist.lwGz</b></h2>
+                                <span class="r">20小时前</span>
+                            </div>
+                            @*<div class="item_tit">
+                                    <h2><b>大专</b><b>3-5年</b><b class="gr">5000~8000元</b></h2>
+                                </div>*@
+                            <div class="item_tit fix">
+                                <h2 class="l">期望工作地点：@llist.lwArea</h2>
+                                <em class="r n">已认证</em>
+                            </div>
+                        </a>
+                    </li>
+                }
+            }
+
+
+        </ul>
+
+    </div>
+
+    <!-- 热门职位 -->
+    @Html.Partial("~/Views/Shared/_mHotwork.cshtml")
+
+    <!-- 广告 -->
+    <div class="swiper-container ad_picbox">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <a href="#"><img src="/mobile/images/company_img/adpic01.png"></a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#"><img src="/mobile/images/person_img/adpic02.jpg"></a>
+            </li>
+        </ul>
+        <script>
+		    var swiper = new Swiper('.ad_picbox', {
+		        autoplay:"4000",
+		        effect:"fade",
+		        loop:"ture",
+		        speed:700,
+		        autoplayDisableOnInteraction : false,
+		    });
+        </script>
+    </div>
+
+    <!-- 返回顶部 -->
+    <div class="go_top">
+        <a class="btn_top"></a>
+    </div>
+
+    <!-- 底部 -->
+    @Html.Partial("~/Views/Shared/_mFoot.cshtml")
+    <!-- 底部导航 -->
+    @Html.Partial("~/Views/Shared/_mFootMenu.cshtml")
+</div>
+<!-- 搜索框 -->
+@Html.Partial("~/Views/Shared/_mSearch.cshtml")

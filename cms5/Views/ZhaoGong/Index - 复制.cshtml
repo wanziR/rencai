@@ -1,0 +1,361 @@
+﻿@model Models.ZhaoGong
+@using BLL
+@using Models
+@{
+    ViewBag.Title = "主页-招工平台";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+<script type="text/javascript">
+        //平台、设备和操作系统
+        var system = {
+            win: false,
+            mac: false,
+            xll: false,
+            ipad:false
+        };
+        //检测平台
+        var p = navigator.platform;
+        system.win = p.indexOf("Win") == 0;
+        system.mac = p.indexOf("Mac") == 0;
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+        system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+        //跳转语句，如果是手机访问就自动跳转到wap.baidu.com页面
+        if (system.win || system.mac || system.xll||system.ipad) {
+
+        } else {
+
+            window.location.href = "/mobile/index";
+        }
+</script>
+<div class="mainWrap">
+    <div class="main w1200" style="border-bottom:solid 1px #e1e1e1; padding-bottom: 10px">
+        <!--start 新增部分 -->
+        <!--start 滚动代码 -->
+        <style type="text/css">
+            #demo {
+                overflow: hidden;
+                height: 210px;
+                background: #FFF;
+                float: left;
+                display: inline;
+            }
+        </style>
+        <noscript>
+            <style type="text/css">
+                #demo {
+                    overflow: auto;
+                }
+            </style>
+        </noscript>
+        <!--end 滚动代码 -->
+        <div class="row mt10" style="border-radius: 5px;background: #fff; ">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt10">
+                <table class="table mt10 ">
+                    <thead>
+                        <tr>
+                            <td>
+                                <a class="btn btn-primary" href="/zhaogong/zginfo/?strWord=需要"
+                                   style="vertical-align: bottom;text-align: left; border-radius: 5px 5px 0 0;">
+                                    企业招聘
+                                </a>
+                            </td>
+                            <td style="vertical-align: bottom;text-align: right;color: #8d8c8a;"><a href="/zhaogong/zginfo/?strWord=需要">more</a> </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>公司名称</b></td>
+                            <td><b>招聘职位</b></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/Article/GetDetail?id=4"><sapn style="color:green;font-weight:bold">甘肃建投人力资源开发服务有限公司</sapn></a></td>
+                            <td><a href="/Article/GetDetail?id=4"><sapn style="color:green;font-weight:bold">公司简介</sapn></a></td>
+                        </tr>
+                        @if (ViewBag.zglist != null)
+                        {
+                            foreach (var zglist in ViewBag.zglist)
+                            {
+                                <tr>
+                                    <td><a href="/zhaogong/GetDetail?id=@zglist.zgId">@zglist.zgZhuti</a></td>
+                                    <td>@zglist.zgGz</td>
+                                </tr>
+                            }
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt10">
+                <table class="table mt10 ">
+                    <thead>
+                        <tr>
+                            <td>
+                                <a class="btn btn-primary" href="/laowu/lwinfo"
+                                   style="vertical-align: bottom;text-align: left; border-radius: 5px 5px 0 0;">
+                                    个人求职
+                                </a>
+                            </td>
+                            <td style="vertical-align: bottom;text-align: right;color: #8d8c8a;"><a href="/laowu/lwinfo">more</a> </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (ViewBag.lwlist != null)
+                        {
+                            <tr>
+                                <td><b>姓名</b></td>
+                                <td><b>求职岗位</b></td>
+                            </tr>
+                            foreach (var llist in ViewBag.lwlist)
+                            {
+                                // lwId, lwTitle, lwName, lwSex, lwage, lwPhone, lwArea, lwGz, lwDetail, lwAddtime, lwZhuangtai, isTuijian, isRemen
+
+                                <tr>
+                                    <td><a href="/laowu/GetDetail?id=@llist.lwId"> @llist.lwName</a></td>
+                                    <td><a href="/laowu/GetDetail?id=@llist.lwId"> @llist.lwGz</a></td>
+                                </tr>
+
+                            }
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt10">
+                <table class="table mt10 ">
+                    <thead>
+                        <tr>
+                            <td>
+                                <a class="btn btn-primary" href="/article/list/?kWord=消息法规"
+                                        style="vertical-align: bottom;text-align: left; border-radius: 5px 5px 0 0;">
+                                    消息法规
+                                </a>
+                            </td>
+                            <td style="vertical-align: bottom;text-align: right;color: #8d8c8a;">
+                                <a href="/article/list/?kWord=消息法规"> more</a>
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+                <div id="demo">
+                    <div id="demo1">
+                        <table class="table mt10 ">
+                            <tbody>
+                                @foreach (var tlist in ViewBag.tzlist)
+                                {
+                                    // aId, aName, aContent, acId, aAuthor, aPV, aAddtime, isTuiJian, isReMen, isZhiDing
+
+                                    <tr>
+                                        <td>·<a href="/Article/GetDetail?id=@tlist.aId" title="@tlist.aName" > 
+                                            @(tlist.aName.Length>24 ? tlist.aName.Substring(0, 24)+"..." : tlist.aName)
+                                            </a></td>
+                                    </tr>
+
+                                }
+                               
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="demo2"> </div>
+                    <script type="text/javascript">
+							var speed = 40;
+							var FGDemo = document.getElementById('demo');
+							var FGDemo1 = document.getElementById('demo1');
+							var FGDemo2 = document.getElementById('demo2');
+							FGDemo2.innerHTML = FGDemo1.innerHTML
+
+							function Marquee1() {
+								if (FGDemo2.offsetHeight - FGDemo.scrollTop <= 0)
+									FGDemo.scrollTop -= FGDemo1.offsetHeight
+								else {
+									FGDemo.scrollTop++
+								}
+							}
+							var MyMar1 = setInterval(Marquee1, speed)
+							FGDemo.onmouseover = function () {
+								clearInterval(MyMar1)
+							}
+							FGDemo.onmouseout = function () {
+								MyMar1 = setInterval(Marquee1, speed)
+							}
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="row mt10">
+            <img src="/imgs/ad-index.jpg" class="img-responsive" width="100%" alt="Image">
+
+        </div>
+
+        <div class="row mt10" style="border-radius: 5px;background: #fff; ">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 mt10">
+                <table class="table mt10 ">
+                    <thead>
+                        <tr>
+                            <td>
+                                <a class="btn btn-primary" href="/zhaogong/zginfo"
+                                   style="vertical-align: bottom;text-align: left; border-radius: 5px 5px 0 0;;">
+                                    用工信息
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="vertical-align: bottom;text-align: right;color: #8d8c8a;"><a href="/zhaogong/zginfo">more</a> </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>需求</b></td>
+                            <td><b>单位名称</b></td>
+                            <td><b>工种人数</b></td>
+                            <td><b>开始时间</b></td>
+                            <td><b>结束时间</b></td>
+                            <td><b>联系电话</b></td>
+                        </tr>
+                        @if (ViewBag.zglist != null)
+                        {
+                            foreach (var zglist in ViewBag.zglist)
+                            {
+
+                                <tr>
+                                    <td>
+                                        @{
+                                            if (zglist.zgXuqiu == "需要")
+                                            {
+                                                <span style="color: green;">@zglist.zgXuqiu</span>
+                                            }
+                                            else
+                                            {
+                                                <span style="color: red;">@zglist.zgXuqiu</span>
+                                            }
+                                        }
+
+                                    </td>
+                                    <td><a href="/zhaogong/GetDetail?id=@zglist.zgId">@zglist.zgZhuti</a></td>
+                                    <td>@zglist.zgGz@zglist.zgNum</td>
+                                    <td>@zglist.zgStarttime.ToString("yyyy-MM-dd")</td>
+                                    <td>@zglist.zgEndtime.ToString("yyyy-MM-dd")</td>
+                                    @{
+                                        string m = zglist.zgPhone;
+                                        m = m.Replace(m.Substring(m.Length - 4, 4), "****");
+                                    }
+
+                                    <td>@m</td>
+                                </tr>
+
+                            }
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt10">
+                <table class="table mt10 ">
+                    <thead>
+                        <tr>
+                            <td>
+                                <button class="btn btn-primary"
+                                        style="vertical-align: bottom;text-align: left; border-radius: 5px 5px 0 0;">
+                                    培训通知
+                                </button>
+                            </td>
+                            <td style="vertical-align: bottom;text-align: right;color: #8d8c8a;">more</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>发布日期</b></td>
+                            <td><b>标题</b></td>
+                        </tr>
+                         @if (ViewBag.pxlist != null)
+                        {
+                            foreach (var pxlist in ViewBag.pxlist)
+                            {
+                        <tr>
+                            <td> <span style="color: red;">@pxlist.aAddtime.ToString("MM-dd")</span></td>
+                            <td><a href="/Article/GetDetail?id=@pxlist.aId">@pxlist.aName</a></td>
+                        </tr>
+                            }
+                        }
+
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--end 新增部分 -->
+
+    </div>
+</div>
+
+<!---友情链接-->
+
+<div class="container" style="margin-top: -15px">
+    <div class="row form-group">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <select class="selectpicker form-control" name="link1"
+                    onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+                <option value="">--友情链接--</option>
+                <option value="http://www.gsjtpxzx.com/">甘肃建投培训中心</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <select class="selectpicker form-control" name="link1" style="margin-left:0"
+                    onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+                <option value="">--建设相关单位链接--</option>
+                <option value="http://www.gstsks.com/index.shtml">甘肃省特种设备作业人员考核管理平台</option>
+                <option value="http://www.gsjs.com.cn/index.aspx?tabid=1">甘肃省住房和城乡建设厅</option>
+                <option value="http://www.gstzsb.com/">甘肃省特种设备安全监察工作专网</option>
+                <option value="http://www.gsjtw.cc">甘肃建投</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <select class="selectpicker form-control" name="link1"
+                    onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+                <option value="">--政府部门网站链接--</option>
+                <option value="http://www.gsszczx.com/">甘肃省建设厅职业资格注册中心</option>
+                <option value="http://www.gstsks.com/index.shtml">甘肃省特种设备作业人员考核管理平台</option>
+                <option value="http://zscx.osta.org.cn/">国家职业资格证书全国联网查询</option>
+                <option value="http://www.gsjs.com.cn/index.aspx?tabid=1">甘肃省住房和城乡建设厅</option>
+                <option value="http://www.gstzsb.com/">甘肃省特种设备安全监察工作专网</option>
+                <option value="http://www.rst.gansu.gov.cn/">甘肃省人力资源和社会保障厅</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <select class="selectpicker form-control" name="link1"
+                    onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+                <option value="">--集团内部链接--</option>
+                <option value="http://www.jtdzpt.com/">甘肃建投大宗平台</option>
+                <option value="http://www.gsjtxqglgs.com/html/index.htm">甘肃建投兰州新区建设管理有限公司</option>
+                <option value="http://www.gsjtgjg.com/html/index.htm">甘肃建投钢结构有限公司</option>
+                <option value="http://www.gsazjsjt.com/">甘肃省安装建设集团公司</option>
+                <option value="http://www.gsjtw.cc/">甘肃建投网</option>
+                <option value="http://www.gcctravel.com/">甘肃建投国际旅行社</option>
+                <option value="http://www.gsjtst.com/">甘肃建投商品混凝土有限公司</option>
+                <option value="http://www.cgicop.com/">中国甘肃国际经济技术合作总公司</option>
+                <option value="http://www.gsjtzcb.com/Feiye.html">甘肃建投建设公司</option>
+                <option value="http://www.gcigcem.com.cn/w/Default.htm">甘肃建投装备制造有限公司</option>
+                <option value="http://www.gsjky.com.cn/index.asp">甘肃省建筑科学研究院</option>
+                <option value="http://www.gsjtsd.com/">甘肃建投隧道工程有限公司</option>
+                <option value="http://www.gjtsst.com/">甘肃建投天水混凝土有限公司</option>
+                <option value="http://www.gsya.com.cn/">甘肃第一安装工程有限公司</option>
+                <option value="http://www.gs9j.com/">甘肃第九建设集团公司</option>
+                <option value="http://www.gs8j.com/">甘肃省第八建设集团有限责任公司</option>
+                <option value="http://www.gs7j.com.cn/index.html">甘肃第七建设集团股份有限公司</option>
+                <option value="http://www.gsljw.com/">甘肃第六建设集团股份有限公司</option>
+                <option value="http://www.gs5j.com/">甘肃第五建设集团公司</option>
+                <option value="http://www.gssjjt.com/">甘肃第四建设集团有限责任公司</option>
+                <option value="http://www.gssanjian.com/w/Default.htm">甘肃第三建设集团公司</option>
+                <option value="http://www.gsejjt.com.cn/">甘肃第二建设集团有限责任公司</option>
+                <option value="http://www.gsyj.com.cn/">甘肃第一建设集团有限责任公司</option>
+            </select>
+        </div>
+
+
+    </div>
+
+</div>

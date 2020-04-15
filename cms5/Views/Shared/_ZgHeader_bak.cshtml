@@ -1,0 +1,45 @@
+﻿<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-6">
+                <a href="/"><img src="/imgs/logo.png" height="40em" style="margin-top: 3px"></a>
+            </div>
+            <div class="col-md-12 col-lg-6 ">
+                <a href="/laowu/lwinfo" class="btn btn-warning pull-right" style="margin: 8px;padding-right: 20px; width: 100px;">
+                    <i class="glyphicon glyphicon-user"></i> 招 聘
+                </a>
+                <a href="/zhaopin/zpinfo" class="btn btn-success pull-right" style="margin: 8px;width: 100px;">
+                    <i class="glyphicon glyphicon-home" aria-hidden="true"></i> 求 职
+                </a>
+                <form class="navbar-form navbar-left pull-right" role="search">
+                    <div class="input-group">
+                        <input name="strWord" type="text" class="form-control" placeholder="标题/工种/地区/联系人/详情" aria-describedby="basic-addon2">
+                        <span class="input-group-btn" id="basic-addon2">
+                            <ul class="dropdown-menu">
+                                <li><a id="sHuo" href="">个人找活</a></li>
+                                <li><a id="sGong" href="">项目找人</a></li>
+                            </ul>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                搜索
+                                <span class="caret"></span>
+                            </button>
+                        </span>
+                    </div>
+                    <script>
+                            $("#sHuo").click(function () {
+                                var strWord = $("#strWord").val();
+                                $("#sHuo").attr('href', '/zhaogong/zginfo/?strWord=' + strWord + '');
+                            });
+
+                            $("#sGong").click(function () {
+                                var strWord = $("#strWord").val();
+                                $("#sGong").attr('href', '/laowu/lwInfo/?strWord=' + strWord + '');
+                            });
+                    </script>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,121 @@
+﻿@model Models.ZhaoHuo
+
+@{
+    ViewBag.Title = "个人劳务";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<div class="container">
+    <div class="box visible-xs mt10 pl15">
+        <i class="glyphicon glyphicon-home"></i>
+        <a href="#">首页</a><em> / </em><a href="#">@ViewBag.Title</a>
+    </div>
+    <div class="box hidden-xs">
+        <div class="page-header" style="padding-top: 10px">
+            <i class="glyphicon glyphicon-home"></i>
+            <a href="#">首页</a><em> / </em><a href="#">@ViewBag.Title</a>
+        </div>
+        <!-- start 工种城市-->
+        @Html.Action("_LwCity", "zhaogong")
+        <!-- start 工种城市-->
+    </div>
+</div>
+
+<div class="container mt10">
+    <div class="row">
+
+
+        <div class="col-xs-12  col-lg-9 pr0">
+            <div class="box pl15">
+                @if (ViewBag.List != null)
+                {
+
+                    foreach (var alist in ViewBag.list)
+                    {
+                        <div class="row">
+                            <div class="col-xs-12 col-lg-8 text-left" style="overflow:initial">
+                                <h4 style="color:#145fa8">@alist.lwTitle</h4>
+                                <p>联系人：@alist.lwName</p>
+                                <p>工作地区：@alist.lwArea</p>
+                                <p style="color: darkgray">发布时间：@alist.lwAddtime.ToString("yyyy-MM-dd HH:mm") </p>
+                            </div>
+                            <div class="col-xs-12 col-lg-4 text-right">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+                                            title="该用户已经通过实名认证">
+                                        <i class="glyphicon  glyphicon-check"></i>实名
+                                    </button>
+                                    @*<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+                                                title="VIP认证用户">
+                                            <i class="glyphicon  glyphicon-check"></i>VIP
+                                        </button>*@
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+                                            title="该信息已审核">
+                                        <i class="glyphicon  glyphicon-check"></i>已核
+                                    </button>
+                                    <a href="/laowu/GetDetail?id=@alist.lwId" class="btn btn-default">查看详情</a>
+                                </div>
+                                <br><br>
+                                <a data-toggle="tooltip" data-placement="bottom" title="平台信用">
+                                    @{
+                                        int a = 3;
+
+                                        if (a == 1)
+                                        {
+                                            @Html.Raw(ViewBag.xin1);
+                                        }
+                                        else if (a == 2)
+                                        {
+                                            @Html.Raw(ViewBag.xin2);
+                                        }
+                                        else if (a == 3)
+                                        {
+                                            @Html.Raw(ViewBag.xin3);
+                                        }
+                                        else if (a == 4)
+                                        {
+                                            @Html.Raw(ViewBag.xin4);
+                                        }
+                                        else
+                                        {
+                                            @Html.Raw(ViewBag.xin5);
+                                        }
+                                    }
+                                </a>
+                            </div>
+                        </div>
+                        <hr class="simple" color="#6f5499" />
+                    }
+
+
+                }
+
+
+            </div>
+            <script>
+	$(function () {
+		$("[data-toggle='tooltip']").tooltip();
+	});
+            </script>
+            <div class="box mt10 text-center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">上一页</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">下一页</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        @Html.Partial("/Views/Shared/_ZgRight.cshtml")
+    </div>
+
+</div>

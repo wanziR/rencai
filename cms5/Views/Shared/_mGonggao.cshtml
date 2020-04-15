@@ -1,0 +1,37 @@
+﻿<div class="news_sj_dxs_box bgwh mb6">
+    <div class="scrollnews">
+        <span><img src="/mobile/images/news_tit.png"></span>
+        <ul>
+            <li><a href="../web_other/news_xq.html">甘肃建投招工平台上线了!</a></li>
+            <li><a href="../web_other/news_xq.html">甘肃建投招工平台上线了！</a></li>
+            <li><a href="../web_other/news_xq.html">甘肃建投招工平台上线了！</a></li>
+        </ul>
+        <span class="r"><a href="../web_other/newslist.html">更多></a></span>
+        <script type="text/javascript">
+
+                $(document).ready(function(){
+                	var timer;
+                    //滚动文字
+                    function runtxt(){
+                        $(".scrollnews ul").animate({marginTop:"-.4rem"},300,
+                            function(){
+                                $(".scrollnews ul li:last").after($(".scrollnews ul li:first"))
+                                $(".scrollnews ul").css("margin-top",0)
+                            }
+                        )
+                    }
+                    $(".scrollnews ul li a").mouseenter(
+                        function(){
+                            clearInterval(timer)
+                        }
+                    )
+                    $(".scrollnews ul li a").mouseleave(
+                        function(){
+                            timer=setInterval(runtxt,4000)
+                        }
+                    )
+                    timer=setInterval(runtxt,4000);
+                })
+        </script>
+    </div>
+</div>

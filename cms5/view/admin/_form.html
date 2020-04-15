@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kode is a Premium Bootstrap Admin Template, It's responsive, clean coded and mobile friendly">
+  <meta name="keywords" content="bootstrap, admin, dashboard, flat admin template, responsive," />
+  <title>Kode</title>
+
+  <!-- ========== Css Files ========== -->
+  <link href="../../Content/root.css" rel="stylesheet">
+
+  </head>
+  <body><!-- Start Page Loading -->
+  <div class="loading"><img src="../../images/admin/loading.gif" alt="loading-img"></div>
+  <!-- End Page Loading -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+  <!-- START TOP -->
+  <div id="top" class="clearfix">
+
+    <!-- Start App Logo -->
+    <div class="applogo">
+      <a href="index.html" class="logo">后台管理系统</a>
+    </div>
+    <!-- End App Logo -->
+
+    <!-- Start 侧边栏显示隐藏按钮 -->
+    <a href="#" class="sidebar-open-button"><i class="fa fa-bars"></i></a>
+    <a href="#" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a>
+    <!-- End 侧边栏显示隐藏按钮 -->
+
+    <!-- Start 搜索框 -->
+    <form class="searchform">
+      <input type="text" class="searchbox" id="searchbox" placeholder="搜索">
+      <span class="searchbutton"><i class="fa fa-search"></i></span>
+    </form>
+    <!-- End 搜索框 -->
+
+    <!-- Start Top Menu -->
+    <ul class="topmenu">
+      <li><a href="#">文件</a></li>
+      <li><a href="#">作者</a></li>
+      <li class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">我的文件<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">视频</a></li>
+          <li><a href="#">图片</a></li>
+          <li><a href="#">博客</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!-- End Top Menu -->
+
+    <!-- Start 侧面板显示隐藏按钮 -->
+    <a href="#sidepanel" class="sidepanel-open-button"><i class="fa fa-outdent"></i></a>
+    <!-- End 侧面板显示隐藏按钮 -->
+
+    <!-- Start Top Right -->
+    <ul class="top-right">
+
+    <li class="dropdown link">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle hdbutton">顶部下拉 <span class="caret"></span></a>
+        <ul class="dropdown-menu dropdown-menu-list">
+          <li><a href="#"><i class="fa falist fa-paper-plane-o"></i>顶部下拉1</a></li>
+          <li><a href="#"><i class="fa falist fa-font"></i>顶部下拉2</a></li>
+          <li><a href="#"><i class="fa falist fa-file-image-o"></i>顶部下拉3</a></li>
+          <li><a href="#"><i class="fa falist fa-file-video-o"></i>顶部下拉4</a></li>
+        </ul>
+    </li>
+
+    <li class="link">
+      <a href="#" class="notifications">5</a>
+    </li>
+
+    <li class="dropdown link">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="../../images/admin/profileimg.png" alt="img"><b>周龙</b><span class="caret"></span></a>
+        <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right">
+          <li role="presentation" class="dropdown-header">个人中心</li>
+          <li><a href="#"><i class="fa falist fa-inbox"></i>消息<span class="badge label-danger">4</span></a></li>
+          <li><a href="#"><i class="fa falist fa-file-o"></i>文件</a></li>
+          <li><a href="#"><i class="fa falist fa-wrench"></i>设置</a></li>
+          <li class="divider"></li>
+          <li><a href="#"><i class="fa falist fa-lock"></i> 密码</a></li>
+          <li><a href="#"><i class="fa falist fa-power-off"></i> 退出</a></li>
+        </ul>
+    </li>
+
+    </ul>
+    <!-- End Top Right -->
+
+  </div>
+  <!-- END TOP -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+
+<!-- //////////////////////////////////////////////////////////////////////////// --> 
+<!-- START 左侧菜单 -->
+<div class="sidebar clearfix">
+
+<ul class="sidebar-panel nav">
+  <li class="sidetitle">栏目设置</li>
+  <li><a href="_lefttop.html"><span class="icon color5"><i class="fa fa-home"></i></span>主页<span class="label label-default">2</span></a></li>
+  <li><a href="#"><span class="icon color7"><i class="fa fa-flask"></i></span>列表<span class="caret"></span></a>
+    <ul>
+      <li><a href="_list.html">文章列表</a></li>
+      <li><a href="#">图片列表</a></li>
+      <li><a href="#">其它<span class="label label-danger">NEW</span></a></li>
+    </ul>
+  </li>
+  <li><a href="_form.html"><span class="icon color10"><i class="fa fa-home"></i></span>表单</a></li>
+</ul>
+
+<ul class="sidebar-panel nav">
+  <li class="sidetitle">系统设置</li>
+  <li><a href="grid.html"><span class="icon color15"><i class="fa fa-columns"></i></span>数据备份</a></li>
+  <li><a href="maps.html"><span class="icon color7"><i class="fa fa-map-marker"></i></span>修改密码</a></li>
+</ul>
+
+
+<div class="sidebar-plan">
+  空间使用<a href="#" class="link">更多</a>
+  <div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+  </div>
+</div>
+<span class="space">42 GB / 100 GB</span>
+</div>
+
+</div>
+<!-- END 左侧菜单 -->
+<!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+<!-- START 内容部分 -->
+<div class="content">
+
+  <!-- Start Page Header -->
+  <div class="page-header">
+    <h1 class="title">栏目标题</h1>
+      <ol class="breadcrumb">
+        <li class="active">栏目简介</li>
+    </ol>
+
+    <!-- Start Page Header Right Div -->
+    <div class="right">
+      <div class="btn-group" role="group" aria-label="...">
+        <a href="#" class="btn btn-light">栏目</a>
+        <a href="#" class="btn btn-light"><i class="fa fa-refresh"></i></a>
+        <a href="#" class="btn btn-light"><i class="fa fa-search"></i></a>
+        <a href="#" class="btn btn-light" id="topstats"><i class="fa fa-line-chart"></i></a>
+      </div>
+    </div>
+    <!-- End Page Header Right Div -->
+
+  </div>
+  <!-- End Page Header -->
+
+
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+<!-- START 容器-->
+<div class="container-padding">
+
+  <!-- Start Row -->
+  <div class="row">
+	<div class="col-md-12">
+      <div class="panel panel-default">
+
+            <div class="panel-body">
+            <form class="form-horizontal">
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">用户注册</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">请填写您的真实信息</p>
+                  </div>
+                </div>
+				<div class="form-group">
+                  <label for="exampleInputAmount2" class="col-sm-2 control-label form-label">用户名</label>
+                  <div class="col-sm-10">
+                    <label class="sr-only" for="exampleInputAmount2">登录</label>
+                    <div class="input-group">
+                      <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                      <input type="text" class="form-control" id="exampleInputAmount2" placeholder="请输入呢称">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="input002" class="col-sm-2 control-label form-label">真实姓名</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input002">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="input002" class="col-sm-2 control-label form-label">手机号</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input001">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input3" class="col-sm-2 control-label form-label">密码</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="input3" placeholder="请输入密码">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input4" class="col-sm-2 control-label form-label">年龄</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input4" placeholder="信息不可输入" disabled>
+                  </div>
+                </div>
+                <div class="form-group has-error">
+                  <label for="input8" class="col-sm-2 control-label form-label">输入有误</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="input8">
+                  </div>
+                </div>
+
+     	    	  <div class="form-group">
+                  <label for="input002" class="col-sm-2 control-label form-label">手机号</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input005">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                <label for="input002" class="col-sm-2 control-label form-label">日期</label>
+                  <div class="col-sm-10">
+                      <div class="controls">
+                       <div class="input-prepend input-group">
+                         <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
+                         <input style="width:100px" type="text" id="date-picker" class="form-control" value="01/1/2019"/> 
+                       </div>
+                      </div>
+                   </div>
+          		</div>
+                
+  			   <div class="form-group">
+                <label for="input002" class="col-sm-2 control-label form-label">城市</label>
+                  <div class="col-sm-10">
+                    <select class="selectpicker">
+                        <option>北京</option>
+                        <option>上海</option>
+                        <option>深圳</option>
+                        <option>兰州</option>
+                      </select>                  
+                  </div>
+          		</div>
+                
+               <div class="form-group">
+                <label for="input002" class="col-sm-2 control-label form-label">性别</label>
+                  <div class="col-sm-10">
+                                       <div class="radio radio-info radio-inline">
+                        <input type="radio" id="inlineRadio1" value="option1" name="radioInline" >
+                        <label for="inlineRadio1"> 女</label>
+                    </div>
+                    <div class="radio radio-inline">
+                        <input type="radio" id="inlineRadio2" value="option1" name="radioInline" checked>
+                        <label for="inlineRadio2"> 男</label>
+                    </div>                
+                  </div>
+               </div>
+                
+               <div class="form-group">
+                <label for="input002" class="col-sm-2 control-label form-label">文章内容</label>
+                  <div class="col-sm-10">
+                  <div class="panel-body">
+
+               	 <div id="summernote">输入文章内容</div>
+                	<button class="btn btn-default">Send Post</button>
+       
+           		 </div>
+              </div>
+        </div>
+                
+             </form>
+           </div>
+			 
+             
+       </div>
+    </div>
+ </div>
+ <!-- End Row -->
+
+</div>
+<!-- END 容器 -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+
+<!-- Start Footer -->
+<div class="row footer">
+  
+</div>
+<!-- End Footer -->
+
+
+</div>
+<!-- End 内容部分 -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+
+<!-- ================================================
+jQuery Library
+================================================ -->
+<script type="text/javascript" src="../../Scripts/admin/jquery.min.js"></script>
+
+<!-- ================================================
+Bootstrap Core JavaScript File
+================================================ -->
+<script src="../../Scripts/admin/bootstrap/bootstrap.min.js"></script>
+
+<!-- ================================================
+Plugin.js - Some Specific JS codes for Plugin Settings
+================================================ -->
+<script type="text/javascript" src="../../Scripts/admin/plugins.js"></script>
+
+<!-- ================================================
+Bootstrap Select
+================================================ -->
+<script type="text/javascript" src="../../Scripts/admin/bootstrap-select/bootstrap-select.js"></script>
+
+<!-- ================================================
+Bootstrap Toggle
+================================================ -->
+<script type="text/javascript" src="../../Scripts/admin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+
+<!-- ================================================
+Moment.js
+================================================ -->
+<script type="text/javascript" src="../../Scripts/admin/moment/moment.min.js"></script>
+
+<!-- ================================================
+Bootstrap Date Range Picker
+================================================ -->
+<script type="text/javascript" src="../../Scripts/admin/date-range-picker/daterangepicker.js"></script>
+
+
+<!-- Basic Date Range Picker -->
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#date-range-picker').daterangepicker(null, function(start, end, label) {
+    console.log(start.toISOString(), end.toISOString(), label);
+  });
+});
+</script>
+
+<!-- Basic Single Date Picker -->
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#date-picker').daterangepicker({ singleDatePicker: true }, function(start, end, label) {
+    console.log(start.toISOString(), end.toISOString(), label);
+  });
+});
+</script>
+
+<!-- Date Range and Time Picker -->
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#date-range-and-time-picker').daterangepicker({
+    timePicker: true,
+    timePickerIncrement: 30,
+    format: 'MM/DD/YYYY h:mm A'
+  }, function(start, end, label) {
+    console.log(start.toISOString(), end.toISOString(), label);
+  });
+});
+</script>
+<!-- ================================================
+Bootstrap WYSIHTML5
+================================================ -->
+<!-- main file -->
+<script type="text/javascript" src="../../Scripts/admin/bootstrap-wysihtml5/wysihtml5-0.3.0.min.js"></script>
+<!-- bootstrap file -->
+<script type="text/javascript" src="../../Scripts/admin/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+
+<!-- ================================================
+Summernote
+================================================ -->
+<script type="text/javascript" src="../../Scripts/admin/summernote/summernote.min.js"></script>
+
+<script>
+  /* BOOTSTRAP WYSIHTML5 */
+  $('.textarea').wysihtml5();
+
+  /* SUMMERNOTE*/
+  $(document).ready(function() {
+  $('#summernote').summernote();
+});
+</script>
+</body>
+</html>

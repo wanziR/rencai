@@ -1,0 +1,27 @@
+﻿<a data-toggle="tooltip" data-placement="bottom" title="平台信用">
+    @{
+            int a = 3;
+
+            if (a == 1)
+            {
+                @Html.Raw(ViewBag.xin1);
+            }
+            else if (a == 2)
+            {
+                @Html.Raw(ViewBag.xin2);
+            }
+            else if (a == 3)
+            {
+                @Html.Raw(ViewBag.xin3);
+            }
+            else if (a == 4)
+            {
+                @Html.Raw(ViewBag.xin4);
+            }
+            else
+            {
+                @Html.Raw(ViewBag.xin5);
+            }
+        }
+
+</a>

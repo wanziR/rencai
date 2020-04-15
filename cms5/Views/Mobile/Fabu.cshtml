@@ -1,0 +1,246 @@
+﻿
+@{
+    ViewBag.Title = "Fabu";
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
+
+<header class="zy_search_top_box scroll_fix">
+    <div class="zy_title_top fix">
+        <div class="one" href="javascript:" onclick="history.back();"><img src="/mobile/images/back_jt.png"><span>返回</span></div>
+        <h1>发布招聘/项目</h1>
+
+    </div>
+</header>
+<!-- 占位框 -->
+<div class="top_zhanwei_box"></div>
+
+<!-- 内容框 -->
+<div class="zy_module-content zy_vip_conbox">
+    <div class="zy_vip_scbox zy_vip_myfabu bgwh">
+        <div class="tit">
+            <div class="dis_flex rel">
+                <span class="pct50 cur">发布招工信息</span>
+                @*<span class="pct50">发布项目信息</span>*@
+                <i class="sc_line pct50"></i>
+            </div>
+        </div>
+        <div class="sc_list vip_user_info_mima vip_user_createbox">
+            <!-- 发布职位招聘 -->
+            <div class="list">
+                <form>
+                    <div class="write">
+                        <div class="form_line bbd xzbox work_style">
+                            <span>需&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;求</span>
+                            <select>
+                                <option value="需要">需要</option>
+                                <option value="提供">提供</option>
+                            </select>
+                            <select hidden></select>
+                        </div>
+
+                        <div class="form_line bbd xzbox work_style">
+                            <span>岗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位</span>
+                            <select id="sel_1">
+                                <option value="0">请选择职位类型</option>
+                                <option value="1">管理岗</option>
+                                <option value="2">技术工人</option>
+                                <option value="3">特种作业人员</option>
+                                <option value="4">司机驾驶员</option>
+                            </select>
+
+
+                            <script>
+                                $("#sel_1").change(function () {
+                                    var $intVal = $(this).val();
+                                    $.post("/Mobile/getGzListByGzPid",
+                                        { pid: $intVal },
+                                        function (data, status) {
+                                            var list = $.parseJSON(data);
+                                            $("#sel_2").empty();
+                                            for (var i = 0; i <= list.length; i++) {
+                                                opt = ' <option class="opt_2" value="' + list[i].gzName + '">' + list[i].gzName + '</option>'
+                                                $("#sel_2").append(opt);
+                                            }
+                                        });
+                                });
+
+                            </script>
+                            <select id="sel_2"></select>
+
+                        </div>
+                        <div class="form_line bbd xzbox work_style">
+                            <span>招聘主体</span>
+                            <select>
+                                <option value="企业">企业</option>
+                                <option value="项目">项目</option>
+                                <option value="队伍">队伍</option>
+                            </select>
+                            <select hidden></select>
+                        </div>
+                        <div class="form_line">
+                            <label><span>主体名称</span><input type="text" name="" ></label>
+                        </div>
+                       
+                        <div class="form_line">
+                            <label><span>招聘人数</span>  <input name="zpNum" type="text" class=" form-control" placeholder="请输入招聘人数"/></label>
+                        </div>
+                        <div class="form_line bbd xzbox">
+                            <span>学历要求</span>
+                            <select>
+                                <option>请选择学历</option>
+                                <option>硕士及以上</option>
+                                <option>本科</option>
+                                <option>大专</option>
+                                <option>中专/技校</option>
+                                <option>高中</option>
+                                <option>初中及以下</option>
+                            </select>
+                        </div>
+
+                        <div class="form_line bbd xzbox">
+                            <span>经验要求</span>
+                            <select>
+                                <option>请选择工作经验</option>
+                                <option>经验不限</option>
+                                <option>1-3年</option>
+                                <option>3-5年</option>
+                                <option>5-8年</option>
+                                <option>8-10年</option>
+                                <option>10年以上</option>
+                            </select>
+                        </div>
+                        <div class="form_line">
+                            <label><span>工作地址</span><input type="text" name="" placeholder="请输入工作地址"></label>
+                        </div>
+                        <div class="form_line" id="tip">
+                            <label>
+                                <span>福利待遇</span>
+                                <ul>
+                                    <li>加班补助</li>
+                                    <li>包吃住</li>
+                                    <li>餐补</li>
+                                    <li>话补</li>
+                                    <li>五险</li>
+                                    <li>弹性工作</li>
+                                    <li>周末双休</li>
+                                </ul>
+                            </label>
+                            <script type="text/javascript">
+                                $(function () {
+                                    $("#tip ul li").mousedown(function () {
+                                        if ($(this).hasClass("cur")) {
+                                            $(this).removeClass("cur");
+                                        } else {
+                                            $(this).addClass("cur");
+                                        }
+                                    })
+                                })
+                            </script>
+                        </div>
+                        <div class="form_line">
+                            <label><span>岗位职责</span><textarea placeholder="请输入工作内容及职位要求"></textarea></label>
+                        </div>
+                        <div class="form_line">
+                            <label><span>联系人</span><input type="text" name="" placeholder="请输入联系人"></label>
+                        </div>
+                        <div class="form_line">
+                            <label><span>联系电话</span><input type="text" name="" placeholder="请输入联系电话"></label>
+                        </div>
+                        <div class="form_line">
+                            <label><span>企业名称</span><input type="text" name="" readonly="true"></label>
+                        </div>
+                        <div class="form_line">
+                            <label><span>企业介绍</span><textarea placeholder="请输入企业简介"></textarea></label>
+                        </div>
+                        <button class="zy_butn bord_3" type="submit">立即发布职位</button>
+                    </div>
+                </form>
+            </div>
+            <!-- 发布项目-->
+            <div class="list item_fabu">
+                <form>
+                    <div class="write">
+                        <div class="form_line">
+                            <label><span>项目名称</span><input type="text" name="" placeholder="请输入项目名称"></label>
+                        </div>
+                        <div class="form_line">
+                            <label><span>项目主体</span><input type="text" name="" placeholder="请输入项目主体企业名称"></label>
+                        </div>
+                        <div class="form_line">
+                            <label><span>项目资金</span><input type="text" name="" placeholder="请输入项目预算资金"></label>
+                        </div>
+                        <div class="form_line bbd xzbox work_style">
+                            <span>项目类型</span>
+                            <select>
+                                <option>请选择项目类型</option>
+                              
+                                <option>其他</option>
+                            </select>
+                            <select>
+                                <option>请选择项目</option>
+                              
+                                <option>其他</option>
+                            </select>
+                        </div>
+                        <div class="form_line">
+                            <label><span>项目地址</span><input type="text" name="" placeholder="请输入项目地址"></label>
+                        </div>
+                        <div class="form_line">
+                            <label><span>企业介绍</span><textarea placeholder="请填写企业简介"></textarea></label>
+                        </div>
+                        <div class="form_line">
+                            <label><span>项目介绍</span><textarea placeholder="请填写项目介绍"></textarea></label>
+                        </div>
+
+                        <!-- 前面几个是默认显示的，添加其他栏目介绍 -->
+                        <div class="add_column">
+                            <div class="zy_butn bord_3" id="add">＋添加其他栏目</div>
+                            <!-- 邀请面试box -->
+                            <div class="resume_box interview_box">
+                                <div class="resume">
+                                    <h2>添加栏目</h2>
+                                    <span class="close">×</span>
+                                    <div>
+                                        <input type="text" name="" placeholder="请输入栏目名称（最多4个字）">
+                                    </div>
+                                    <div>
+                                        <textarea placeholder="请输入栏目介绍（不超过300字）"></textarea>
+                                    </div>
+                                    <button class="zy_butn">确定添加</button>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function(){
+                                        $("#add").mousedown(function(){
+                                            $(".resume_box").show()
+                                        })
+                                        $(".close").mousedown(function(){
+                                            $(".resume_box").hide();
+                                        })
+                                    })
+                                </script>
+                            </div>
+                        </div>
+                        <button class="zy_butn bord_3" type="submit">立即发布项目</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <script type="text/javascript">
+            $(function(){
+                $(".sc_list .list").hide().first().show();
+                $(".zy_vip_scbox .tit span").mousedown(function(){
+                    var n=$(this).index();
+                    var m=$(".sc_line").width();
+                    $(".sc_line").stop().animate({left:m*n},300);
+                    $(this).addClass("cur");
+                    $(this).siblings().removeClass("cur");
+                    $(".sc_list .list").hide().eq(n).show();
+                })
+            })
+        </script>
+    </div>
+
+</div>
+
+

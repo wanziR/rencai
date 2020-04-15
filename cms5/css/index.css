@@ -1,0 +1,4121 @@
+/*回到顶部 最新最全最好的Bootstrap模板：http://www.bootstrapmb.com*/
+.rightFixBar {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 170px;
+    right: 15%;
+    z-index: 9999;
+}
+
+.quick_toggle ul li {
+    width: 50px;
+    height: 50px;
+    background: url(/imgs/top.png) no-repeat;
+    cursor: pointer;
+}
+
+    .quick_toggle ul li:hover {
+        background: url(/imgs/top_hov.png) no-repeat;
+    }
+    /*回到顶部*/
+    .quick_toggle ul li.gotop {
+        z-index: 1;
+    }
+
+        .quick_toggle ul li.gotop em {
+            display: inline-block;
+            width: 70px;
+            height: 80px;
+            background: url(/img/store_ico11.png) center center no-repeat;
+        }
+
+            .quick_toggle ul li.gotop em:hover {
+                background: url(/img/store_ico11_hov.png) center center no-repeat;
+            }
+
+@-webkit-keyframes toolbar-scaleIn {
+    from {
+        opacity: .7;
+        -webkit-transform: translateX(270px)
+    }
+
+    to {
+        -webkit-transform: translateX(0px)
+    }
+}
+
+@-ms-keyframes toolbar-scaleIn {
+    from {
+        opacity: .7
+    }
+}
+
+@-moz-keyframes toolbar-scaleIn {
+    from {
+        opacity: .7;
+        -moz-transform: translateX(270px)
+    }
+
+    to {
+        -moz-transform: translateX(0px)
+    }
+}
+
+@keyframes toolbar-scaleIn {
+    from {
+        opacity: .7;
+        transform: translateX(270px)
+    }
+
+    to {
+        transform: translateX(0px)
+    }
+}
+
+@-webkit-keyframes toolbar-scaleOut {
+    to {
+        opacity: .5;
+        -webkit-transform: scale(0.7) translateX(270px)
+    }
+}
+
+@-ms-keyframes toolbar-scaleOut {
+    to {
+        opacity: .5
+    }
+}
+
+@-moz-keyframes toolbar-scaleOut {
+    to {
+        opacity: .5;
+        -moz-transform: scale(0.7) translateX(270px)
+    }
+}
+
+@keyframes toolbar-scaleOut {
+    to {
+        opacity: .5;
+        transform: scale(0.7) translateX(270px)
+    }
+}
+/*top*/
+.topWrap {
+    width: 100%;
+    height: auto;
+    background: #005bac;
+    overflow: hidden;
+}
+
+.top .topL {
+    height: 34px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 34px;
+}
+
+.top .topR {
+    height: 20px;
+    padding: 7px 0;
+    line-height: 20px;
+    padding-right: 12px;
+}
+
+    .top .topR a {
+        float: left;
+        display: inline-block;
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .top .topR em {
+        display: inline-block;
+        width: 1px;
+        height: 12px;
+        float: left;
+        background: #108dfc;
+        margin: 4px 10px;
+    }
+
+    .top .topR a.china {
+        width: 50px;
+        height: 20px;
+        background: #0077e1;
+        border-radius: 3px;
+        margin-left: 15px;
+        text-align: center;
+        margin-right: -12px;
+    }
+
+    .top .topR a.cur {
+        background: #024683;
+    }
+
+    .top .topR a:hover {
+        color: #d9d9d9;
+    }
+/*header*/
+.headerWrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #dedede;
+}
+
+.header {
+    height: auto;
+}
+    /*logo*/
+    .header .logo {
+        width: 14.75%;
+        height: auto;
+        padding-top: 33px;
+        float: left;
+    }
+
+        .header .logo img {
+            display: block;
+            width: 100%;
+        }
+    /*侧滑*/
+    .header #slide {
+        width: 40px;
+        display: none;
+        float: right;
+        padding: 25px 0 0;
+    }
+
+        .header #slide img {
+            display: block;
+            width: 75%;
+        }
+    /*header_center*/
+    .header .head_C {
+        width: 73.67%;
+        height: auto;
+        margin-right: 4.58%;
+    }
+
+        .header .head_C .headc_T {
+            width: 100%;
+            height: auto;
+            margin-top: 25px;
+        }
+
+            .header .head_C .headc_T ul {
+                width: 100%;
+                height: auto;
+                float: left;
+            }
+
+                .header .head_C .headc_T ul li {
+                    float: right;
+                    height: 22px;
+                    line-height: 22px;
+                    margin-left: 3%;
+                }
+
+                    .header .head_C .headc_T ul li .QQlayer {
+                        display: none;
+                    }
+
+                    .header .head_C .headc_T ul li .webLayer {
+                        display: none;
+                    }
+
+                    .header .head_C .headc_T ul li #QQ {
+                        display: none;
+                    }
+
+                    .header .head_C .headc_T ul li i {
+                        display: inline-block;
+                        float: left;
+                        width: 22px;
+                        height: auto;
+                    }
+
+                        .header .head_C .headc_T ul li i img {
+                            display: block;
+                            width: 100%;
+                        }
+
+                    .header .head_C .headc_T ul li em {
+                        display: inline-block;
+                        float: left;
+                        height: 22px;
+                        line-height: 20px;
+                        font-size: 14px;
+                        color: #3c3c3c;
+                        padding-left: 6px;
+                    }
+
+                        .header .head_C .headc_T ul li em.tel {
+                            font-size: 16px;
+                            color: #5a5a5a;
+                            font-style: italic;
+                            font-weight: bold;
+                            line-height: 22px;
+                        }
+    /*webchat*/
+    .header .webchat {
+        width: 6.58%;
+        height: auto;
+        padding-top: 15px;
+    }
+
+        .header .webchat h2 {
+            border: 1px solid #e4e4e4;
+        }
+
+            .header .webchat h2 img {
+                display: block;
+                width: 100%;
+            }
+/*nav*/
+.nav {
+    width: 95%;
+    height: auto;
+    padding-left: 5%;
+    margin-top: 23px;
+}
+
+    .nav .list ul {
+        float: left;
+        width: 105.2%;
+        height: auto;
+    }
+
+        .nav .list ul li {
+            float: left;
+            height: 42px;
+            margin-right: 5.2%;
+        }
+
+            .nav .list ul li a {
+                display: inline-block;
+                font-size: 16px;
+                color: #3c3c3c;
+                height: 40px;
+                line-height: 40px;
+                border-bottom: 2px solid #fff;
+            }
+
+                .nav .list ul li a.cur,
+                .nav .list ul li:hover a {
+                    border-bottom: 2px solid #005bac;
+                }
+
+                .nav .list ul li a i {
+                    display: inline-block;
+                    width: 19px;
+                    height: 10px;
+                    background: url(/img/ico4.png) no-repeat;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -9.5px;
+                    display: none;
+                }
+
+.box {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 113px;
+    left: 0;
+    z-index: 1000;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: #f7f7f7 url(/imgs/ico_btn23.png) left bottom repeat-x;
+}
+
+    .box .cont {
+        position: relative;
+        height: auto;
+    }
+
+        .box .cont .cont_div {
+            display: block;
+            height: auto;
+            padding: 22px 0 41px;
+        }
+
+            .box .cont .cont_div .conL {
+                width: 44%;
+                height: auto;
+            }
+
+                .box .cont .cont_div .conL .conUl {
+                    float: left;
+                    width: 43%;
+                    height: auto;
+                    margin-left: 3%;
+                }
+
+                    .box .cont .cont_div .conL .conUl li {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                        .box .cont .cont_div .conL .conUl li h2 {
+                            width: 100%;
+                            height: 46px;
+                            margin-bottom: 10px;
+                            line-height: 46px;
+                            border-bottom: 1px solid #dedede;
+                            font-size: 18px;
+                            color: #005bac;
+                        }
+
+                        .box .cont .cont_div .conL .conUl li a {
+                            display: block;
+                            padding-left: 14px;
+                            height: 32px;
+                            line-height: 32px;
+                            font-size: 14px;
+                            color: #4c4c4c;
+                            background: url(/imgs/ico_btn24.png) 4px 15px no-repeat;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+
+                            .box .cont .cont_div .conL .conUl li a em {
+                                font-size: 20px;
+                            }
+
+            .box .cont .cont_div .conR {
+                width: 56%;
+                height: auto;
+            }
+
+                .box .cont .cont_div .conR ul {
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                }
+
+                    .box .cont .cont_div .conR ul li {
+                        width: 44%;
+                        height: auto;
+                        margin-left: 6%;
+                        float: left;
+                    }
+
+                        .box .cont .cont_div .conR ul li .conImg {
+                            width: 100%;
+                            height: auto;
+                        }
+
+                            .box .cont .cont_div .conR ul li .conImg img {
+                                display: block;
+                                width: 100%;
+                            }
+
+                        .box .cont .cont_div .conR ul li h2 {
+                            width: 100%;
+                            height: auto;
+                            margin-top: 10px;
+                        }
+
+                            .box .cont .cont_div .conR ul li h2 a {
+                                display: inline-block;
+                                width: 100%;
+                                height: 36px;
+                                line-height: 36px;
+                                font-size: 16px;
+                                color: #4c4c4c;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+
+                        .box .cont .cont_div .conR ul li p {
+                            width: 100%;
+                            height: auto;
+                            line-height: 24px;
+                            font-size: 12px;
+                            color: #acacac;
+                            text-align: justify;
+                            text-justify: inter-ideograph;
+                        }
+
+/*banner*/
+.main_visual {
+    overflow: hidden;
+    position: relative;
+}
+
+.main_image {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+    .main_image ul {
+        width: 9999px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0
+    }
+
+    .main_image li {
+        float: left;
+        width: 100%;
+        height: 500px;
+    }
+
+        .main_image li.ima1 {
+            background: url(../imgs/banner.jpg) center top no-repeat;
+            background-size: 100%;
+        }
+
+        .main_image li.ima2 {
+            background: url(/imgs/banner1.jpg) center top no-repeat;
+            background-size: 100%;
+        }
+
+        .main_image li.ima3 {
+            background: url(/imgs/banner2.jpg) center top no-repeat;
+            background-size: 100%;
+        }
+
+        .main_image li a {
+            display: block;
+            width: 100%;
+        }
+
+            .main_image li a img {
+                display: block;
+                width: 100%;
+            }
+
+div.flicking_con {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 17px;
+    text-align: center;
+}
+
+    div.flicking_con a {
+        display: inline-block;
+        width: 11px;
+        height: 17px;
+        margin: 0 5px;
+        background: url(/imgs/cut.png) no-repeat;
+    }
+
+        div.flicking_con a.on {
+            background: url(/imgs/cut_hov.png) no-repeat;
+        }
+
+#btn_prev,
+#btn_next {
+    z-index: 200;
+    position: absolute;
+    display: block;
+    width: 34px !important;
+    height: 68px !important;
+    top: 50%;
+    margin-top: -34px;
+    cursor: pointer;
+}
+
+#btn_prev {
+    background: url(/imgs/next.png) 0 bottom no-repeat;
+    left: 18.75%;
+    background-size: 100%;
+}
+
+#btn_next {
+    background: url(/imgs/next.png) 0 0 no-repeat;
+    right: 18.75%;
+    background-size: 100%;
+}
+/*新闻*/
+/*头条*/
+.headlinesWrap {
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 1px solid #dad8cd;
+    border-top: 1px solid #dad8cd;
+    background: #f3f2ee;
+    padding: 10px 0;
+}
+
+.headlines .headlinesL {
+    position: relative;
+    width: 37px;
+    height: 20px;
+    background: #005bac;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+}
+
+    .headlines .headlinesL i {
+        position: absolute;
+        top: 50%;
+        margin-top: -4px;
+        right: -5px;
+        display: inline-block;
+        width: 5px;
+        height: 8px;
+    }
+
+        .headlines .headlinesL i img {
+            display: block;
+            width: 100%;
+        }
+
+.txtScroll-top {
+    width: 96%;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+    .txtScroll-top .bd {
+        width: 90%;
+        height: auto;
+    }
+
+    .txtScroll-top .infoList li {
+        width: 90%;
+        zoom: 1;
+        font-size: 12px;
+        color: #373737;
+        line-height: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .txtScroll-top .hd {
+        width: 10%;
+        overflow: hidden;
+        height: 20px;
+    }
+
+        .txtScroll-top .hd .prev,
+        .txtScroll-top .hd .next {
+            display: block;
+            width: 10px;
+            height: 17px;
+            float: right;
+            margin-left: 20px;
+            margin-top: 1px;
+            overflow: hidden;
+            cursor: pointer;
+            background: url(/imgs/next1.png) 0 0 no-repeat;
+        }
+
+        .txtScroll-top .hd .next {
+            background: url(/imgs/next1.png) 0 bottom no-repeat;
+        }
+/*页面主体部分*/
+.mainWrap {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    padding-bottom: 46px;
+}
+
+.main {
+    height: auto;
+}
+/*解决方案*/
+.plan {
+    width: 100%;
+    height: auto;
+}
+
+    .plan .planTitle {
+        width: 100%;
+        height: 56px;
+        border-bottom: 1px solid #e1e1e1;
+        margin-top: 23px;
+    }
+
+        .plan .planTitle h2 {
+            float: left;
+            height: 56px;
+            line-height: 56px;
+            font-size: 26px;
+            color: #3c3c3c;
+        }
+
+        .plan .planTitle ul {
+            height: 26px;
+            float: left;
+            margin-left: 3%;
+            margin-top: 17px;
+        }
+
+            .plan .planTitle ul li {
+                float: left;
+                height: 26px;
+                padding: 0 7px;
+            }
+
+                .plan .planTitle ul li span {
+                    width: 1px;
+                    height: 22px;
+                    display: block;
+                    background: #d6d6d6;
+                    margin: 2px 0;
+                }
+
+                .plan .planTitle ul li a {
+                    display: inline-block;
+                    height: 26px;
+                    line-height: 24px;
+                    padding: 0 17px;
+                    font-size: 16px;
+                    color: #3c3c3c;
+                    background: #fff;
+                    border-radius: 3px;
+                }
+
+                    .plan .planTitle ul li.cur a,
+                    .plan .planTitle ul li a:hover {
+                        background: #005bac;
+                        border-radius: 3px;
+                        color: #fff;
+                    }
+
+        .plan .planTitle h3 {
+            float: right;
+            height: 22px;
+            margin-top: 19px;
+        }
+
+            .plan .planTitle h3 a {
+                display: inline-block;
+                width: 60px;
+                height: 20px;
+                line-height: 20px;
+                border: 1px solid #e2e2e2;
+                font-size: 12px;
+                color: #606060;
+                text-align: center;
+                border-radius: 50px;
+            }
+
+                .plan .planTitle h3 a:hover {
+                    background: #005bac;
+                    color: #fff;
+                    border: 1px solid #005bac;
+                }
+
+    .plan .planBom {
+        width: 100%;
+        height: auto;
+        padding-top: 30px;
+    }
+
+        .plan .planBom .planBL {
+            width: 31%;
+            height: auto;
+            background: url(/imgs/ico_btn5.png) right 14px no-repeat;
+            padding-bottom: 20px;
+            margin-right: 2%;
+        }
+
+            .plan .planBom .planBL .planBImg {
+                width: 86%;
+                height: auto;
+            }
+
+                .plan .planBom .planBL .planBImg a {
+                    display: inline-block;
+                    width: 100%;
+                }
+
+                    .plan .planBom .planBL .planBImg a img {
+                        display: block;
+                        width: 100%;
+                    }
+
+            .plan .planBom .planBL h2 {
+                width: 86%;
+                height: 50px;
+                line-height: 50px;
+            }
+
+                .plan .planBom .planBL h2 a {
+                    display: inline-block;
+                    width: 100%;
+                    font-size: 16px;
+                    color: #3c3c3c;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+                    .plan .planBom .planBL h2 a:hover {
+                        color: #005bac;
+                    }
+
+            .plan .planBom .planBL p {
+                width: 86%;
+                font-size: 12px;
+                color: #3c3c3c;
+                line-height: 24px;
+                text-align: justify;
+                text-justify: inter-ideograph;
+            }
+
+            .plan .planBom .planBL h3 {
+                width: 86%;
+                height: auto;
+                margin-top: 15px;
+            }
+
+                .plan .planBom .planBL h3 a {
+                    display: inline-block;
+                    height: 32px;
+                    padding: 0 22px;
+                    border: 1px solid #4ea1eb;
+                    font-size: 14px;
+                    color: #4ea1eb;
+                    line-height: 32px;
+                }
+
+                    .plan .planBom .planBL h3 a b {
+                        font-weight: normal;
+                        font: 400 16px consolas;
+                        margin-left: 3px;
+                    }
+
+                    .plan .planBom .planBL h3 a:hover {
+                        background: #4ea1eb;
+                        color: #fff;
+                    }
+
+        .plan .planBom .planBC {
+            width: 30%;
+            height: auto;
+            padding-right: 4%;
+            padding-bottom: 20px;
+            background: url(/imgs/ico_btn5.png) right 14px no-repeat;
+        }
+
+            .plan .planBom .planBC h2,
+            .plan .planBom .planBR h2 {
+                width: 100%;
+                font-size: 16px;
+                color: #3c3c3c;
+                height: 18px;
+                line-height: 18px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            .plan .planBom .planBC .plancTxt {
+                border: 1px solid #e5e5e5;
+                padding: 12px 5%;
+                margin-top: 20px;
+                background: url(/imgs/ico_btn6.png) 95% center no-repeat;
+                background-size: 14.5%;
+            }
+
+                .plan .planBom .planBC .plancTxt h3 {
+                    width: 100%;
+                    height: 24px;
+                    line-height: 24px;
+                    font-size: 14px;
+                    color: #565656;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+                .plan .planBom .planBC .plancTxt p {
+                    width: 100%;
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: 12px;
+                    color: #abacac;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+            .plan .planBom .planBC ul {
+                width: 100%;
+                height: auto;
+                margin-top: 15px;
+            }
+
+                .plan .planBom .planBC ul li {
+                    width: 100%;
+                    height: auto;
+                    border-bottom: 1px dashed #e0dfdf;
+                }
+
+                    .plan .planBom .planBC ul li a {
+                        display: inline-block;
+                        width: 97%;
+                        height: 36px;
+                        line-height: 36px;
+                        padding-left: 3%;
+                        background: url(/imgs/ico_btn7.png) 0 center no-repeat;
+                        font-size: 12px;
+                        color: #565656;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                        .plan .planBom .planBC ul li a:hover {
+                            color: #4ea1eb;
+                            background: url(/imgs/ico_btn7_hov.png) 0 center no-repeat;
+                        }
+
+        .plan .planBom .planBR {
+            width: 32%;
+            height: auto;
+        }
+
+            .plan .planBom .planBR h2 {
+                width: 96%;
+                padding-left: 3.333%;
+            }
+
+            .plan .planBom .planBR ul {
+                width: 100%;
+                height: auto;
+            }
+
+                .plan .planBom .planBR ul li {
+                    float: left;
+                    width: 30%;
+                    height: auto;
+                    margin-left: 3.333%;
+                    margin-top: 20px;
+                }
+
+                    .plan .planBom .planBR ul li a {
+                        display: block;
+                        border: 1px solid #ececec;
+                    }
+
+                        .plan .planBom .planBR ul li a img {
+                            display: block;
+                            width: 100%;
+                        }
+
+                        .plan .planBom .planBR ul li a:hover {
+                            border: 1px solid #aad5fb;
+                            box-shadow: 0 0 5px #aad5fb
+                        }
+    /*服务内容*/
+    .plan .planTitle1 {
+        margin-top: 0;
+    }
+
+    .plan .planServer {
+        width: 100%;
+        height: auto;
+    }
+
+        .plan .planServer ul {
+            width: 100%;
+            height: auto;
+            margin-top: 25px;
+        }
+
+            .plan .planServer ul li {
+                float: left;
+                width: 31%;
+                height: auto;
+                margin-right: 3.5%;
+            }
+
+                .plan .planServer ul li .serverM {
+                    border: 1px solid #e7e7e7;
+                    text-align: center;
+                    padding: 26px 0;
+                }
+
+                    .plan .planServer ul li .serverM i {
+                        display: inline-block;
+                        width: 44px;
+                        height: 50px;
+                    }
+
+                        .plan .planServer ul li .serverM i img {
+                            display: block;
+                            width: 100%;
+                        }
+
+                    .plan .planServer ul li .serverM h2 {
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 16px;
+                        color: #373737;
+                    }
+
+                    .plan .planServer ul li .serverM p {
+                        width: 88%;
+                        padding-left: 15px;
+                        margin: 0 auto;
+                        font-size: 12px;
+                        color: #a2a2a2;
+                        line-height: 20px;
+                        text-align: left;
+                        background: url(/imgs/ico4.png) 0 5px no-repeat;
+                    }
+/*footer*/
+
+/*产品介绍内页*/
+.productWrap {
+    width: 100%;
+    height: auto;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #e2e2e2;
+    overflow: hidden;
+}
+
+.productTitle {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+    .productTitle h2 {
+        width: 1200px;
+        height: 44px;
+        line-height: 44px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+        .productTitle h2 img,
+        .productTitle h2 a,
+        .productTitle h2 b {
+            float: left;
+        }
+
+        .productTitle h2 img {
+            margin-top: 13px;
+            margin-right: 5px;
+        }
+
+        .productTitle h2 a {
+            font-size: 12px;
+            color: #424242;
+        }
+
+            .productTitle h2 a:hover {
+                color: #4ea1eb;
+            }
+
+        .productTitle h2 b {
+            display: inline-block;
+            margin: 0 5px;
+            font: 400 16px/44px consolas;
+            font-weight: normal;
+            color: #424242;
+        }
+
+.product {
+    height: auto;
+    padding-top: 32px;
+}
+
+    .product h2 {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+        color: #424242;
+        text-align: center;
+    }
+
+    .product h3 {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+    }
+
+        .product h3 em {
+            display: inline-block;
+            width: 50%;
+            margin-left: 50%;
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+
+    .product .proI {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+        .product .proI img {
+            display: block;
+            width: 100%;
+        }
+
+    .product .proI1 img {
+        display: block;
+        width: 79.75%;
+        margin: 0 auto;
+    }
+
+    .product h1 {
+        width: 100%;
+        height: 33px;
+        margin-top: 28px;
+        padding-bottom: 12px;
+    }
+
+        .product h1 em {
+            display: inline-block;
+            float: left;
+            width: 30px;
+            height: 33px;
+        }
+
+            .product h1 em img {
+                display: block;
+                width: 100%;
+            }
+
+        .product h1 span {
+            display: inline-block;
+            float: left;
+            margin-left: 3px;
+            line-height: 33px;
+            font-size: 16px;
+            color: #005bac;
+        }
+
+    .product p {
+        width: 100%;
+        font-size: 14px;
+        color: #4f4f4f;
+        line-height: 30px;
+        text-align: justify;
+        text-justify: inter-ideograph;
+    }
+
+    .product h4 {
+        padding-left: 28px;
+        height: auto;
+        margin-top: 12px;
+        background: url(/imgs/ico_btn15.png) no-repeat;
+        line-height: 18px;
+        font-size: 14px;
+        color: #4f4f4f;
+    }
+
+    .product .proH4 {
+        width: 100%;
+        padding-left: 0;
+        background: none;
+    }
+
+        .product .proH4 em {
+            color: #005bac;
+        }
+
+    .product .proTxt {
+        margin-left: 16px;
+        height: auto;
+        border-left: 1px solid #c8c8c8;
+    }
+
+        .product .proTxt .proH5 {
+            position: relative;
+            padding-left: 16px;
+            line-height: 30px;
+            font-size: 14px;
+            color: #4f4f4f;
+        }
+
+            .product .proTxt .proH5 em {
+                position: absolute;
+                top: 9px;
+                left: -8px;
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+            }
+
+                .product .proTxt .proH5 em img {
+                    display: block;
+                    width: 100%;
+                }
+
+    .product .proMay {
+        width: 94%;
+        margin-left: 33px;
+        height: auto;
+    }
+
+        .product .proMay .proMayL {
+            width: 59%;
+            height: auto;
+            background: url(/imgs/ico_btn17.png) right no-repeat;
+        }
+
+            .product .proMay .proMayL ul {
+                width: 39%;
+                height: auto;
+                border: 1px solid #edebeb;
+                float: left;
+                padding: 12px 0;
+                margin-right: 6%;
+            }
+
+                .product .proMay .proMayL ul li {
+                    width: 92%;
+                    height: auto;
+                    margin: 0 4%;
+                }
+
+                    .product .proMay .proMayL ul li .proH51 {
+                        padding-left: 26px;
+                        height: 20px;
+                        margin-bottom: 12px;
+                        background: url(/imgs/ico_btn18.png) no-repeat;
+                        line-height: 18px;
+                        font-size: 16px;
+                        color: #186ab4;
+                    }
+
+                    .product .proMay .proMayL ul li .proH52 {
+                        background: url(/imgs/ico_btn19.png) no-repeat;
+                    }
+
+                    .product .proMay .proMayL ul li a {
+                        display: block;
+                        padding-left: 10px;
+                        height: 32px;
+                        border-bottom: 1px dashed #dedede;
+                        background: url(/imgs/ico_btn20.png) left center no-repeat;
+                        line-height: 32px;
+                        font-size: 12px;
+                        color: #4d4d4d;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                        .product .proMay .proMayL ul li a:hover {
+                            color: #ff8b02;
+                        }
+
+        .product .proMay .proMayR {
+            width: 41%;
+            height: auto;
+            padding-top: 36px;
+        }
+
+            .product .proMay .proMayR ul {
+                width: 100%;
+                height: auto;
+                float: left;
+            }
+
+                .product .proMay .proMayR ul li {
+                    float: left;
+                    width: 35%;
+                    height: auto;
+                    margin-left: 15%;
+                }
+
+                    .product .proMay .proMayR ul li a {
+                        display: block;
+                        height: auto;
+                    }
+
+                        .product .proMay .proMayR ul li a i {
+                            display: block;
+                            border: 1px solid #e0e0e0;
+                            border-radius: 50%;
+                            -moz-transition: all 0.3s ease-in;
+                            -webkit-transition: all 0.3s ease-in;
+                            -o-transition: all 0.3s ease-in;
+                            transition: all 0.3s ease-in;
+                        }
+
+                            .product .proMay .proMayR ul li a i img {
+                                display: block;
+                                width: 100%;
+                            }
+
+                        .product .proMay .proMayR ul li a span {
+                            display: inline-block;
+                            width: 100%;
+                            margin-top: 10px;
+                            height: 32px;
+                            line-height: 32px;
+                            font-size: 14px;
+                            color: #4f4f4f;
+                            text-align: center;
+                            -moz-transition: all 0.3s ease-in;
+                            -webkit-transition: all 0.3s ease-in;
+                            -o-transition: all 0.3s ease-in;
+                            transition: all 0.3s ease-in;
+                        }
+
+                        .product .proMay .proMayR ul li a:hover i {
+                            border: 1px solid #7fadd5;
+                            box-shadow: 0 0 5px rgba(0,91,172,0.5);
+                        }
+
+                        .product .proMay .proMayR ul li a:hover span {
+                            color: #005bac;
+                        }
+/*产品目录*/
+.proBanner {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+    .proBanner a {
+        display: block;
+    }
+
+    .proBanner img {
+        display: block;
+        width: 100%;
+    }
+/*页面主体部分*/
+.directoryT {
+    width: 100%;
+    padding-top: 9px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+    .directoryT .directoryTM {
+        height: auto;
+        position: relative;
+    }
+
+    .directoryT .tab {
+        border-bottom: none;
+    }
+
+        .directoryT .tab .tab_div {
+            display: inline-block;
+            float: left;
+            margin-right: 20px;
+            height: 34px;
+            background: #fff;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 0 20px;
+            line-height: 34px;
+            font-size: 16px;
+            color: #424242;
+            border: none;
+        }
+
+        .directoryT .tab .cur {
+            background: #005bac;
+            color: #fff;
+        }
+
+    .directoryT a {
+        display: inline-block;
+        float: left;
+        margin-right: 20px;
+        height: 34px;
+        background: #fff;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 0 20px;
+        line-height: 34px;
+        font-size: 16px;
+        color: #424242;
+    }
+
+        .directoryT a:hover,
+        .directoryT a.cur {
+            background: #005bac;
+            color: #fff;
+        }
+
+.directory {
+    height: auto;
+}
+
+    .directory h1 {
+        width: 100%;
+        height: auto;
+        padding-top: 40px;
+    }
+
+        .directory h1 img {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+    .directory ul {
+        border-top: 1px dashed #c4c4c4;
+        margin-top: 45px;
+        padding-top: 45px;
+    }
+
+        .directory ul li {
+            float: left;
+            width: 24%;
+            height: auto;
+            margin-right: 1.3333%;
+            margin-bottom: 28px;
+        }
+
+            .directory ul li .dirImg {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+                .directory ul li .dirImg img {
+                    display: block;
+                    width: 100%;
+                }
+
+                .directory ul li .dirImg em {
+                    position: absolute;
+                    top: 8px;
+                    right: 0;
+                    display: inline-block;
+                    width: 23%;
+                    height: auto;
+                }
+
+                .directory ul li .dirImg i {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: inline-block;
+                    width: 13.55%;
+                    height: auto;
+                }
+
+            .directory ul li .dirTxt {
+                border: 1px solid #e6e6e6;
+                border-top: none;
+                padding: 0 5% 20px;
+            }
+
+                .directory ul li .dirTxt h2 {
+                    position: relative;
+                    width: 100%;
+                    height: 56px;
+                    line-height: 56px;
+                    text-align: center;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+                    .directory ul li .dirTxt h2 a {
+                        font-size: 16px;
+                        color: #626262;
+                    }
+
+                    .directory ul li .dirTxt h2 em {
+                        position: absolute;
+                        top: 46px;
+                        left: 50%;
+                        margin-left: -31px;
+                        display: inline-block;
+                        width: 62px;
+                        height: 2px;
+                        background: #626262;
+                    }
+
+            .directory ul li:hover .dirTxt h2 a {
+                color: #005bac;
+            }
+
+            .directory ul li:hover .dirTxt h2 em {
+                background: #005bac;
+            }
+
+            .directory ul li .dirTxt p {
+                line-height: 24px;
+                font-size: 12px;
+                color: #626262;
+                text-align: justify;
+                text-justify: inter-ideograph;
+            }
+/*分页*/
+.paging {
+    width: 249px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.pageWrapWrap {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.paging span {
+    display: inline-block;
+    float: left;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    cursor: pointer;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+    .paging span.num {
+        width: 35px;
+        height: 36px;
+        line-height: 34px;
+        background: url(/imgs/ico_btn30.png) no-repeat;
+        text-align: center;
+        font-size: 16px;
+        color: #7e7e7e;
+    }
+
+        .paging span.num:hover,
+        .paging span.cur {
+            color: #ff9600;
+        }
+
+    .paging span.prve {
+        width: 36px;
+        height: 36px;
+        background: url(/imgs/ico_btn29.png) no-repeat;
+        border-left: 1px solid #e9e9e9;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        -moz-transition: all 0s ease-in;
+        -webkit-transition: all 0s ease-in;
+        -o-transition: all 0s ease-in;
+        transition: all 0s ease-in;
+    }
+
+        .paging span.prve em {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background: url(/imgs/next2.png) no-repeat;
+        }
+
+    .paging span.next {
+        background: url(/imgs/ico_btn29_hov.png) no-repeat;
+        border-left: none;
+        border-right: 1px solid #e9e9e9;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+        .paging span.next em {
+            background-position: right 0;
+        }
+
+    .paging span.prve em:hover {
+        background-position: 0 bottom;
+    }
+
+    .paging span.next em:hover {
+        background-position: right bottom;
+    }
+/*公司介绍*/
+.company {
+    height: auto;
+}
+
+    .company .companL,
+    .company .newTab {
+        width: 77%;
+        height: auto;
+        padding-top: 28px;
+    }
+
+        .company .companL h2 {
+            width: 100%;
+            height: 46px;
+            line-height: 46px;
+            font-size: 18px;
+            color: #005bac;
+        }
+
+            .company .companL h2.comH2 {
+                font-size: 22px;
+            }
+
+        .company .companL i {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 35px;
+        }
+
+            .company .companL i img {
+                display: block;
+                width: 100%;
+            }
+
+        .company .companL .comLM {
+            width: 100%;
+            height: auto;
+            margin-bottom: 18px;
+        }
+
+            .company .companL .comLM .comLML {
+                width: 55.76%;
+                height: auto;
+            }
+
+                .company .companL .comLM .comLML p,
+                .company .companL .comLM .comLMR p {
+                    margin: 14px 0 11px;
+                    font-size: 14px;
+                    color: #515151;
+                    line-height: 24px;
+                    text-indent: 2em;
+                    text-align: justify;
+                    text-justify: inter-ideograph;
+                }
+
+                .company .companL .comLM .comLML em,
+                .company .companL .comLM .comLMR em {
+                    display: inline-block;
+                    width: 100%;
+                }
+
+                    .company .companL .comLM .comLML em img,
+                    .company .companL .comLM .comLMR em img {
+                        display: block;
+                        width: 100%;
+                    }
+
+            .company .companL .comLM .comLMR {
+                width: 42%;
+                height: auto;
+            }
+
+        .company .companL .comUl {
+            width: 100%;
+            height: auto;
+        }
+
+            .company .companL .comUl li {
+                float: left;
+                width: 23%;
+                height: auto;
+                margin-right: 2.66667%;
+                margin-bottom: 24px;
+            }
+
+                .company .companL .comUl li .comUlT {
+                    position: relative;
+                    width: 100%;
+                    height: 66px;
+                    background: #005bac;
+                }
+
+                    .company .companL .comUl li .comUlT p {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        line-height: 22px;
+                        font-size: 14px;
+                        color: #fffffe;
+                        text-align: center;
+                    }
+
+                .company .companL .comUl li .comUlB {
+                    width: 100%;
+                    height: auto;
+                    background: #ededed;
+                    padding: 8px 0;
+                }
+
+                    .company .companL .comUl li .comUlB img {
+                        display: block;
+                        width: 87%;
+                        height: auto;
+                        margin: 0 auto;
+                    }
+
+    .company .companR {
+        width: 18%;
+        height: auto;
+        padding-top: 28px;
+    }
+/*导航*/
+#TB_overlayBG {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa000000',endColorstr='#aa000000'); /*IE6,IE7*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa000000', endColorstr='#aa000000')"; /*IE8*/
+}
+
+.company .companR .comNav {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+    .company .companR .comNav h2 {
+        width: 100%;
+        background: #0062b9;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+    }
+
+.company .companR #comNav {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    display: none;
+    z-index: 998;
+}
+
+.company .companR .comNav ul {
+    width: 100%;
+    height: auto;
+    background: #f6f6f6;
+    padding-bottom: 14px;
+}
+
+    .company .companR .comNav ul li {
+        width: 100%;
+        height: auto;
+    }
+
+        .company .companR .comNav ul li a {
+            display: inline-block;
+            width: 100%;
+            border-bottom: 1px solid #d2d1d1;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            font-size: 14px;
+            color: #646363;
+        }
+
+            .company .companR .comNav ul li a:hover,
+            .company .companR .comNav ul li a.cur {
+                color: #0062b9;
+            }
+/*关注微信*/
+.company .companR .comWeb {
+    border: 1px solid #e5e5e5;
+    margin-top: 20px;
+    padding: 8px 0 20px;
+}
+
+    .company .companR .comWeb h2 {
+        width: 100%;
+        line-height: 38px;
+        font-size: 16px;
+        color: #444343;
+        text-align: center;
+    }
+
+        .company .companR .comWeb h2 em {
+            color: #005bac;
+        }
+
+    .company .companR .comWeb img {
+        display: block;
+        width: 68%;
+        margin: 0 auto;
+    }
+
+    .company .companR .comWeb i {
+        display: inline-block;
+        width: 100%;
+    }
+
+        .company .companR .comWeb i img {
+            display: block;
+            width: 58%;
+        }
+/*企业文化*/
+.company .culture h4,
+.company .team h4,
+.company .contac h4,
+.company .train h4,
+.company .welfare h4,
+.company .been h4 {
+    height: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    margin-bottom: 18px;
+    color: #005BAC;
+}
+
+.company .culture h3,
+.company .train h3,
+.company .newTab h2 {
+    height: 38px;
+    line-height: 38px;
+    font-size: 18px;
+    color: #005BAC;
+}
+
+    .company .culture h3 em {
+        color: #5f5f5f;
+    }
+
+.company .culture .colOl {
+    width: 100%;
+    height: auto;
+    margin: 17px 0 36px;
+    padding-bottom: 32px;
+    border-bottom: 1px dashed #c4c5c5;
+}
+
+    .company .culture .colOl li {
+        float: left;
+        width: 30%;
+        height: auto;
+        margin-right: 5%;
+    }
+
+        .company .culture .colOl li h1 {
+            position: relative;
+            width: 72px;
+            margin: 0 auto;
+            border-bottom: 1px solid #0089e1;
+            height: 34px;
+            line-height: 34px;
+            font-size: 18px;
+            color: #ff8400;
+            text-align: center;
+        }
+
+            .company .culture .colOl li h1 em {
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                margin-left: -3.5px;
+                display: inline-block;
+                width: 7px;
+                height: 9px;
+                background: url(/imgs/ico_btn31.png) no-repeat;
+                background-size: cover;
+            }
+
+        .company .culture .colOl li p {
+            width: 100%;
+            margin-top: 6px;
+            font-size: 14px;
+            color: #555555;
+            line-height: 24px;
+            text-align: center;
+        }
+
+.company .culture dl {
+    width: 100%;
+    height: auto;
+}
+
+    .company .culture dl dt,
+    .company .culture dl dd {
+        float: left;
+        width: 100%;
+        height: auto;
+    }
+
+        .company .culture dl dt .dtL {
+            width: 56.1%;
+        }
+
+            .company .culture dl dt .dtL img {
+                display: block;
+                width: 100%;
+            }
+
+        .company .culture dl dt .dtR {
+            position: relative;
+            width: 43%;
+        }
+
+            .company .culture dl dt .dtR em {
+                float: left;
+                display: inline-block;
+                width: 100%;
+            }
+
+                .company .culture dl dt .dtR em img,
+                .company .culture dl dd em img {
+                    display: block;
+                    width: 100%;
+                }
+
+                .company .culture dl dt .dtR em.ico {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .company .culture dl dt .dtR em.ico1 {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+
+    .company .culture dl dd {
+        position: relative;
+        margin-top: 8px;
+    }
+
+        .company .culture dl dd em {
+            float: left;
+        }
+
+            .company .culture dl dd em.ico,
+            .company .culture dl dd em.ico1 {
+                width: 31.6%;
+                margin-right: 0.8%;
+            }
+
+            .company .culture dl dd em.ico2 {
+                width: 35.2%;
+            }
+/*技术团队*/
+.company .team ul {
+    width: 100%;
+    height: auto;
+    margin-top: -10px;
+}
+
+    .company .team ul li {
+        float: left;
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+        border-bottom: 1px dashed #c6c6c6;
+    }
+
+        .company .team ul li .ulImg {
+            width: 20%;
+            height: auto;
+        }
+
+            .company .team ul li .ulImg em {
+                display: block;
+                border: 1px solid #d0d3d6;
+                background: #d8d8d8;
+            }
+
+                .company .team ul li .ulImg em img {
+                    display: block;
+                    width: 100%;
+                }
+
+        .company .team ul li .ulTxt {
+            width: 77%;
+            height: auto;
+        }
+
+            .company .team ul li .ulTxt h3 {
+                width: 100%;
+                height: 44px;
+                margin-bottom: 7px;
+                line-height: 44px;
+                font-size: 18px;
+                color: #0062b9;
+            }
+
+            .company .team ul li .ulTxt p {
+                width: 100%;
+                font-size: 14px;
+                color: #424242;
+                line-height: 26px;
+                text-align: justify;
+                text-justify: inter-ideograph;
+            }
+/*联系我们*/
+.company .contac h4 {
+    margin-bottom: 8px;
+}
+
+.company .contac h3 {
+    width: 100%;
+    line-height: 28px;
+    font-size: 14px;
+    color: #464646;
+}
+
+    .company .contac h3.contacH3 {
+        margin-top: -5px;
+    }
+
+.company .contac ul {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e3e3e3;
+    margin: 25px 0;
+    padding-bottom: 32px;
+}
+
+    .company .contac ul li {
+        float: left;
+        width: 48.161%;
+        height: auto;
+    }
+
+        .company .contac ul li .tacUlL {
+            position: relative;
+            z-index: 1;
+            width: 21.5%;
+            height: 160px;
+            background: #005bac url(/imgs/ico_btn32.png) center 47px no-repeat;
+            background-size: 42%;
+        }
+
+        .company .contac ul li .tacUlL1 {
+            background: #005bac url(/imgs/ico_btn33.png) center 47px no-repeat;
+            background-size: 42%;
+        }
+
+        .company .contac ul li .tacUlL p {
+            padding-top: 86px;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .company .contac ul li .tacUlL em {
+            position: absolute;
+            top: 50%;
+            margin-top: -8px;
+            right: -11px;
+            display: inline-block;
+            width: 11px;
+            height: 19px;
+            background: url(/imgs/ico_btn34.png) no-repeat;
+        }
+
+        .company .contac ul li .tacUlR {
+            position: relative;
+            width: 78.5%;
+            height: 160px;
+            background: #f3f3f3;
+            z-index: 0;
+        }
+
+            .company .contac ul li .tacUlR p {
+                position: absolute;
+                top: 0;
+                left: 16%;
+                line-height: 28px;
+                font-size: 14px;
+                color: #404040;
+            }
+
+.company .contac h5 {
+    width: 100%;
+    height: auto;
+    margin: 22px 0 3px;
+}
+
+    .company .contac h5 em {
+        display: inline-block;
+        width: 66px;
+        height: 24px;
+        line-height: 24px;
+        padding-left: 11px;
+        background: #005bac;
+        font-size: 14px;
+        color: #fff;
+    }
+
+.company .contac h6 {
+    width: 96%;
+    height: auto;
+    margin-top: 25px;
+    line-height: 20px;
+    background: #f3f3f3;
+    color: #464646;
+    font-size: 14px;
+    padding: 8px 2%;
+}
+
+    .company .contac h6 em {
+        color: #ff7e00;
+    }
+
+.company .contac h2 {
+    height: 30px;
+    line-height: 30px;
+}
+
+.company .companL .map {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+    .company .companL .map img {
+        display: block;
+        width: 100%;
+        cursor: pointer;
+    }
+/*成功案例*/
+/*按行业筛选*/
+.industry {
+    position: absolute;
+    right: 24px;
+    top: 3px;
+    width: 98px;
+    height: auto;
+    cursor: pointer;
+    z-index: 300;
+}
+
+    .industry h2 {
+        position: relative;
+        height: 20px;
+        margin-top: 3px;
+        line-height: 20px;
+        padding-left: 11px;
+        background: #005bac;
+        border-radius: 3px;
+        font-size: 12px;
+        color: #fff;
+    }
+
+        .industry h2 em {
+            position: absolute;
+            right: 11px;
+            top: 7px;
+            display: inline-block;
+            width: 9px;
+            height: 6px;
+            background: url(/imgs/ico_btn36.png) no-repeat;
+        }
+
+        .industry h2.indeH2 em {
+            background: url(/imgs/ico_btn36_hov.png) no-repeat;
+        }
+
+    .industry .indeLayer {
+        position: absolute;
+        top: 24px;
+        right: -24px;
+        width: 78px;
+        height: auto;
+        padding-top: 4px;
+        background: #fff;
+        display: none;
+    }
+
+    .industry .indeLayer1 {
+        display: block;
+    }
+
+    .industry .indeLayer .layer {
+        width: 76px;
+        height: auto;
+        border: 1px solid #dbdbdb;
+        padding: 6px 0;
+    }
+
+        .industry .indeLayer .layer em {
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            margin-left: -7px;
+            display: inline-block;
+            width: 15px;
+            height: 8px;
+            background: url(/imgs/ico_btn37.png) no-repeat;
+        }
+
+        .industry .indeLayer .layer a {
+            display: inline-block;
+            padding: 0;
+            float: none;
+            width: 100%;
+            height: 18px;
+            line-height: 18px;
+            background: #fff;
+            font-size: 12px;
+            color: #a6a6a6;
+            border-radius: 0;
+            text-align: center;
+        }
+
+            .industry .indeLayer .layer a:hover {
+                color: #005bac;
+            }
+
+.case {
+    height: auto;
+}
+
+    .case ul {
+        width: 100%;
+        height: auto;
+        margin-bottom: 38px;
+    }
+
+        .case ul li {
+            float: left;
+            width: 100%;
+            height: auto;
+            padding: 30px 0;
+            border-bottom: 1px dashed #dbd9d9;
+        }
+
+            .case ul li .caseUlL {
+                width: 14%;
+                height: auto;
+            }
+
+                .case ul li .caseUlL a {
+                    display: block;
+                    height: auto;
+                    border: 1px solid #e3e3e3;
+                }
+
+                    .case ul li .caseUlL a:hover {
+                        border: 1px solid #aad5fb;
+                        box-shadow: 0 0 5px #aad5fb
+                    }
+
+                    .case ul li .caseUlL a img {
+                        display: block;
+                        width: 100%;
+                    }
+
+            .case ul li .caseUlR {
+                width: 84%;
+                height: auto;
+            }
+
+                .case ul li .caseUlR h2 {
+                    height: auto;
+                    padding-left: 17px;
+                    margin-bottom: 10px;
+                    line-height: 26px;
+                    background: url(/imgs/ico_btn35.png) 0 10px no-repeat;
+                }
+
+                    .case ul li .caseUlR h2 a {
+                        display: inline-block;
+                        font-size: 16px;
+                        color: #005bac;
+                    }
+
+                        .case ul li .caseUlR h2 a:hover {
+                            color: #ff9600;
+                        }
+
+                .case ul li .caseUlR p {
+                    line-height: 24px;
+                    font-size: 12px;
+                    color: #424242;
+                }
+
+                .case ul li .caseUlR h3 {
+                    width: 100%;
+                    margin-top: 7px;
+                    height: 22px;
+                    line-height: 22px;
+                    font-size: 12px;
+                    color: #a7a7a7;
+                }
+
+                    .case ul li .caseUlR h3 em {
+                        float: left;
+                    }
+
+                        .case ul li .caseUlR h3 em b {
+                            font-weight: normal;
+                            color: #4d4c4c;
+                        }
+
+                        .case ul li .caseUlR h3 em strong {
+                            font-weight: normal;
+                            color: #d70808;
+                        }
+
+                    .case ul li .caseUlR h3 span {
+                        float: right;
+                    }
+/*tab切换*/
+.tab {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #d2d1d1;
+}
+
+    .tab .tab_ul {
+        width: 100%;
+        height: auto;
+    }
+
+    .tab .tab_div {
+        float: left;
+        width: auto;
+        height: 38px;
+        padding: 0 4.4%;
+        border: 1px solid #d2d1d1;
+        border-bottom: none;
+        cursor: pointer;
+        margin-right: 1%;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        text-align: center;
+        background: #e5e5e5;
+        font-size: 14px;
+        color: #3c3c3c;
+        text-align: center;
+        line-height: 38px;
+    }
+
+    .tab .selectedl {
+        border: 1px solid #005bac;
+        border-bottom: none;
+        background: #fff;
+    }
+
+    .tab .tab_box {
+        width: 100%;
+        height: auto;
+        clear: both;
+        margin-top: 1.4102em;
+    }
+
+.hide {
+    display: none;
+}
+
+.tab_box > div {
+    width: 100%;
+    height: auto;
+    padding-top: 12px;
+}
+
+    .tab_box > div h5 {
+        width: 100%;
+        height: 38px;
+        border-bottom: 1px solid #d2d1d1;
+        line-height: 38px;
+        font-size: 14px;
+        color: #3d3d3d;
+    }
+
+    .tab_box > div ul {
+        width: 100%;
+        height: auto;
+    }
+
+        .tab_box > div ul li {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px dashed #bccedd;
+            padding: 22px 0;
+        }
+
+            .tab_box > div ul li h3 {
+                width: 100%;
+                height: auto;
+            }
+
+                .tab_box > div ul li h3 em {
+                    float: left;
+                    display: block;
+                    width: 18px;
+                    height: 18px;
+                    background: #ff9000;
+                    border-radius: 3px;
+                    text-align: center;
+                    line-height: 18px;
+                    font-size: 14px;
+                    color: #fff;
+                    font-weight: bold;
+                    /*font-style: italic;*/
+                    font-family: "arial black";
+                }
+
+                .tab_box > div ul li h3 span {
+                    float: left;
+                    display: block;
+                    margin-left: 10px;
+                    width: 95%;
+                    height: auto;
+                    line-height: 16px;
+                    font-size: 14px;
+                    color: #005bac;
+                }
+
+            .tab_box > div ul li p {
+                margin-top: 10px;
+                font-size: 12px;
+                color: #616161;
+                padding-left: 28px;
+                line-height: 20px;
+            }
+
+            .tab_box > div ul li:hover {
+                background: #fcfcfc;
+            }
+/*服务内容*/
+.company .serMain i {
+    margin-bottom: 0;
+}
+
+.company .serMain .serMainUl {
+    width: 100%;
+    height: auto;
+}
+
+    .company .serMain .serMainUl li {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px dashed #86a8c5;
+        padding: 10px 0 15px;
+    }
+
+        .company .serMain .serMainUl li h3 {
+            width: 100%;
+            height: auto;
+            margin-bottom: 4px;
+        }
+
+            .company .serMain .serMainUl li h3 em {
+                display: block;
+                float: left;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: #ff9000;
+                font-size: 14px;
+                color: #fff;
+                text-align: center;
+                line-height: 38px;
+            }
+
+            .company .serMain .serMainUl li h3 span {
+                float: left;
+                display: block;
+                margin-top: 6px;
+                width: 85%;
+                margin-left: 8px;
+                line-height: 26px;
+                font-size: 14px;
+                color: #565656;
+            }
+
+        .company .serMain .serMainUl li p {
+            width: 100%;
+            line-height: 28px;
+            font-size: 14px;
+            color: #565656;
+            margin-top: 10px;
+        }
+
+            .company .serMain .serMainUl li p.serMp {
+                line-height: 32px;
+            }
+
+            .company .serMain .serMainUl li p em {
+                color: #005bac;
+            }
+
+        .company .serMain .serMainUl li dl {
+            width: 100%;
+            height: auto;
+            padding: 36px 0 20px;
+        }
+
+            .company .serMain .serMainUl li dl dd {
+                float: left;
+                width: 23%;
+                height: auto;
+                margin-right: 2.6%;
+                text-align: center;
+            }
+
+                .company .serMain .serMainUl li dl dd em {
+                    display: inline-block;
+                    width: 35.765%;
+                    height: auto;
+                    border: 1px solid #c1c1c1;
+                    border-radius: 50%;
+                    -moz-transition: all 0.3s ease-in;
+                    -webkit-transition: all 0.3s ease-in;
+                    -o-transition: all 0.3s ease-in;
+                    transition: all 0.3s ease-in;
+                }
+
+                    .company .serMain .serMainUl li dl dd em img {
+                        display: block;
+                        width: 100%;
+                    }
+
+                .company .serMain .serMainUl li dl dd h4 {
+                    font-size: 16px;
+                    color: #373737;
+                    height: 34px;
+                    line-height: 34px;
+                }
+
+                .company .serMain .serMainUl li dl dd h5 {
+                    line-height: 24px;
+                    font-size: 12px;
+                    color: #a2a2a2;
+                }
+
+                .company .serMain .serMainUl li dl dd:hover em {
+                    border: 1px solid #aad5fb;
+                    box-shadow: 0 0 5px #aad5fb
+                }
+/*留言沟通*/
+.company .leave h2 {
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.company .leave p {
+    font-size: 14px;
+    color: #3c3c3c;
+}
+
+    .company .leave p a {
+        color: #005bac;
+    }
+
+        .company .leave p a:hover {
+            color: #ff9600;
+        }
+
+.company .leave .leavUl {
+    width: 82%;
+    height: auto;
+    margin: 0 auto 40px;
+}
+
+    .company .leave .leavUl li {
+        float: left;
+        height: 30px;
+        width: 50%;
+        margin-top: 28px;
+    }
+
+        .company .leave .leavUl li label {
+            display: inline-block;
+            width: 70px;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            text-align: right;
+            font-size: 14px;
+            color: #3c3c3c;
+            padding-right: 3%;
+        }
+
+        .company .leave .leavUl li .ulTxt,
+        .company .leave .leavUl li .nav_bbs {
+            float: left;
+            width: 65%;
+            border: 1px solid #d5d5d5;
+            height: 20px;
+            line-height: 22px;
+            padding: 4px 3%;
+            font-size: 12px;
+            color: #919191;
+        }
+        /*下拉菜单*/
+        .company .leave .leavUl li .nav_bbs {
+            position: relative;
+            *z-index: 200;
+        }
+
+            .company .leave .leavUl li .nav_bbs h3 {
+                cursor: pointer;
+            }
+
+        .company .leave .leavUl li .set {
+            background: url(/imgs/ico_btn38.png) 100% 7px no-repeat;
+        }
+
+        .company .leave .leavUl li .select1 {
+            background: url(/imgs/ico_btn38_hov.png) 100% 7px no-repeat;
+        }
+
+        .company .leave .leavUl li .new {
+            width: 100%;
+            position: absolute;
+            left: -1px;
+            top: 29px;
+            display: none;
+            background: #fff;
+            z-index: 999;
+        }
+
+        .company .leave .leavUl li .nav_bbs ul {
+            border: 1px solid #d5d5d5;
+            border-top: none;
+        }
+
+            .company .leave .leavUl li .nav_bbs ul li {
+                width: 92%;
+                height: 30px;
+                margin: 0;
+                padding: 0 4%;
+                line-height: 30px;
+                cursor: pointer;
+                font-size: 12px;
+                color: #919191;
+            }
+
+                .company .leave .leavUl li .nav_bbs ul li:hover {
+                    background: #fbfbfb;
+                }
+/*多选*/
+/*CheckBox*/
+.WellForm .WellCheckBox {
+    float: left;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 7px 0;
+    background: url(/imgs/radio.jpg) no-repeat;
+}
+
+.WellForm .WellCheckBoxH {
+    background: url(/imgs/radio_hov.jpg) no-repeat;
+}
+
+.WellForm .WellCheckBox input {
+    margin-top: 12px;
+    display: none;
+}
+
+.radio {
+    width: 82%;
+    height: auto;
+    margin: 15px auto 0;
+}
+
+    .radio .radioM {
+        float: left;
+        width: 20%;
+        margin-top: 10px;
+    }
+
+form {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+    form .item2 {
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+
+    form pre {
+        width: 80%;
+        height: 26px;
+        line-height: 28px;
+        display: inline-block;
+        color: #3c3c3c;
+        font-size: 14px;
+        float: left;
+        margin-left: 5%;
+    }
+
+.radio .leaveTxt {
+    border: 1px solid #d7d7d7;
+    padding: 6px 15px;
+    margin-top: 30px;
+}
+
+    .radio .leaveTxt textarea {
+        width: 100%;
+        height: 192px;
+        resize: none;
+        font-size: 12px;
+        color: #3c3c3c;
+        overflow: hidden;
+    }
+
+.radio .radioBut {
+    display: block;
+    width: 68px;
+    height: 28px;
+    margin: 30px auto 0;
+    background: #005bac;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    -moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+    .radio .radioBut:hover {
+        background: #0175dc;
+    }
+/*资料下载*/
+#tabDown {
+    width: 100%;
+}
+
+    #tabDown .tab_menuD {
+        width: 100%;
+        height: 38px;
+        line-height: 38px;
+        float: left;
+        background: #eaeaea;
+        margin-bottom: 0;
+    }
+
+        #tabDown .tab_menuD li {
+            float: left;
+            cursor: pointer;
+            position: relative;
+            width: 13%;
+            height: 38px;
+            line-height: 38px;
+            font-size: 14px;
+            color: #424242;
+            text-align: center;
+        }
+
+            #tabDown .tab_menuD li.sel {
+                border-left: 1px solid #005bac;
+            }
+
+            #tabDown .tab_menuD li em {
+                display: none;
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                margin-left: -5px;
+                width: 10px;
+                height: 5px;
+                background: url(/imgs/ico_btn39.png) no-repeat;
+            }
+
+        #tabDown .tab_menuD .selected {
+            background: #005bac;
+            color: #fff;
+        }
+
+            #tabDown .tab_menuD .selected em {
+                display: block;
+            }
+
+    #tabDown .tab_boxD {
+        width: 100%;
+        height: auto;
+        clear: both;
+    }
+
+
+    #tabDown .hide {
+        display: none;
+    }
+
+    #tabDown .tab_boxD > div {
+        padding: 0;
+    }
+
+    #tabDown .tab_boxD .downM {
+        height: auto;
+        border: 1px solid #ddd;
+        border-top: none;
+    }
+
+        #tabDown .tab_boxD .downM .downML {
+            width: 13%;
+            padding-top: 45px;
+            font-size: 14px;
+            color: #005bac;
+            text-align: center;
+        }
+
+        #tabDown .tab_boxD .downM .downMR {
+            width: 87%;
+        }
+
+            #tabDown .tab_boxD .downM .downMR .MrM {
+                border-left: 1px solid #ddd;
+            }
+
+                #tabDown .tab_boxD .downM .downMR .MrM p {
+                    padding: 22px 5%;
+                    line-height: 32px;
+                    font-size: 14px;
+                    color: #424242;
+                }
+
+                    #tabDown .tab_boxD .downM .downMR .MrM p em {
+                        float: left;
+                        width: 18.5%;
+                        display: inline-block;
+                        padding-left: 1.5%;
+                        background: url(/imgs/ico_btn24.png) 0 15px no-repeat;
+                    }
+
+    #tabDown .tab_boxD ul {
+        width: 100%;
+        height: auto;
+        margin-bottom: 35px;
+    }
+
+        #tabDown .tab_boxD ul li {
+            width: 100%;
+            height: auto;
+            float: left;
+            border-bottom: 1px dashed #ddd8d8;
+        }
+
+            #tabDown .tab_boxD ul li h3 {
+                width: 92%;
+                float: left;
+                height: 54px;
+                line-height: 54px;
+                font-size: 14px;
+            }
+
+            #tabDown .tab_boxD ul li h4 {
+                width: 7%;
+                float: right;
+                height: 23px;
+                padding-top: 16px;
+            }
+
+            #tabDown .tab_boxD ul li h3 span {
+                display: inline-block;
+                float: left;
+                width: 76%;
+                padding-left: 2%;
+                color: #424242;
+                background: url(/imgs/ico_btn40.png) 0 23px no-repeat;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            #tabDown .tab_boxD ul li h3 em {
+                display: inline-block;
+                float: left;
+                width: 20%;
+                color: #b8b8b8;
+                text-align: right;
+            }
+
+            #tabDown .tab_boxD ul li h4 a {
+                float: right;
+                margin-right: 15%;
+                display: inline-block;
+                width: 24px;
+                height: 23px;
+                background: url(/imgs/down.png) no-repeat;
+            }
+/*技术专题*/
+.tech ul li .caseUlL {
+    width: 16.25%;
+}
+
+    .tech ul li .caseUlL a {
+        border: none;
+    }
+
+.tech ul li .caseUlR {
+    width: 82%;
+}
+
+    .tech ul li .caseUlR h3 span b {
+        font-weight: normal;
+        float: left;
+    }
+
+    .tech ul li .caseUlR h3 span a {
+        display: inline-block;
+        float: left;
+        margin-left: 8px;
+        width: 20px;
+        height: 20px;
+        background: url(/imgs/icon11.png) no-repeat;
+    }
+
+        .tech ul li .caseUlR h3 span a.ico1 {
+            background: url(/imgs/icon11.png) no-repeat;
+        }
+
+        .tech ul li .caseUlR h3 span a.ico2 {
+            background-position: -20px 0;
+        }
+
+        .tech ul li .caseUlR h3 span a.ico3 {
+            background-position: -40px 0;
+        }
+
+        .tech ul li .caseUlR h3 span a.ico4 {
+            background-position: -60px 0;
+        }
+
+        .tech ul li .caseUlR h3 span a.ico5 {
+            background-position: -80px 0;
+        }
+
+        .tech ul li .caseUlR h3 span a.ico1:hover {
+            background-position: 0 bottom;
+        }
+
+        .tech ul li .caseUlR h3 span a.ico2:hover {
+            background-position: -20px bottom;
+        }
+
+        .tech ul li .caseUlR h3 span a.ico3:hover {
+            background-position: -40px bottom;
+        }
+
+        .tech ul li .caseUlR h3 span a.ico4:hover {
+            background-position: -60px bottom;
+        }
+
+        .tech ul li .caseUlR h3 span a.ico5:hover {
+            background-position: -80px bottom;
+        }
+/*解决方案*/
+.solution ol {
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+}
+
+    .solution ol li {
+        float: left;
+        width: 25%;
+        height: auto;
+        text-align: center;
+    }
+
+        .solution ol li h2 {
+            width: 126px;
+            height: 126px;
+            border-radius: 50%;
+            border: 2px solid #005bac;
+            margin: 0 auto;
+            text-align: center;
+            -moz-transition: all 0.3s ease-in;
+            -webkit-transition: all 0.3s ease-in;
+            -o-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in;
+        }
+
+            .solution ol li h2 i {
+                display: block;
+                margin: 0 auto;
+                width: 62px;
+                height: auto;
+                padding-top: 15px;
+            }
+
+                .solution ol li h2 i img {
+                    display: block;
+                    width: 100%;
+                }
+
+            .solution ol li h2 em {
+                display: inline-block;
+                width: 100%;
+                height: 38px;
+                line-height: 38px;
+                font-size: 24px;
+                font-style: italic;
+                font-weight: bolder;
+                color: #ff7800;
+                font-family: "arial rounded mt bold";
+            }
+
+        .solution ol li h3 {
+            width: 100%;
+            height: 52px;
+            line-height: 52px;
+            font-size: 18px;
+            color: #005bac;
+        }
+
+        .solution ol li:hover h2 {
+            box-shadow: 0 0 5px #005bac;
+        }
+
+.solution ul li .dirTxt {
+    padding: 0 0 20px;
+}
+
+    .solution ul li .dirTxt h2,
+    .solution ul li .dirTxt p {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .solution ul li .dirTxt h3 {
+        width: 90%;
+        padding: 15px 5% 0;
+        border-top: 1px dashed #d0d0d0;
+        margin-top: 10px;
+    }
+
+        .solution ul li .dirTxt h3 em {
+            float: left;
+            display: block;
+            width: 75%;
+            line-height: 22px;
+            font-size: 12px;
+            color: #626262;
+        }
+
+        .solution ul li .dirTxt h3 a {
+            float: right;
+            display: block;
+            width: 42px;
+            padding-left: 9px;
+            height: 22px;
+            background: #626262 url(/imgs/ico_btn41.png) 90% 7px no-repeat;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #fff;
+            line-height: 22px;
+        }
+
+            .solution ul li .dirTxt h3 a:hover {
+                background: #005bac url(/imgs/ico_btn41.png) 90% 7px no-repeat;
+            }
+/*解决方案内页*/
+.product .proH41 {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 0;
+}
+
+.product .proP {
+    margin-bottom: 15px;
+}
+
+.product .soluOl {
+    width: 100%;
+    height: auto;
+    padding-top: 12px;
+}
+
+    .product .soluOl li {
+        width: 100%;
+        float: left;
+        margin-bottom: 25px;
+    }
+
+    .product .soluOl .soluOlL {
+        float: left;
+        width: 49%;
+        height: auto;
+    }
+
+    .product .soluOl .soluOlL1 {
+        float: right;
+    }
+
+    .product .soluOl .soluOlL em {
+        float: left;
+        display: block;
+        width: 28px;
+        height: 28px;
+        text-align: center;
+        line-height: 28px;
+        border-radius: 3px;
+        background: #005bac;
+        font-size: 22px;
+        color: #fff;
+        font-family: "arial rounded mt bold";
+    }
+
+    .product .soluOl .soluOlL h6 {
+        float: right;
+        width: 93%;
+        font-size: 14px;
+        color: #4f4f4f;
+        line-height: 26px;
+    }
+
+.product .soluDl {
+    width: 100%;
+    height: auto;
+    padding: 15px 0 0;
+}
+
+    .product .soluDl dd {
+        float: left;
+        width: 27%;
+        height: auto;
+        margin-right: 9.5%;
+        text-align: center;
+    }
+
+        .product .soluDl dd i {
+            display: inline-block;
+            width: 72px;
+            height: auto;
+        }
+
+            .product .soluDl dd i img {
+                display: block;
+                width: 100%;
+            }
+
+        .product .soluDl dd p {
+            text-align: center;
+            line-height: 26px;
+            margin-top: 15px;
+        }
+/*培训发展*/
+.company .train p,
+.company .welfare p {
+    font-size: 14px;
+    color: #404040;
+    line-height: 26px;
+}
+
+.company .train h1,
+.company .welfare h1,
+.company .been h1 {
+    width: 100%;
+    height: 16px;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #bbbbbb;
+}
+
+.company .train .trainI img {
+    width: auto;
+    margin: 30px auto 0;
+}
+
+.company .train h5 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+    .company .train h5 em {
+        float: left;
+        display: block;
+        width: 18px;
+        height: 18px;
+        background: #005bac;
+        border-radius: 3px;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        line-height: 18px;
+        font-family: "arial rounded mt bold";
+    }
+
+    .company .train h5 span {
+        display: block;
+        width: 97%;
+        float: left;
+        padding-left: 1%;
+        line-height: 18px;
+        font-size: 14px;
+        color: #404040;
+    }
+/*薪酬福利*/
+.company .welfare .trainUl {
+    width: 100%;
+    height: auto;
+    padding-top: 24px;
+}
+
+    .company .welfare .trainUl li {
+        width: 23.2%;
+        float: left;
+        height: auto;
+        margin-right: 2.4%;
+    }
+
+        .company .welfare .trainUl li .trainUM {
+            border: 1px solid #0062b9;
+            height: 148px;
+            padding-top: 32px;
+            border-bottom: none;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+            .company .welfare .trainUl li .trainUM em {
+                float: left;
+                display: block;
+                height: auto;
+                width: 40%;
+                padding-left: 10%;
+                font-size: 14px;
+                color: #404040;
+                line-height: 24px;
+                background: url(/imgs/ico_btn24.png) 13px 10px no-repeat;
+            }
+
+                .company .welfare .trainUl li .trainUM em.ico {
+                    width: 90%;
+                    background: url(/imgs/ico_btn24.png) 13px 10px no-repeat;
+                }
+
+        .company .welfare .trainUl li h5 {
+            height: 38px;
+            line-height: 38px;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            background: #0062b9;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+.company .welfare h3 {
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    color: #005BAC;
+}
+
+.company .welfare h5 {
+    font-size: 14px;
+    color: #3d3d3d;
+    background: url(/imgs/ico_btn42.jpg) 0 9px no-repeat;
+    padding-left: 12px;
+    line-height: 26px;
+}
+/*招贤纳士*/
+.been .beenInfo {
+    width: 100%;
+    height: auto;
+}
+
+    .been .beenInfo .beenIL {
+        width: 10%;
+        height: auto;
+        text-align: center;
+        background: #005bac;
+    }
+
+        .been .beenInfo .beenIL em {
+            display: inline-block;
+            width: 55%;
+            height: auto;
+            padding-top: 8px;
+        }
+
+            .been .beenInfo .beenIL em img {
+                display: block;
+                width: 100%;
+            }
+
+        .been .beenInfo .beenIL p {
+            height: 30px;
+            line-height: 30px;
+            color: #f4f4f4;
+            font-size: 14px;
+        }
+
+    .been .beenInfo .beenIR {
+        width: 90%;
+        height: auto;
+        background: #f4f4f4;
+    }
+
+        .been .beenInfo .beenIR p {
+            width: 94%;
+            margin-left: 3%;
+            margin-top: 10px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #605f5f;
+        }
+
+        .been .beenInfo .beenIR h3 {
+            width: 94%;
+            margin-left: 3%;
+            padding: 9px 0 10px;
+        }
+
+            .been .beenInfo .beenIR h3 span {
+                display: inline-block;
+                float: left;
+                padding: 0 7px;
+                margin-right: 10px;
+                border: 1px solid #a9d1e9;
+                background: #d4e5f3;
+                height: 18px;
+                line-height: 18px;
+                font-size: 12px;
+                color: #585858;
+            }
+
+.company .been .beenH4 {
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #51ab0c;
+}
+
+.beenTab .tab {
+    width: auto;
+    margin-top: 10px;
+    position: relative;
+    padding: 0 28px;
+    height: 70px;
+    background: #f58b05;
+    border-bottom: none;
+}
+
+    .beenTab .tab .tab_div {
+        width: 20%;
+        height: 70px;
+        padding: 0;
+        margin-right: 0;
+        border: none;
+        background: none;
+    }
+
+        .beenTab .tab .tab_div p {
+            position: relative;
+            height: 16px;
+            margin-top: 27px;
+            border-right: 1px solid #ffffff;
+            text-align: center;
+        }
+
+            .beenTab .tab .tab_div p span {
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                margin-left: -44%;
+                display: inline-block;
+                width: 88%;
+                height: 34px;
+                line-height: 34px;
+                background: #f58b05;
+                border-radius: 3px;
+                font-size: 14px;
+                color: #fff;
+                text-align: center;
+            }
+
+                .beenTab .tab .tab_div p span em {
+                    position: absolute;
+                    bottom: -7px;
+                    left: 50%;
+                    margin-left: -6px;
+                    display: inline-block;
+                    display: none;
+                    width: 12px;
+                    height: 7px;
+                    background: url(/imgs/ico_btn43.png) no-repeat;
+                }
+
+    .beenTab .tab .selectedl p span {
+        background: #ffbb29;
+    }
+
+        .beenTab .tab .selectedl p span em {
+            display: block;
+        }
+
+.beenTab .swiper-button-next,
+.beenTab .swiper-button-prev {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 28px;
+    height: 70px;
+    background: url(/imgs/next3.png) no-repeat;
+    background-size: cover;
+}
+
+.beenTab .swiper-button-next {
+    width: 30px;
+    left: auto;
+    right: 0;
+    background: #005bac;
+    background: url(/imgs/next3.png) right bottom no-repeat;
+    background-size: cover;
+}
+
+.company .been .beenH41 {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #f58b05;
+}
+
+.company .been .beenH42 {
+    padding-left: 32px;
+    background: url(/imgs/icon22.png) no-repeat;
+    margin-bottom: 10px;
+    margin-top: 16px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 18px;
+    color: #005bac;
+}
+
+.company .been i img {
+    width: auto;
+    margin: 0 auto;
+}
+
+.company .been .beenH43 {
+    background: url(/imgs/icon23.png) no-repeat;
+}
+
+.beenTab .tab_box > div p {
+    font-size: 14px;
+    color: #535353;
+    line-height: 30px;
+}
+
+    .beenTab .tab_box > div p.beenP {
+        color: #444444;
+    }
+
+    .beenTab .tab_box > div p.beenP2 {
+        font-size: 14px;
+        color: #4b4b4b;
+        line-height: 26px;
+    }
+
+.beenTab .tab_box > div h3 {
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+    .beenTab .tab_box > div h3 em {
+        display: inline-block;
+        background: #005bac;
+        padding: 0 6px;
+        height: 22px;
+        line-height: 22px;
+        font-size: 14px;
+        color: #fff;
+    }
+
+.beenTab .tab_box > div .beenResu {
+    border: 1px solid #c2dcf3;
+    background: #f4f4f4;
+    margin-top: 10px;
+    padding: 5px 3%;
+}
+
+    .beenTab .tab_box > div .beenResu .resulL {
+        width: 80%;
+        height: auto;
+    }
+
+    .beenTab .tab_box > div .beenResu .beenP1 {
+        line-height: 28px;
+    }
+
+    .beenTab .tab_box > div .beenResu .resuR {
+        text-align: right;
+        width: 20%;
+    }
+
+        .beenTab .tab_box > div .beenResu .resuR input {
+            width: 92px;
+            height: 29px;
+            margin-top: 15px;
+            background: #51ab0c url(/imgs/ico_btn45.png) 4px center no-repeat;
+            border-radius: 3px;
+            font-size: 14px;
+            color: #fff;
+            padding-left: 28px;
+            cursor: pointer;
+            -moz-transition: all 0.3s ease-in;
+            -webkit-transition: all 0.3s ease-in;
+            -o-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in;
+        }
+
+            .beenTab .tab_box > div .beenResu .resuR input:hover {
+                background: #52bb02 url(/imgs/ico_btn45.png) 4px center no-repeat;
+            }
+
+.beenTab .tab_box > div h5 {
+    border-bottom: none;
+    margin-top: 15px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #ff9000;
+}
+/*荣誉客户*/
+.honor {
+    height: auto;
+}
+
+    .honor i {
+        padding-top: 30px;
+        display: block;
+        width: 100%;
+    }
+
+        .honor i img {
+            display: block;
+            margin: 0 auto;
+        }
+
+    .honor h2 {
+        height: 48px;
+        line-height: 48px;
+        color: #005bac;
+        font-size: 18px;
+    }
+
+    .honor .honorTab .tab {
+        border-bottom: none;
+        background: #005bac;
+        padding: 0;
+        overflow: hidden;
+        height: 36px;
+    }
+
+        .honor .honorTab .tab .tab_div {
+            position: relative;
+            width: auto;
+            margin-top: 6px;
+            height: 30px;
+            line-height: 23px;
+            font-size: 16px;
+            border: none;
+            background: none;
+            padding: 0 12px;
+            margin-right: 0;
+        }
+
+            .honor .honorTab .tab .tab_div span {
+                display: inline-block;
+                padding: 0 30px;
+                color: #fff;
+                height: 30px;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+            }
+
+            .honor .honorTab .tab .tab_div em {
+                display: inline-block;
+                position: absolute;
+                top: 5px;
+                right: 0;
+                width: 1px;
+                height: 18px;
+                background: #fff;
+            }
+
+        .honor .honorTab .tab .selectedl span {
+            background: #fff;
+            color: #005bac;
+        }
+
+    .honor .honorTab .tab_box > div {
+        padding-top: 30px;
+    }
+
+        .honor .honorTab .tab_box > div p {
+            padding: 8px 14px;
+            background: #e6eff7;
+            font-size: 14px;
+            color: #3f3f3f;
+            line-height: 24px;
+        }
+
+        .honor .honorTab .tab_box > div ol {
+            width: 100%;
+            height: auto;
+            padding-top: 12px;
+        }
+
+            .honor .honorTab .tab_box > div ol li {
+                width: 12.75%;
+                height: auto;
+                padding: 28px 0.7678% 22px;
+                float: left;
+                border-bottom: 1px dashed #d5d5d5;
+            }
+
+                .honor .honorTab .tab_box > div ol li a {
+                    display: block;
+                    border: 1px solid #f3f3f3;
+                }
+
+                    .honor .honorTab .tab_box > div ol li a img {
+                        display: block;
+                        width: 100%;
+                    }
+
+            .honor .honorTab .tab_box > div ol span {
+                display: block;
+                height: 34px;
+                line-height: 34px;
+                font-size: 12px;
+                color: #616161;
+                text-align: center;
+            }
+
+            .honor .honorTab .tab_box > div ol li:hover a {
+                border: 1px solid #aad5fb;
+                box-shadow: 0 0 5px #aad5fb
+            }
+
+            .honor .honorTab .tab_box > div ol li:hover span {
+                color: #0062B9;
+            }
+/*企业新闻*/
+.newsWrap {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.news .newL {
+    width: 70%;
+    height: 30px;
+}
+
+    .news .newL .search {
+        float: left;
+        width: 242px;
+        height: 28px;
+        border: 1px solid #e4e4e4;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+        .news .newL .search .seaTxt {
+            float: left;
+            width: 200px;
+            height: 20px;
+            line-height: 20px;
+            padding: 4px 0 4px 8px;
+            font-size: 12px;
+            color: #9f9f9f;
+        }
+
+        .news .newL .search .seaBut {
+            float: right;
+            width: 30px;
+            height: 28px;
+            background: #6c6c6c url(/imgs/ico_btn46.png) 7px 6px no-repeat;
+            cursor: pointer;
+            -moz-transition: all 0.3s ease-in;
+            -webkit-transition: all 0.3s ease-in;
+            -o-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in;
+        }
+
+            .news .newL .search .seaBut:hover {
+                background: #848383 url(/imgs/ico_btn46.png) 7px 6px no-repeat;
+            }
+
+    .news .newL form {
+        width: auto;
+        float: left;
+        margin-left: 2%;
+    }
+
+        .news .newL form input {
+            float: left;
+            width: 14px;
+            height: 14px;
+            margin: 8px 0 8px 24px;
+        }
+
+        .news .newL form label {
+            float: left;
+            margin-left: 4px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+            color: #4f4f4f;
+        }
+
+    .news .newL .industry {
+        margin-left: 3.6%;
+        position: relative;
+    }
+
+        .news .newL .industry h2 {
+            background: #fff;
+            color: #4f4f4f;
+            margin-top: 2px;
+        }
+
+            .news .newL .industry h2 em {
+                position: absolute;
+                right: 11px;
+                top: 8px;
+                display: inline-block;
+                width: 10px;
+                height: 6px;
+                background: url(/imgs/ico_btn38.png) no-repeat;
+            }
+
+            .news .newL .industry h2.indeH2 em {
+                background: url(/imgs/ico_btn38_hov.png) no-repeat;
+            }
+
+        .news .newL .industry .indeLayer {
+            width: 97px;
+            right: -33px;
+            z-index: 100;
+        }
+
+            .news .newL .industry .indeLayer .layer {
+                width: 95px;
+            }
+
+                .news .newL .industry .indeLayer .layer a {
+                    height: 24px;
+                    line-height: 24px;
+                }
+
+.news .newNav a {
+    display: block;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #424242;
+}
+
+.news .newNav b {
+    display: inline-block;
+    margin: 0 4px;
+    float: left;
+    font: 400 12px consolas;
+    height: 30px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.news .newNav a:hover {
+    color: #4ea1eb;
+}
+/*newTab*/
+.company .newTab .tab {
+    position: relative;
+    width: auto;
+    padding: 0 38px;
+    height: 58px;
+    background: #ececec url(/imgs/ico_btn47.png) repeat;
+    border-bottom: none;
+}
+
+    .company .newTab .tab .swiper-button-next,
+    .company .newTab .tab .swiper-button-prev {
+        position: absolute;
+        top: 22px;
+        left: 0;
+        width: 38px;
+        height: 58px;
+        background: url(/imgs/next4.png) no-repeat;
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    .company .newTab .tab .swiper-button-next {
+        width: 39px;
+        left: auto;
+        right: 0;
+        background: #ebebeb url(/imgs/next4.png) 0 bottom no-repeat;
+        background-size: cover;
+    }
+
+    .company .newTab .tab .tab_div {
+        position: relative;
+        width: 86px;
+        height: 58px;
+        padding: 0 10px;
+        margin-right: 0;
+        border: none;
+        background: none;
+    }
+
+        .company .newTab .tab .tab_div p {
+            width: 100%;
+            height: 56px;
+            line-height: 56px;
+            border-bottom: 2px solid #ececec;
+            font-size: 14px;
+            color: #3d3d3d;
+        }
+
+    .company .newTab .tab .selectedl p {
+        border-bottom: 2px solid #005bac;
+        background: #dedede url(/imgs/ico_btn48.png) repeat;
+    }
+
+    .company .newTab .tab .tab_div em {
+        position: absolute;
+        right: 0;
+        top: 22px;
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        background: #cdc7c7;
+    }
+
+.company .newTab .tab_box > div {
+    padding-top: 0;
+}
+
+    .company .newTab .tab_box > div .newsOl {
+        width: 100%;
+        height: auto;
+        padding-bottom: 35px;
+    }
+
+        .company .newTab .tab_box > div .newsOl li {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px dashed #dbd9d9;
+            padding: 28px 0 22px;
+        }
+
+            .company .newTab .tab_box > div .newsOl li h1 {
+                width: 100%;
+                height: auto;
+            }
+
+                .company .newTab .tab_box > div .newsOl li h1 em {
+                    position: relative;
+                    float: left;
+                    display: block;
+                    width: 38px;
+                    height: 20px;
+                    line-height: 20px;
+                    text-align: center;
+                    background: #f89200;
+                    font-size: 12px;
+                    color: #fefefe;
+                    border-radius: 3px;
+                    margin-right: 10px;
+                }
+
+                    .company .newTab .tab_box > div .newsOl li h1 em i {
+                        position: absolute;
+                        top: 5px;
+                        right: -5px;
+                        display: inline-block;
+                        width: 5px;
+                        height: 9px;
+                        background: url(/imgs/ico_btn42.jpg) no-repeat;
+                    }
+
+                .company .newTab .tab_box > div .newsOl li h1 a {
+                    float: left;
+                    display: block;
+                    width: 94%;
+                    font-size: 16px;
+                    color: #005bac;
+                    line-height: 18px;
+                }
+
+                    .company .newTab .tab_box > div .newsOl li h1 a:hover {
+                        color: #f89200;
+                    }
+
+            .company .newTab .tab_box > div .newsOl li p {
+                font-size: 12px;
+                color: #424242;
+                background: #f2f2f2;
+                padding: 8px 20px;
+                line-height: 22px;
+                margin-top: 10px;
+                text-align: justify;
+            }
+
+            .company .newTab .tab_box > div .newsOl li h3 {
+                font-size: 12px;
+                color: #a7a7a7;
+                line-height: 24px;
+                margin-top: 8px;
+            }
+
+                .company .newTab .tab_box > div .newsOl li h3 em {
+                    float: left;
+                }
+
+                    .company .newTab .tab_box > div .newsOl li h3 em b {
+                        font-weight: normal;
+                        color: #4d4c4c;
+                    }
+
+                    .company .newTab .tab_box > div .newsOl li h3 em strong {
+                        font-weight: normal;
+                        color: #d70808;
+                    }
+
+                .company .newTab .tab_box > div .newsOl li h3 span {
+                    float: right;
+                }
+
+.company .companR .comNew {
+    width: 100%;
+    height: auto;
+    margin-bottom: 22px;
+}
+
+    .company .companR .comNew img {
+        display: block;
+        width: 100%;
+    }
+
+.company .companR .imporNew {
+    width: 100%;
+    overflow: hidden;
+}
+
+    .company .companR .imporNew h2 {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        height: 52px;
+        border: 1px solid #eae9e4;
+        background: url(/imgs/ico_btn49.png) repeat-x;
+        font-size: 16px;
+        color: #57565b;
+        line-height: 52px;
+        text-align: center;
+        box-shadow: 3px 2px 5px #f5f5f5;
+    }
+
+    .company .companR .imporNew ul {
+        height: auto;
+        padding: 4px 0;
+        border: 1px solid #eae9e4;
+        border-top: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+        .company .companR .imporNew ul li {
+            width: 94%;
+            margin: 0 3%;
+            float: left;
+            padding: 14px 0;
+            border-bottom: 1px dashed #d9d9d9;
+        }
+
+            .company .companR .imporNew ul li .imML {
+                width: 16%;
+                height: 32px;
+            }
+
+                .company .companR .imporNew ul li .imML span {
+                    display: block;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #fff;
+                    background: #7d7d7d;
+                    height: 16px;
+                    line-height: 16px;
+                }
+
+                .company .companR .imporNew ul li .imML em {
+                    display: block;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #fff;
+                    background: #57565b;
+                    height: 16px;
+                    line-height: 16px;
+                }
+
+            .company .companR .imporNew ul li .imMR {
+                width: 82%;
+                height: auto;
+            }
+
+                .company .companR .imporNew ul li .imMR p {
+                    width: 100%;
+                    height: 32px;
+                    line-height: 16px;
+                    font-size: 12px;
+                    color: #57565b;
+                    overflow: hidden;
+                    text-align: justify;
+                    text-justify: inter-ideograph;
+                }
+/*发展历程*/
+.company .newTab h2 {
+    height: 34px;
+    line-height: 34px;
+    margin-bottom: 18px;
+}
+
+.company .course .tab {
+    position: relative;
+    padding: 0 51px;
+    height: 68px;
+    background: none;
+}
+
+    .company .course .tab .tabNav {
+        width: 100%;
+        height: 58px;
+        position: absolute;
+        top: 4px;
+        left: 0;
+        background: #ececec url(/imgs/ico_btn47.png) repeat;
+    }
+
+    .company .course .tab .swiper-button-next,
+    .company .course .tab .swiper-button-prev {
+        position: absolute;
+        top: 22px;
+        left: 0;
+        width: 51px;
+        height: 68px;
+        background: #fff url(/imgs/next5.png) 0 4px no-repeat;
+        cursor: pointer;
+    }
+
+    .company .course .tab .swiper-button-next {
+        left: auto;
+        right: 0;
+        background: #fff url(/imgs/next5.png) right 4px no-repeat;
+    }
+
+    .company .course .tab .tab_div {
+        position: relative;
+        width: 70px;
+        padding: 0 6.5px;
+    }
+
+        .company .course .tab .tab_div span {
+            position: absolute;
+            top: -5px;
+            left: 5px;
+            display: inline-block;
+            width: 70px;
+            height: 68px;
+            background: url(/imgs/ico_btn50.png) no-repeat;
+            background-size: 100%;
+            font-size: 18px;
+            color: #fff;
+            line-height: 68px;
+            text-align: center;
+            font-family: impact;
+        }
+
+    .company .course .tab .selectedl span {
+        background: url(/imgs/ico_btn51.png) no-repeat;
+        background-size: 100%;
+    }
+
+.company .course .tab_box > div h2 {
+    width: 100%;
+    font-size: 18px;
+    color: #005bac;
+    font-family: "arial rounded mt bold";
+    font-style: italic;
+    float: left;
+    margin-top: 15px;
+}
+
+.company .course .tab_box > div .couseUl {
+    float: right;
+    /*width: 90%;*/
+    height: auto;
+    border-left: 1px solid #9bc6e1;
+    margin-left: 63px;
+}
+
+    .company .course .tab_box > div .couseUl li {
+        float: left;
+        width: 98%;
+        border-bottom: 1px dashed #cbcaca;
+        padding: 20px 0;
+        margin-left: 2%;
+    }
+
+        .company .course .tab_box > div .couseUl li .couUImg {
+            position: relative;
+            width: 13%;
+            height: auto;
+        }
+
+            .company .course .tab_box > div .couseUl li .couUImg img {
+                display: block;
+                width: 100%;
+            }
+
+            .company .course .tab_box > div .couseUl li .couUImg em {
+                position: absolute;
+                top: 0;
+                left: -80px;
+                display: inline-block;
+                background: url(/imgs/ico_btn52.png) 54px 2px no-repeat;
+                width: 80px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 16px;
+                color: #f79412;
+                font-family: arial;
+                font-weight: bold;
+            }
+
+        .company .course .tab_box > div .couseUl li .couUTxt {
+            width: 85%;
+            height: auto;
+        }
+
+            .company .course .tab_box > div .couseUl li .couUTxt a {
+                display: block;
+                padding-left: 8px;
+                font-size: 12px;
+                color: #727272;
+                line-height: 26px;
+                background: url(/imgs/ico_btn53.png) 0 11px no-repeat;
+            }
+
+                .company .course .tab_box > div .couseUl li .couUTxt a:hover {
+                    background: url(/imgs/ico_btn53_hov.png) 0 11px no-repeat;
+                    color: #f79412;
+                }

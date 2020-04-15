@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/font-awesome.min.css"><!-- http://www.fontawesome.com.cn/  图标库-->
+    <script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+    <!-- <img src="holder.js/300x200">  占位图片生成器-->
+    <link href="https://cdn.bootcss.com/bootstrap-switch/4.0.0-alpha.1/css/bootstrap-switch.min.css" rel="stylesheet">
+    <!--Switch 选择框开关控制 -->
+    <script src="https://cdn.bootcss.com/bootstrap-switch/4.0.0-alpha.1/js/bootstrap-switch.min.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/CityList.css">
+    <link rel="stylesheet" href="/css/cityIcon.css">
+    <link rel="stylesheet" href="/css/styleu.css">
+</head>
+<body>
+        @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @*@RenderBody（）:呈现子页的主体内容
+    @RenderSection（）：呈现特别的节部分。
+    required默认为true必须覆写，设为false则为可选覆写*@
+</body>
+</html>

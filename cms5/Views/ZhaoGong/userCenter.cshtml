@@ -1,0 +1,100 @@
+﻿@model Models.UserInfo
+@{
+    ViewBag.Title = "用户中心";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<div class="container mt10">
+    <div class="row">
+        <!--start left -->
+        @*@Html.Partial("~/Views/Shared/_UCLeft.cshtml")*@
+        @Html.Action("UCLeft","zhaogong")
+        <!--end left -->
+        <!--start right -->
+        <div class="col-xs-12  col-lg-9">
+            <div class="box">
+                <div class="page-header" style="padding-top: 10px">
+                    <i class="glyphicon glyphicon-th-list"></i>&nbsp;<a href="#">个人信息</a>
+                </div>
+                <div class="user_detail ">
+                    <div class="row row-md">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                            <div class="box box-block bg-white tile tile-1 m-b-2">
+                                <div class="t-icon right">
+                                    <span class="bg-danger"></span><i class="ti-shopping-cart-full"></i>
+                                </div>
+                                <div class="t-content" style="padding-top: 12px">
+                                    <h6 class="text-uppercase m-b-1"></h6>
+
+                                    <img src="/imgs/zp.png" class="img-circle" width="60px" height="60px"
+                                         alt="Image">
+
+                                    <span class="text-muted font-90"> @Model.userName</span>
+                                    <br>
+                                    <a href="/userInfo/EditUser?userPhone=@Model.userPhone"><span style="font-size: 12px; color: #377bb5">编辑个人信息>></span></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                            <div class="box box-block bg-white tile tile-1 m-b-2">
+                                <div class="t-icon right">
+                                    <span class="bg-success"></span><i class="ti-bar-chart"></i>
+                                </div>
+                                <div class="t-content">
+                                    <h6 class="text-uppercase m-b-1">
+                                        <i class="glyphicon glyphicon-grain"></i>&nbsp;积分
+                                    </h6>
+                                    <h3 class="m-b-1">100</h3>
+                                    <a href=""><span style="font-size: 12px; color: #377bb5">如何赚取积分>></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="box box-block bg-white tile tile-1 m-b-2">
+                                <div class="t-icon right">
+                                    <span class="bg-warning"></span><i class="ti-receipt"></i>
+                                </div>
+                                <div class="t-content">
+                                    <h6 class="text-uppercase m-b-1">
+                                        <i class="glyphicon glyphicon-edit"></i> &nbsp;
+                                        实名信息
+                                    </h6>
+                                    <h3 class="m-b-1">未实名</h3>
+                                    <a href=""><span style="font-size: 12px; color: #377bb5">去实名>></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="box box-block bg-white tile tile-1 m-b-2">
+                                <div class="t-icon right">
+                                    <span class="bg-primary"></span><i class="ti-package"></i>
+                                </div>
+                                <div class="t-content">
+                                    <h6 class="text-uppercase m-b-1">
+                                        <i class="glyphicon glyphicon-star-empty"></i>星级
+                                    </h6>
+
+                                    <h3>
+                                        <i class="glyphicon glyphicon-star"></i>
+                                        <i class="glyphicon glyphicon-star"></i>
+                                        <i class="glyphicon glyphicon-star"></i>
+                                        <i class="glyphicon glyphicon-star-empty"></i>
+                                        <i class="glyphicon glyphicon-star-empty"></i>
+                                    </h3>
+                                    <a href=""><span style="font-size: 12px; color: #377bb5">如何评定星级>></span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <h2 class="center-block">
+                    @ViewBag.info
+            </h2>
+        </div>
+    </div>
+    <!--end right -->
+</div>
+
+</div>

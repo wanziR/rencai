@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "个人劳务管理";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<!--城市-->
+<script type="text/javascript" src="/script/City_data.js"></script>
+<script type="text/javascript" src="/script/areadata.js"></script>
+<script type="text/javascript" src="/script/auto_area.js"></script>
+
+<div class="container mt10">
+    <div class="row">
+        <!--start left -->
+        @Html.Action("UCLeft", "zhaogong")
+        <!--end left -->
+        <!--start right -->
+        <script>
+            $(function () {
+                $(".delu").click(function () {
+                    if (!confirm("确认删除吗？")) return;
+                    var ID = $(this).attr("name");
+                    $.post("/laowu/Del/", { id: ID }, function (data, status) {
+                        $("#" + ID).remove();
+                       $(success("删除成功！"))
+                    });
+                });
+            });
+        </script>
+
+        <div class="col-xs-12  col-lg-9" style="margin-top:0px">
+            <div class="box">
+                <div class="page-header" style="padding-top: 10px">
+                    <div class="row">
+                        <div class="col-lg-4 text-left">
+                            <i class="glyphicon glyphicon-th-list"></i>&nbsp;<a href="#">@ViewBag.Title</a>
+                        </div>
+                        <div class="col-lg-6 text-left">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="搜索关键词">
+                                        <div class="input-group-addon">
+                                            <a href="#"> <i class="glyphicon glyphicon-search"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-2 text-right">
+                            <a href="#" class="btn btn-primary">发布</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my_fabu">
+
+                    <div class="panel-body table-responsive">
+
+                        <table id="example" class="table display table-striped">
+                            <thead>
+                                <tr>
+                                    <th>姓名 </th>
+                                    <th>工种</th>
+                                    <th>发布时间</th>
+                                    <th>详细信息</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @if (ViewBag.List != null)
+                            {
+                                foreach (var alist in ViewBag.list)
+                                {//lwId, lwTitle, lwName, lwSex, lwage, lwPhone, lwArea, lwGz, lwDetail, lwAddtime, lwZhuangtai, isTuijian, isRemen
+                                    <tr id="@alist.lwId">
+                                        <td> <a target="_blank" href="/Laowu/GetDetail?id=@alist.lwId">@alist.lwName</a></td>
+                                        <td>@alist.lwGz</td>
+                                        <td>@((alist.lwAddtime).ToString("yyyy-MM-dd") )</td>
+                                        <td>
+                                            <a href="//laowu/GetDetail?id=@alist.lwId"><span style="color:#0c5daa">详情</span> </a>&nbsp;&nbsp;
+                                            <a href="#" name="@alist.lwId" class="delu"><span style="color:red">删除</span></a>
+                                        </td>
+                                    </tr>
+
+                            }
+                        }
+                            </tbody>
+
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!--end right -->
+    </div>
+
+</div>

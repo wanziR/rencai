@@ -1,0 +1,201 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "List";
+                Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
+
+<header class="zy_search_top_box">
+    <div class="zy_search_top fix">
+        <div class="one"><img src="/mobile/images/logo.png"></div>
+        <!-- 注释去间隙
+        间隙-->
+        <div class="box">
+            <span><img src="/mobile/images/icon_search.png"></span>
+            <input type="text" placeholder="请输入关键词搜索" value="">
+        </div>
+        <!-- 注释去间隙
+        间隙-->
+        <div class="r">
+            <a href="#">我的发布</a>
+        </div>
+    </div>
+</header>
+
+<!-- 内容框 -->
+<div class="zy_module-content">
+    <!-- 消息 -->
+    <div class="zy_content zy_find_work">
+        <!-- 类别筛选 -->
+        <div class="zy_category_box mb6">
+            <div class="zy_black_bg"></div>
+            <div class="zy_category bgwh dis_flex">
+                <div class="xz_work brd pct50"><span>全部项目</span></div>
+                <div class="xz_rank pct50"><span>智能排序</span></div>
+            </div>
+            <div class="zy_category_list">
+                <div class="box workbox fix">
+                    <ul>
+                        <li class="work" is_click="no">全部工种</li>
+                        <li class="work" is_click="yes">管理岗</li>
+                        <li class="work" is_click="yes">技术工人</li>
+                        <li class="work" is_click="yes">司机驾驶员</li>
+                        <li class="work" is_click="yes">特种作业人员</li>
+                        <li class="work" is_click="yes">其他</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span class="work">全部</span>
+                            <span class="work">施工员</span>
+                            <span class="work">质量员</span>
+                            <span class="work">安全员</span>
+                            <span class="work">木工</span>
+                            <span class="work">架子工</span>
+                            <span class="work">钢筋工</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <ul>
+                        <li class="rank">最新发布</li>
+                        <li class="rank">热门职位</li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- 类别js -->
+            <script type="text/javascript">
+				$(function(){
+					// 不同条件选择切换选择
+					$(".zy_category div").mousedown(function(){
+						var m=$(this).index();
+						if ($(this).hasClass("cur")) {
+							$(this).removeClass("cur");
+							$(".zy_black_bg").hide();
+						}else{
+							$(this).addClass("cur");
+							$(this).siblings().removeClass("cur");
+							$(".zy_black_bg").show();
+						}
+
+						$(".zy_category_list .box").eq(m).toggle();
+						$(".zy_category_list .box").eq(m).siblings().hide();
+
+						//后面这两段放在这里才能点击后获取到显示的高度
+						var work_H=$(".zy_category_list .workbox ul:first-child").height();
+						work_UL2.css("height",work_H);
+					})
+					//点击背景隐藏
+					$(".zy_black_bg").mousedown(function(){
+						$(this).hide();
+						$(".zy_category_list .box").hide();
+						$(".zy_category>div").removeClass("cur");
+					})
+
+					// 工作类型选择
+					var work_UL1=$(".zy_category_list .workbox ul:first-child");
+					var work_UL2=$(".zy_category_list .workbox ul:last-child");
+					work_UL1.find("li").mousedown(
+						function(){
+							var ks=$(this).attr("is_click");
+							if (ks=="yes") {
+								work_UL1.animate({width:"25%"},300)
+								work_UL2.find("li").show();
+							}
+							$(this).css("color","#1666ad");
+							$(this).siblings().css("color","#333");
+						}
+					)
+
+					//滑动页面后类别筛选浮动固定在顶部
+					var h1=$(".zy_search_top_box").height();
+					var h2=$(".zy_category_box").innerHeight();
+
+					$(window).scroll(function(){
+						var s = $(document).scrollTop();
+						if (s>h1) {
+							$(".zy_category_box").addClass('scroll_fix');
+							$(".zy_category_box").css("position","fixed");
+							$(".zy_find_work").css("padding-top",h2);
+						}else{
+							$(".zy_category_box").removeClass('scroll_fix');
+							$(".zy_category_box").css("position","relative");
+							$(".zy_find_work").css("padding-top",0);
+						}
+					});
+				})
+            </script>
+        </div>
+        <!-- 类别筛选 end-->
+
+        <div class="tuij_box item_list">
+            <ul>
+                <li>
+                    <a href="item_xq.html">
+                        <div class="item_tit fix">
+                            <h2 class="l pct80">企业：<b class="g3 n">中煤第三建设（集团）有限责任公司</b></h2>
+                            <span class="r">20小时前</span>
+                        </div>
+                        <div class="item_tit">
+                            <h2>需求：<b class="gr n">需要</b>&nbsp;&nbsp;<b class="g3 n">架子工45人</b></h2>
+                        </div>
+                        <div class="item_tit fix">
+                            <h2 class="l">工期：(2019-11)&nbsp;~&nbsp;(2020-03)</h2>
+                            <em class="r n">已认证</em>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="item_xq.html">
+                        <div class="item_tit fix">
+                            <h2 class="l pct80">项目：<b class="g3 n">兰州市伟业建筑劳务有限公司</b></h2>
+                            <span class="r">20小时前</span>
+                        </div>
+                        <div class="item_tit">
+                            <h2>需求：<b class="gr n" style="color: green;">提供</b>&nbsp;&nbsp;<b class="g3 n">焊工600人</b></h2>
+                        </div>
+                        <div class="item_tit fix">
+                            <h2 class="l">工期：(2019-11)&nbsp;~&nbsp;(2020-03)</h2>
+                            <em class="r n">已认证</em>
+                        </div>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+
+        <!-- 热门职位 -->
+        @Html.Partial("~/Views/Shared/_mHotwork.cshtml")
+        <!-- 翻页 -->
+        <div class="zy_fanye dis_flex">
+            <a href="#">上一页</a>
+            <span>
+                <b><em>1</em>/<i>2</i></b>
+                <select>
+                    <option>第1页</option>
+                    <option>第2页</option>
+                </select>
+            </span>
+            <a href="#">下一页</a>
+        </div>
+
+    </div>
+
+    <!-- 返回顶部 -->
+    <div class="go_top">
+        <a class="btn_top"></a>
+    </div>
+
+    <!-- 底部 -->
+    @Html.Partial("~/Views/Shared/_mFoot.cshtml")
+
+    <!-- 底部导航 -->
+    @Html.Partial("~/Views/Shared/_mFootMenu.cshtml")
+
+</div>
+
+<!-- 搜索框 -->
+@Html.Partial("~/Views/Shared/_mSearch.cshtml")

@@ -1,0 +1,138 @@
+﻿@model Models.ZhaoGong
+
+@{
+    ViewBag.Title = "招工信息";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<div class="container">
+    <div class="box visible-xs mt10 pl15">
+        <i class="glyphicon glyphicon-home"></i>
+        <a href="#">首页</a><em> / </em><a href="#">项目信息</a>
+    </div>
+    <div class="box hidden-xs">
+        <div class="page-header" style="padding-top: 10px">
+            <i class="glyphicon glyphicon-home"></i>
+            <a href="#">首页</a><em> / </em><a href="#">项目信息</a>
+        </div>
+        <div class="commonOption ">
+            <div class="rows ">
+                <div class="rit ">
+                    <div class="ins">
+                        <a class="cur" href="#">类型</a>
+                        <a href="#">项目负责人</a>
+                        <a href="#">工程中介</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="rows">
+                <div class="rit">
+                    <div class="ins">
+                        <a class="cur" href="#">区域</a>
+                        <a href="#">北京</a>
+                        <a href="#">天津</a>
+                        <a href="#">上海</a>
+                        <a href="#">重庆</a>
+                        <a href="#">甘肃</a>
+                        <a href="#">河北</a>
+                        <a href="#">山西</a>
+                        <a href="#">内蒙古</a>
+                        <a href="#">辽宁</a>
+                        <a href="#">吉林</a>
+                        <a href="#">黑龙江</a>
+                        <a href="#">江苏</a>
+                        <a href="#">浙江</a>
+                        <a href="#">安徽</a>
+                        <a href="#">福建</a>
+                        <a href="#">江西</a>
+                        <a href="#">山东</a>
+                        <a href="#">河南</a>
+                        <a href="#">湖北</a>
+                        <a href="#">湖南</a>
+                        <a href="#">广东</a>
+                        <a href="#">广西</a>
+                        <a href="#">海南</a>
+                        <a href="#">四川</a>
+                        <a href="#">贵州</a>
+                        <a href="#">云南</a>
+                        <a href="#">西藏</a>
+                        <a href="#">陕西</a>
+                        <a href="#">青海</a>
+                        <a href="#">宁夏</a>
+                        <a href="#">新疆</a>
+                        <a href="#">香港</a>
+                        <a href="#">澳门</a>
+                        <a href="#">台湾</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container mt10">
+    <div class="row">
+        <div class="col-xs-12  col-lg-9 pr0">
+            <div class="box pl15">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-8 text-left">
+                        <!-- <h4 style="color:#145fa8">[项目名称]：承接，外墙保温，涂料</h4>
+                        <p>联系人：李先生</p>
+                        <p>队伍规模：50人</p>
+                        <p style="color: darkgray">发布时间：2019-08-28 10:47</p>
+                    </div>
+                    <div class="col-xs-12 col-lg-4 text-right">
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+                                title="该用户已经通过实名认证"><i class="glyphicon  glyphicon-check"></i>实名</button>
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+                                title="VIP认证用户"><i class="glyphicon  glyphicon-check"></i>VIP</button>
+                                <a href="/zhaogong/zgDetail" class="btn btn-default">查看详情</a>
+                        </div> -->
+
+                    </div>
+                </div>
+                <hr class="simple" color="#6f5499" />
+                <div class="row">
+                    <div class="col-xs-12 col-lg-9 text-left">
+
+                    </div>
+                    <div class="col-xs-12 col-lg-3 text-right">
+                        <!-- <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+                            title="该信息已核实"><i class="glyphicon  glyphicon-check"></i>已核</button>
+                        <a href="/zhaogong/zgDetail" class="btn btn-default">查看详情</a>
+                    </div> -->
+                    </div>
+                </div>
+            </div>
+            <script>
+	$(function () {
+		$("[data-toggle='tooltip']").tooltip();
+	});
+            </script>
+            <div class="box mt10 text-center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">上一页</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">下一页</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        @Html.Partial("/Views/Shared/_ZgRight.cshtml")
+    </div>
+
+</div>

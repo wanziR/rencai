@@ -1,0 +1,187 @@
+﻿@model Models.ZhaoHuo
+
+@{
+    ViewBag.Title = "发布找活信息";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+
+<!--城市-->
+<script type="text/javascript" src="/script/City_data.js"></script>
+<script type="text/javascript" src="/script/areadata.js"></script>
+<script type="text/javascript" src="/script/auto_area.js"></script>
+
+<!--选择工种-->
+<script>
+        function getCheckBoxVal() {
+            //jquery获取复选框值
+            var chk_value = []; //定义一个数组
+            $('input[name="interest"]:checked').each(function () { //遍历每一个名字为interest的复选框，其中选中的执行函数
+                chk_value.push($(this).val()); //将选中的值添加到数组chk_value中
+            });
+            // alert(chk_value.length == 0 ? '你还没有选择任何内容！' : chk_value);
+            $('#zgGz').val(chk_value);
+            dwr.util.setValue(checkboxInfo, chk_value);
+        }
+</script>
+<style>
+    .gongz div {
+        margin: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="row margin-t-5">
+        <!--start left -->
+        @*@Html.Partial("~/Views/Shared/_UCLeft.cshtml")*@
+        <!--end left -->
+        <!--start right -->
+        <form action="/ZhaoHuo/getZhFabu" method="post">
+            <div class="col-xs-12  col-lg-9" style="margin-top:0px">
+                <div class="box">
+                    <div class="page-header" style="padding-top: 10px">
+                        <i class="glyphicon glyphicon-th-list"></i>&nbsp;<a href="#">@ViewBag.Title</a>
+                        <span style="color:green;font-weight:bold">@ViewBag.info</span>
+                    </div>
+                    @*zgId, zgTitle, zgUser, zgPhone, zgArea, zgGz, zgDetail, zgAddtime, zgImg1, zgImg2, zgImg3*@
+                    <div class="zh_fabu">
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>标&nbsp;&nbsp;&nbsp;&nbsp;题 </b></div>
+                            <div class="col-lg-10"><input name="zhTitle" class="form-control" type="text" placeholder=""><span style="color:red">@Html.ValidationMessage("userName")</span></div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>所需工种</b></div>
+                            <div class="col-lg-10">
+                                <input id="zgGz" name="zgGz" class=" form-control" type="text" data-toggle="modal" data-target="#myModal">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>选择地区</b></div>
+                            <div class="col-lg-10">
+                                <span style="color:red">@Html.ValidationMessage("zhArea")</span>
+                                <input name="zhArea" type="text" class="area-danxuan form-control" value="" data-value="" />
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>队伍规模</b></div>
+                            <div class="col-lg-10">
+                                <span style="color:red">@Html.ValidationMessage("zhNum")</span>
+                                <input name="zhNum" type="text" class="" width="20px" value="" data-value="" />&nbsp;（人）
+
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>联&nbsp;系&nbsp;人</b></div>
+                            <div class="col-lg-10">
+                                <span style="color:red">@Html.ValidationMessage("zhUser")</span>
+                                <input name="zhUser" class="form-control" type="text" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>联系电话</b></div>
+                            <div class="col-lg-10">
+                                <span style="color:red">@Html.ValidationMessage("zhPhone")</span>
+                                <input name="zhPhone" class="form-control" type="text" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>找活详情</b></div>
+                            <div class="col-lg-10">
+
+                                <textarea name="zhDetail" style="width:100%" rows="5" placeholder="请输入详情（如工作经验、工资要求、擅长技能等），有助于您更快、更准确的找到好工作~" lay-verify="required"></textarea>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-8 text-right" style="letter-spacing:8px"></div>
+                            <div class="col-lg-4 text-right">
+                                <button class="btn btn-primary " type="submit">提交</button>
+                                <button class="btn btn-default ">取消</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!--end right -->
+
+</div>
+
+<!-- Modal 工种-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">选择工种</h4>
+            </div>
+            <div class="modal-body gongz">
+                <span>【管理岗】</span>
+                <div class="row">
+
+                    @if (ViewBag.List1 != null)
+                    {
+
+                        foreach (var lista in ViewBag.list1)
+                        {
+                            <div style="float:left"><input type="checkbox" name="interest" value="@lista.gzName" />@lista.gzName</div>
+
+                        }
+                    }
+                </div>
+
+
+                <span>【技术工人】</span>
+                <div class="row">
+
+                    @if (ViewBag.List2 != null)
+                    {
+
+                        foreach (var listb in ViewBag.list2)
+                        {
+                            <div style="float:left"><input type="checkbox" name="interest" value="@listb.gzName" />@listb.gzName</div>
+
+                        }
+                    }
+                </div>
+                <span>【特种作业人员】</span>
+                <div class="row">
+
+                    @if (ViewBag.List3 != null)
+                    {
+
+                        foreach (var listc in ViewBag.list3)
+                        {
+                            <div style="float:left"><input type="checkbox" name="interest" value="@listc.gzName" />@listc.gzName</div>
+
+                        }
+                    }
+                </div>
+                <span>【司机驾驶员】</span>
+                <div class="row">
+
+                    @if (ViewBag.List4 != null)
+                    {
+
+                        foreach (var listd in ViewBag.list4)
+                        {
+                            <div style="float:left"><input type="checkbox" name="interest" value="@listd.gzName" />@listd.gzName</div>
+
+                        }
+                    }
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="getCheckBoxVal()">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 工种结束-->

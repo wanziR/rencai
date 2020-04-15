@@ -1,0 +1,117 @@
+﻿@model Models.ZhaoGong
+
+@{
+    ViewBag.Title = "发布找活信息";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+
+<!--城市-->
+<script type="text/javascript" src="/script/City_data.js"></script>
+<script type="text/javascript" src="/script/areadata.js"></script>
+<script type="text/javascript" src="/script/auto_area.js"></script>
+
+<!--多选（工种）-->
+<link href="/css/ySelect.css" rel="stylesheet" type="text/css">
+<script src="/script/ySelect.js"></script>
+<div class="container">
+    <div class="row margin-t-5">
+        <!--start left -->
+        @Html.Action("UCLeft", "zhaogong")
+        <!--start right -->
+        <form action="/ZhaoGong/getZgFabu" method="post">
+            <div class="col-xs-12  col-lg-9" style="margin-top:0px">
+                <div class="box">
+                    <div class="page-header" style="padding-top: 10px">
+                        <i class="glyphicon glyphicon-th-list"></i>&nbsp;<a href="#">@ViewBag.Title</a>
+                        <span style="color:green;font-weight:bold">@ViewBag.info</span>
+                    </div>
+                    @*zgId, zgTitle, zgUser, zgPhone, zgArea, zgGz, zgDetail, zgAddtime, zgImg1, zgImg2, zgImg3*@
+                    <div class="zg_fabu">
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>标&nbsp;&nbsp;&nbsp;&nbsp;题 </b></div>
+                            <div class="col-lg-10"><input name="zgTitle" class="form-control" type="text" placeholder=""><span style="color:red">@Html.ValidationMessage("userName")</span></div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>工种</b></div>
+                            <div class="col-lg-10">
+                                <span style="color:red">@Html.ValidationMessage("zgGz")</span>
+                                <select id='m1' class="demo" multiple="multiple">
+                                    <optgroup label="技术工种">
+                                        <option value="电焊">电焊</option>
+                                        <option value="木工">木工</option>
+                                        <option value="水电工">水电工</option>
+                                        <option value="杂工力工">杂工力工</option>
+                                        <option value="钢筋工">钢筋工</option>
+                                        <option value="混凝土工">混凝土工</option>
+                                        <option value="机械设备油漆工">机械设备油漆工</option>
+                                        <option value="水暖工">水暖工</option>
+                                        <option value="泥瓦工">泥瓦工</option>
+                                    </optgroup>
+                                    <optgroup label="司机驾驶员">
+                                        <option value="挖掘机司机">挖掘机司机</option>
+                                        <option value="架桥机驾驶员">架桥机驾驶员</option>
+                                        <option value="推土机司机">推土机司机</option>
+                                    </optgroup>
+                                </select>
+                                <input name="zgGz" type="text" hidden />
+
+                                <script>
+                                     $(function () {
+                                                     $('.demo').ySelect();
+                                                     $("button[type=submit]").click(function () {
+                                                     $("input[name=zgGz]").val($("#m1").ySelectedValues("/"));
+                                                       });
+                                                 });
+
+                                </script>
+                            </div>
+
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>选择地区</b></div>
+                            <div class="col-lg-10">
+                                <span style="color:red">@Html.ValidationMessage("zgArea")</span>
+                                <input name="zgArea" type="text" class="area-danxuan form-control" value="" data-value="" />
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>联&nbsp;系&nbsp;人</b></div>
+                            <div class="col-lg-10">
+                                <span style="color:red">@Html.ValidationMessage("zgUser")</span>
+                                <input name="zgUser" class="form-control" type="text" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>联系电话</b></div>
+                            <div class="col-lg-10">
+                                <span style="color:red">@Html.ValidationMessage("zgPhone")</span>
+                                <input name="zgPhone" class="form-control" type="text" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>招工详情</b></div>
+                            <div class="col-lg-10">
+
+                                <textarea name="zgDetail" style="width:100%" rows="5" placeholder="请输入详情（如招工要求、工作内容、工资待遇、结款方式/周期等），有助于您更快、更准确的招到好工人~" lay-verify="required"></textarea>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-8 text-right" style="letter-spacing:8px"></div>
+                            <div class="col-lg-4 text-right">
+                                <button class="btn btn-primary " type="submit">提交</button>
+                                <button class="btn btn-default ">取消</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!--end right -->
+
+</div>
+

@@ -1,0 +1,205 @@
+﻿<div class="commonOption ">
+    <div class="rows">
+        <div class="rit">
+            <div class="ins">
+                <div class="rows">
+                    <div class="col-lg-11">
+                        <a class="cur" href="/laowu/lwinfo/">岗位</a>
+                        <a href="#"><b>【管理岗】</b></a>
+                        @if (ViewBag.List1 != null)
+                        {
+                            foreach (var lista in ViewBag.list1)
+                            {
+                                <a href="/laowu/lwinfo/?strWord=@lista.gzName">@lista.gzName</a>
+                            }
+                        }
+                    </div>
+                    <div class="col-lg-1">
+                        <a href="#Modal-gaungli" data-toggle="modal"><span style="color:darkgrey">>>更多</span> </a>
+                    </div>
+
+                </div>
+                <!-- Modal 管理岗-->
+                <div class="modal fade" id="Modal-gaungli" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title text-center" id="myModalLabel">【管理岗】</h4>
+                            </div>
+                            <div class="modal-body" style="min-height:100px">
+   
+                                @if (ViewBag.List1 != null)
+                                {
+                                    foreach (var lista in ViewBag.list1)
+                                    {
+                                        <a href="/laowu/lwinfo/?strWord=@lista.gzName">@lista.gzName</a>
+                                    }
+                                }
+   
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rows" style="width:100%;overflow:hidden;height:30px">
+                    <div class="col-lg-11">
+                        <a href="/zhaogong/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <a href="#"><b>【技术工人】</b></a>
+                        @if (ViewBag.List2 != null)
+                        {
+
+                            foreach (var listb in ViewBag.list2)
+                            {
+                                <a href="/laowu/lwinfo/?strWord=@listb.gzName">@listb.gzName</a>
+
+                            }
+                        }
+                    </div>
+                    <div class="col-lg-1">
+                        <a href="#Modal-jigong" data-toggle="modal"><span style="color:darkgrey">>>更多</span> </a>
+                    </div>
+                </div>
+                <!-- Modal 技术工人-->
+                <div class="modal fade" id="Modal-jigong" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title text-center" id="myModalLabel">【技术工人】</h4>
+                            </div>
+                            <div class="modal-body" style="min-height:210px">
+                                @if (ViewBag.List2 != null)
+                                {
+
+                                    foreach (var listb in ViewBag.list2)
+                                    {
+                                        <a href="/laowu/lwinfo/?strWord=@listb.gzName">@listb.gzName</a>
+
+                                    }
+                                }
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rows" style="width:100%;overflow:hidden;height:30px">
+                    <div class="col-lg-11">
+                        <a href="/zhaogong/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <a href="#"><b>【特种作业人员】</b></a>
+                        @if (ViewBag.List3 != null)
+                        {
+
+                            foreach (var listc in ViewBag.list3)
+                            {
+                                <a href="/laowu/lwinfo/?strWord=@listc.gzName">@listc.gzName</a>
+
+                            }
+                        }
+                    </div>
+                    <div class="col-lg-1">
+                        <a href="#Modal-tezhong" data-toggle="modal"><span style="color:darkgrey">>>更多</span> </a>
+                    </div>
+                </div>
+                <!-- Modal 特种作业人员-->
+                <div class="modal fade" id="Modal-tezhong" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title text-center" id="myModalLabel">【特种作业人员】</h4>
+                            </div>
+                            <div class="modal-body" style="min-height:100px">
+                                @if (ViewBag.List3 != null)
+                                {
+
+                                    foreach (var listc in ViewBag.list3)
+                                    {
+                                        <a href="/laowu/lwinfo/?strWord=@listc.gzName">@listc.gzName</a>
+
+                                    }
+                                }
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rows" style="width:100%;overflow:hidden;height:30px">
+                    <div class="col-lg-11">
+                        <a href="/zhaogong/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <a href="#"><b>【司机驾驶员】</b></a>
+                        @if (ViewBag.List4 != null)
+                        {
+
+                            foreach (var listd in ViewBag.list4)
+                            {
+                                <a href="/laowu/lwinfo/?strWord=@listd.gzName">@listd.gzName</a>
+
+                            }
+                        }
+                    </div>
+                    <div class="col-lg-1">
+                        <a href="#Modal-siji" data-toggle="modal"><span style="color:darkgrey">>>更多</span> </a>
+                    </div>
+                </div>
+                <!-- Modal 司机驾驶员-->
+                <div class="modal fade" id="Modal-siji" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title text-center" id="myModalLabel">【司机驾驶员】</h4>
+                            </div>
+                            <div class="modal-body" style="min-height:100px">
+                                @if (ViewBag.List4 != null)
+                                {
+
+                                    foreach (var listd in ViewBag.list4)
+                                    {
+                                        <a href="/laowu/lwinfo/?strWord=@listd.gzName">@listd.gzName</a>
+
+                                    }
+                                }
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rows">
+        <div class="rit">
+            <div class="ins">
+                <div class="rows" style="width:100%;overflow:hidden;height:30px">
+                    <div class="col-lg-11">
+                        <a class="cur" href="#">区域</a>
+                        @if (ViewBag.ListCity != null)
+                        {
+
+                            foreach (var listct in ViewBag.listCity)
+                            {
+                                <a href="/laowu/lwinfo/?strWord=@listct.lwArea">@listct.lwArea</a>
+
+                            }
+                        }
+                    </div>
+                    <div class="col-lg-1">
+                        <a href=""><span style="color:darkgrey"></span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

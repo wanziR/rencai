@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = ViewBag.kWord + "管理";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<!--城市-->
+<script type="text/javascript" src="/script/City_data.js"></script>
+<script type="text/javascript" src="/script/areadata.js"></script>
+<script type="text/javascript" src="/script/auto_area.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/script/bootstrap-select.min.js"></script>
+<div class="container mt10">
+    <div class="row">
+        <!--start left -->
+        @Html.Action("UCLeft", "zhaogong")
+        <!--end left -->
+        <!--start right -->
+
+        <div class="col-xs-12  col-lg-9" style="margin-top:0px">
+            <div class="box">
+                <div class="page-header" style="padding-top: 10px;">
+                    <div class="row">
+                        <div class="col-lg-4 text-left">
+                            <i class="glyphicon glyphicon-th-list"></i>&nbsp;<a href="#">@ViewBag.Title</a>
+                        </div>
+                        <div class="col-lg-6 text-left">
+                            <select class="selectpicker form-control" name="acId" style="margin-left:0">
+                                @if (ViewBag.acId != null)
+                                {
+                                    <option value="@ViewBag.acId">===== @ViewBag.kWord ==== </option>
+                                }
+                                @if (ViewBag.ACList != null)
+                                {
+                                    foreach (var ACList in ViewBag.ACList)
+                                    {
+                                        <option value="@ACList.acName">@ACList.acName</option>
+
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <script>
+                            $(".selectpicker").change(function () {
+                                var $kWord = $(".selectpicker").val();
+                                //$.post("/article/aArticleList/", { kWord: $kWord });
+                                window.location.href = "/article/aArticleList/?kWord=" + $kWord;
+                                
+                            })
+                        </script>
+                        <div class="col-lg-2 text-right">
+                            <a href="/Article/Add?kWord=@ViewBag.kWord" class="btn btn-primary">添加</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my_fabu">
+
+                    <span class="label label-success">@ViewBag.info</span>
+                    <div class="panel-body table-responsive">
+
+                        <table id="example" class="table display table-striped">
+                            <thead>
+                                <tr>
+                                    <th>文章标题 </th>
+                                    <th>作者</th>
+                                    <th>添加时间</th>
+                                    <th>详细信息</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.List != null)
+                                {
+                                    foreach (var alist in ViewBag.list)
+                                    {//aId, aName, aContent, acId, aAuthor, aPV, aAddtime, isTuiJian, isReMen, isZhiDing, aType, aLink
+                                        <tr id="@alist.aId">
+                                            <td> <a target="_blank" href="/Article/GetDetail?id=@alist.aId" title="@alist.aName">@(alist.aName.Length > 16 ? alist.aName.Substring(0, 16) + "..." : alist.aName) </a></td>
+                                            <td>@alist.aAuthor</td>
+                                            <td>@alist.aAddtime.ToString("yyyy-MM-dd")        </td>
+                                            <td>
+                                                <a href="/Article/GetDetail?id=@alist.aId" target="_blank"><span style="color:#0c5daa">浏览</span> </a>
+                                                &nbsp;&nbsp;<a href="/Article/Edit/?id=@alist.aId"><span style="color:#0c5daa">编辑</span> </a>
+                                                &nbsp;&nbsp;<a href="/Article/del/?id=@alist.aId&kWord=@alist.acName" name="@alist.aId" onclick="if(confirm('确定删除?')==false)return false" ; class="delu"><span style="color:red">删除</span></a>
+                                            </td>
+                                        </tr>
+
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--end right -->
+    </div>
+
+</div>

@@ -1,0 +1,104 @@
+﻿@model Models.ZhaoPin
+
+@{
+    ViewBag.Title = "zgDetail";
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
+
+
+<header class="zy_search_top_box scroll_fix">
+    <div class="zy_title_top fix">
+        <div class="one" href="javascript:" onclick="history.back();"><img src="/mobile/images/back_jt.png"><span>返回</span></div>
+        <h1>招工详情</h1>
+        <div class="r">
+            <a href="../web_company/user.html"><img src="/mobile/images/menu_icon04.png"></a>
+        </div>
+    </div>
+</header>
+
+<!-- 占位框 -->
+<div class="top_zhanwei_box"></div>
+
+<!-- 内容框 -->
+<div class="zy_module-content">
+    <!-- 工作详情 -->
+    <div class="zy_content zy_partner_xq">
+        <div class="bgwh mb6 p_2">
+            <div class="my_head fix">
+                <div class="pic l">
+                    @{
+                        if (Model.zpXuqiu == "企业")
+                        {
+                            <img src="~/mobile/images/common_img/m_qy.png">
+                        }
+                        if (Model.zpXuqiu == "项目")
+                        {
+                            <img src="~/mobile/images/common_img/m_xm.png">
+                        }
+                        if (Model.zpXuqiu == "队伍")
+                        {
+                            <img src="~/mobile/images/common_img/m_dw.png">
+                        }
+                    }
+
+                </div>
+                <dl class="r">
+                    <dt><span>@Model.zpZhuti</span><em>已认证</em></dt>
+                    <dd class="fix">
+                        <span class="r"><em>浏览量：100+</em></span>
+                    </dd>
+                </dl>
+            </div>
+            <div class="work_info other_info">
+                <div><span>招工区域：</span><p>@Model.zpArea</p></div>
+                <div><span>招工简介：</span>@Model.zpXuqiu @Model.zpGangwei@Model.zpNum 人</div>
+                <div><span>发布时间：</span><p>@Model.zpAddtime</p></div>
+            </div>
+        </div>
+
+        <!-- 工作经历 -->
+        <div class="work_zhize bgwh mb6 p_2" style="min-height:100px">
+            <h4><span class="ge04">招工详情</span></h4>
+            <div class="txt">
+                <p>@Model.zpDetail</p>
+            </div>
+        </div>
+
+        <!-- 详情底部栏 -->
+        <div class="xq_foot dis_flex">
+            <a onclick="img_hs(this)" is_show="true"><img src="/mobile/images/common_img/zy_icon_sc.png"><span>收藏</span></a>
+            <a href="tel:@Model.zpPhone"><img src="/mobile/images/common_img/zy_icon_tel.png"><span>电话</span></a>
+            <div class="apply">投递简历</div>
+        </div>
+        <script type="text/javascript">
+			function img_hs(obj){
+				var mr='/mobile/images/common_img/zy_icon_sc.png';
+				var sh='/mobile/images/common_img/zy_icon_sc01.png';
+				var bool=$(obj).attr("is_show");
+				if (bool=="true") {
+					$(obj).find("img").attr("src",sh);
+					$(obj).attr("is_show",'false');
+					$(obj).find("span").css("color","#1666ad").text("已收藏")
+				}else{
+					$(obj).find("img").attr("src",mr);
+					$(obj).attr("is_show",'true');
+					$(obj).find("span").css("color","#333").text("收藏")
+				}
+			}
+        </script>
+
+
+    </div>
+
+    <!-- 返回顶部 -->
+    <div class="go_top">
+        <a class="btn_top"></a>
+    </div>
+
+    <!-- 底部 -->
+    @Html.Partial("~/Views/Shared/_mFoot.cshtml")
+
+</div>
+
+
+

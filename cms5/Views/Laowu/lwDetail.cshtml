@@ -1,0 +1,102 @@
+﻿@model Models.Laowu
+
+@{
+    ViewBag.Title = "个人劳务详情";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<div class="container mt10">
+    <div class="row">
+        <!--start left -->
+        <div class="col-xs-12  col-lg-9 pr0">
+            <div class="box">
+                <div class="page-header" style="padding-top: 10px">
+                    <i class="glyphicon glyphicon-home"></i>
+                    <a href="#">首页</a><em> / </em><a href="#">@ViewBag.Title</a>
+                </div>
+                <div class="zg_detail ">
+                    <div class="rows">
+                        <ul class="nav nav-list">
+                            <li style="color: #145fa8;font-size: 16px"><b>@Model.lwName</b></li>
+                            <li>
+                                <i class="fa fa-hourglass" aria-hidden="true" style="color: #145fa8"></i>
+                                发布时间：@Model.lwAddtime.ToString("yyyy-MM-dd HH:mm")
+                            </li>
+                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true" style="color: #145fa8"></i> 所在地区:@Model.lwArea</li>
+                            <li>
+                                @*<li> <i class="fa fa-users" aria-hidden="true" style="color: #145fa8"></i>队伍规模:@Model.zhNum.ToString()</li>*@
+                            <li>
+                                <i class="fa fa-id-card" aria-hidden="true" style="color: #145fa8"></i> 求职岗位：
+                                @Model.lwGz
+                            </li>
+                            <li>
+                                <div style="width: 100%">
+
+                                    <div style="width: 100%">
+
+                                        <div class="row">
+                                            <div class="col-xs-12 col-lg-8">
+                                                <div class="btn-group float-left" role="group"
+                                                     aria-label="Button group">
+                                                    <button type="button" class="btn btn-primary">电话号码：</button>
+                                                    <button type="button" class="btn btn-default">
+                                                        @{
+                                                            string m = Model.lwPhone;
+                                                            m = m.Replace(m.Substring(m.Length - 4, 4), "****");
+                                                        }
+                                                        <span id="zgP1">  @m</span>
+                                                        <span id="zgP2" hidden>@Model.lwPhone</span>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-lg-4 text-right">
+                                                @{if (this.User.Identity.IsAuthenticated)
+                                                    {
+                                                        <button id="zgP" data-toggle="modal" data-target="#phone" class="btn btn-danger right">查看完整电话号码</button>
+                                                    }
+                                                    else
+                                                    {
+                                                        <button id="notLogined" class="btn btn-danger right">查看完整电话号码</button>
+                                                         <script>
+                                                             $("#notLogined").click(function () {
+                                                                 $(function () { warning("请先登录！"); })
+                                                             });
+                                                         </script>
+                                                    }
+                                                }
+
+                                            </div>
+
+                                        </div>
+                                        <script>
+                                        $('#zgP').click(function () {
+                                            $('#zgP1').hide();
+                                            $('#zgP2').show();
+                                        });
+                                        </script>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="box mt15 pl15">
+                <i class="fa fa-newspaper-o " aria-hidden="true" style="color: #145fa8"></i> 详细信息:
+                <hr>
+                <div class="content">
+                    @Model.lwDetail
+                </div>
+            </div>
+        </div>
+        <!--end left -->
+        <!--start right -->
+        @Html.Partial("/Views/Shared/_ZgRight.cshtml")
+        <!--end right -->
+    </div>
+
+</div>
+
+
+
+

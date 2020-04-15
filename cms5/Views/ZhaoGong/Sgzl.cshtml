@@ -1,0 +1,70 @@
+﻿@model Models.ZhaoGong
+
+@{
+    ViewBag.Title = "施工资料";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<style>
+   .list li {
+        border-bottom: dashed 1px #d6d3d3;
+    }
+</style>
+<div class="container mt10">
+    <div class="row">
+        <!--start left -->
+        <div class="col-xs-12  col-lg-9 pr0">
+            <div class="box">
+                <div class="page-header" style="padding-top: 10px">
+                    <i class="glyphicon glyphicon-home"></i>
+                    <a href="#">首页</a><em> / </em><a href="#">施工资料</a>
+                </div>
+                <div class="zg_detail ">
+                    <div class="rows list">
+                        <ul>
+                            <li>
+                                <i class="fa fa-neuter" aria-hidden="true"></i> <a href="">钢筋工施工合同怎样写，钢筋工劳务承包合同，钢筋工清包合同</a>
+                                &nbsp;&nbsp;<span class="badge" style="background-color: #d75452;">new</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-neuter" aria-hidden="true"></i> <a href="">建设工程合同属于什么合同？属于承揽合同吗</a>
+                                &nbsp;&nbsp;<span class="badge" style="background-color: #d75452;">new</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-neuter" aria-hidden="true"></i> <a href="">模板承包合同怎么写？2019模板施工承包合同范本</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-neuter" aria-hidden="true"></i> <a href="">装修水电要不要签合同？水电改造合同怎么写？2018家装水电改造合同范本？</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-neuter" aria-hidden="true"></i> <a href="">建筑工程施工协议包括哪些内容？建筑工程施工协议怎么写</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              
+                <nav aria-label="Page navigation" class="text-center">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">上一页</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">下一页</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+        </div>
+        <!--end left -->
+        <!--start right -->
+        @Html.Partial("~/Views/Shared/_SgzlRight.cshtml")
+        <!--end right -->
+    </div>
+
+</div>

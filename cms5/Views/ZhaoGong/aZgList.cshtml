@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "招工信息管理";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<!--城市-->
+<script type="text/javascript" src="/script/City_data.js"></script>
+<script type="text/javascript" src="/script/areadata.js"></script>
+<script type="text/javascript" src="/script/auto_area.js"></script>
+
+<div class="container mt10">
+    <div class="row">
+        <!--start left -->
+        @Html.Action("UCLeft", "zhaogong")
+        <!--end left -->
+        <!--start right -->
+        <script>
+            $(function () {
+                $(".delu").click(function () {
+                    if (!confirm("确认删除吗？")) return;
+                    var zgId = $(this).attr("name");
+                    $.post("/ZhaoGong/Del", { Id:$zgId }, function (data, status) {
+                        $("#" + $zgId).remove();
+                    });
+                });
+            });
+
+        </script>
+        <div class="col-xs-12  col-lg-9" style="margin-top:0px">
+            <div class="box">
+                <div class="page-header" style="padding-top: 10px">
+                    <i class="glyphicon glyphicon-th-list"></i>&nbsp;<a href="#">@ViewBag.Title</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/zhaogong/zgFabu" class="btn btn-success">发布招工信息</a>
+                    <span style="color:green;font-weight:bold">
+                        <a id="DelMsg"></a>
+                    </span>
+                </div>
+
+                <div class="my_fabu">
+
+                    <div class="panel-body table-responsive">
+
+                        <table id="example" class="table display">
+                            <thead>
+                                <tr>
+                                    <th>标题 </th>
+                                    <th>发布人</th>
+                                    <th>发布时间</th>
+                                    <th>详细信息</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @if (ViewBag.List != null)
+                                {
+                                    foreach (var alist in ViewBag.list)
+                                    {//zgId, zgTitle, zgXuqiu, zgZhuTilei, zgZhuti, zgArea, zgGz, zgNum,
+                                     //zgDetail, zgUser, zgPhone, zgFaburen, zgStarttime, zgEndtime, zgAddtime, zgImg1, zgImg2, zgImg3, isTuijian, isRemen
+                                <tr id="@alist.zgId">
+                                    <td> <a target="_blank" href="/zhaogong/GetDetail?id=@alist.zgId">@alist.zgXuqiu@alist.zgGz@alist.zgNum 人</a></td>
+                                    <td>@alist.zgFaburen</td>
+                                    <td>@((alist.zgAddtime).ToString("yyyy-MM-dd") )</td>
+                                    <td ><a  href="/zhaogong/GetDetail?id=@alist.zgId"><span style="color:#0c5daa">详情</span> </a>&nbsp;&nbsp;<a href="#" name="@alist.zgId" class="delu"><span style="color:red">删除</span></a></td>
+                                </tr>
+
+                                    }
+                                }
+                            </tbody>
+
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!--end right -->
+    </div>
+
+</div>

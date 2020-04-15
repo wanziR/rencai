@@ -1,0 +1,67 @@
+﻿@model Models.UserInfo
+
+@{
+    ViewBag.Title = "编辑个人信息";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+<!--城市-->
+<script type="text/javascript" src="/script/City_data.js"></script>
+<script type="text/javascript" src="/script/areadata.js"></script>
+<script type="text/javascript" src="/script/auto_area.js"></script>
+
+<div class="container mt10">
+    <div class="row">
+        <!--start left -->
+        @Html.Partial("~/Views/Shared/_UCLeft.cshtml")
+        <!--end left -->
+        <!--start right -->
+        <form action="/UserInfo/GetEdit" method="post">
+            <div class="col-xs-12  col-lg-9" style="margin-top:0px">
+                <div class="box">
+                    <div class="page-header" style="padding-top: 10px">
+                        <i class="glyphicon glyphicon-th-list"></i>&nbsp;<a href="#">@ViewBag.Title</a>
+                        <span style="color:green;font-weight:bold">@ViewBag.info</span>
+                    </div>
+
+                    <div class="edit_user">
+
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>手&nbsp;机&nbsp;号</b></div>
+                            <div class="col-lg-10">
+                               
+                                <input name="userPhone" value="@Model.userPhone" class="form-control" type="text" placeholder="" readonly>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>呢&nbsp;&nbsp;&nbsp;&nbsp;称</b></div>
+                            <div class="col-lg-10"><input name="userName" value="@Model.userName" class="form-control" type="text" placeholder=""><span style="color:red">@Html.ValidationMessage("userName")</span></div>
+                        </div>
+
+
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-2 text-right" style="letter-spacing:8px"><b>选择地区</b></div>
+                            <div class="col-lg-10">
+                                <span style="color:red">@Html.ValidationMessage("userArea")</span>
+                                <input name="userArea" value="@Model.userArea" type="text" class="area-danxuan form-control" value="" data-value="" />
+                            </div>
+                        </div>
+
+
+                        <div class="row" style="margin-bottom:20px">
+                            <div class="col-lg-8 text-right" style="letter-spacing:8px"></div>
+                            <div class="col-lg-4 text-right">
+                                <button class="btn btn-primary " type="submit">提交</button>
+                                <button class="btn btn-default ">取消</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </form>
+        <!--end right -->
+    </div>
+
+</div>
