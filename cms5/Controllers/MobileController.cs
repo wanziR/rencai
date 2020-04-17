@@ -6,6 +6,10 @@ using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using BLL;
 using Models;
+using System.Web.Security;
+using qcloudsms_csharp;
+using qcloudsms_csharp.json;
+using qcloudsms_csharp.httpclient;
 
 namespace cms5.Controllers
 {
@@ -43,10 +47,7 @@ namespace cms5.Controllers
         {
             return View();
         }
-        public ActionResult user()
-        {
-            return View();
-        }
+       
         #endregion
 
         #region 主页
@@ -82,14 +83,48 @@ namespace cms5.Controllers
 
 
         #region 登录
+        [HttpPost]
+        public ActionResult Login(UserInfo obj)
+        {
+            obj = new UserInfo
+            {
+                userName = obj.userName,
+                userPwd = obj.userPwd
+            };
+            obj = new UserInfoBLL().Login(obj);
+            if (obj != null)
+            {
+                string userPhone = obj.userPhone;
+                FormsAuthentication.SetAuthCookie(userPhone, true);
+                return new ContentResult() { Content = "<script> window.location.href = '/zhaogong/userCenter';</script>" };
+                //return RedirectToAction("userCenter","ZhaoGong",obj);
+            }
+            else
+            {
+                return this.Content("用户名或密码错误，请重新填写！");
+            }
+
+        }
+     
         public ActionResult Login()
         {
             return View();
         }
-        public ActionResult Loginn()
+        public ActionResult getLogin()
         {
+
             return View();
         }
+        #endregion
+
+        #region 个人中心
+        [Authorize]
+        public ActionResult user()
+        {
+            return View();
+            
+        }
+
         #endregion
 
         #region 注册 
@@ -106,6 +141,7 @@ namespace cms5.Controllers
         }
         #endregion
 
+      
         #region 发布 
         public ActionResult fabu()
         {
