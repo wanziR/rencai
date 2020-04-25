@@ -152,6 +152,7 @@
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JianliController.cs" />
     <Compile Include="Controllers\LaowuController.cs" />
     <Compile Include="Controllers\MobileController.cs" />
     <Compile Include="Controllers\SysAdminController.cs" />
@@ -246,6 +247,16 @@
     <Content Include="images\admin\profileimg6.png" />
     <Content Include="images\admin\signature.png" />
     <Content Include="images\admin\socialbg.jpg" />
+    <Content Include="images\tx\m1.png" />
+    <Content Include="images\tx\m2.png" />
+    <Content Include="images\tx\m3.png" />
+    <Content Include="images\tx\m4.png" />
+    <Content Include="images\tx\m5.png" />
+    <Content Include="images\tx\w1.png" />
+    <Content Include="images\tx\w2.png" />
+    <Content Include="images\tx\w3.png" />
+    <Content Include="images\tx\w4.png" />
+    <Content Include="images\tx\w5.png" />
     <Content Include="imgs\ad-index.jpg" />
     <Content Include="imgs\bank.jpg" />
     <Content Include="imgs\bank1.jpg" />
@@ -382,6 +393,7 @@
     <Content Include="imgs\next3.png" />
     <Content Include="imgs\next4.png" />
     <Content Include="imgs\next5.png" />
+    <Content Include="images\tx\ntouxiang.png" />
     <Content Include="imgs\pic1.jpg" />
     <Content Include="imgs\pic10.jpg" />
     <Content Include="imgs\pic11.jpg" />
@@ -494,6 +506,8 @@
     <Content Include="mobile\js\public.js" />
     <Content Include="mobile\js\swiper.min.js" />
     <Content Include="mobile\js\TouchSlide.1.1.js" />
+    <Content Include="mobile\weui.css" />
+    <Content Include="mobile\weuix.css" />
     <Content Include="Scripts\admin\bootstrap-select\bootstrap-select.js" />
     <Content Include="Scripts\admin\bootstrap-toggle\bootstrap-toggle.min.js" />
     <Content Include="Scripts\admin\bootstrap-wysihtml5\bootstrap-wysihtml5.js" />
@@ -966,6 +980,8 @@
     <Content Include="Views\Mobile\zgFabu.cshtml" />
     <Content Include="Views\Mobile\zpFabu.cshtml" />
     <Content Include="Views\Shared\_Modal.cshtml" />
+    <Content Include="Views\Jianli\Index.cshtml" />
+    <Content Include="Views\Jianli\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
