@@ -1,0 +1,86 @@
+﻿@using X.PagedList;
+@using X.PagedList.Mvc;
+@{
+    ViewBag.Title = "招聘信息管理";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content">
+    <!-- Start Page Header -->
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-3 text-left">  <h1 class="title">@ViewBag.Title</h1></div>
+            <div class="col-lg-6 text-center"></div>
+            <div class="col-lg-3 text-right">
+                <div class="btn-group" role="group" aria-label="..." style="margin-right: 10px">
+                    <a href="/Admin/ZpFabu" class="btn btn-primary">发布招聘信息</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <div class="container-widget">
+        <!--start right -->
+        <script>
+            $(function () {
+                $(".delu").click(function () {
+                    if (!confirm("确认删除吗？")) return;
+                    var ID = $(this).attr("name");
+                    $.post("/zhaopin/Del/", { id: ID }, function (data, status) {
+                        $("#" + ID).remove();
+                        $(success("删除成功！"));
+                    });
+                });
+            });
+        </script>
+        <!-- Start Row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table id="example" class="table display table-hover">
+                            <thead>
+                                <tr>
+                                    <th>标题 </th>
+                                    <th>发布主体</th>
+                                    <th>发布时间</th>
+                                    <th>详细信息</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.List != null)
+                                {
+                                    foreach (var alist in ViewBag.list)
+                                    {
+                                        <tr id="@alist.zpId">
+                                            <td> <a style="color: #58666e" target="_blank" href="/zhaopin/GetDetail?id=@alist.zpId"><span style="font-weight: bold">@alist.zpXuqiu</span>@alist.zpGangwei@alist.zpNum 人</a></td>
+                                            <td>【@alist.zpZhuTilei】 @alist.zpZhuti</td>
+                                            <td>@((alist.zpAddtime).ToString("yyyy-MM-dd") )</td>
+                                            <td>
+                                                <a href="/zhaopin/GetDetail?id=@alist.zpId" target="_blank"><span style="color:#0c5daa">详情</span> </a>&nbsp;&nbsp;
+                                                <a href="#" name="@alist.zpId" class="delu"><span style="color:red">删除</span></a>
+                                            </td>
+                                        </tr>
+
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center">
+                        @Html.PagedListPager((IPagedList)Model, page => Url.Action("ZpList", new { page }))
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Row -->
+
+    </div>
+    <!-- END 内容部分  -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+
+</div>
+

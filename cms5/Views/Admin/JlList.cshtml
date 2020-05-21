@@ -1,0 +1,152 @@
+﻿@using BLL;
+@using X.PagedList;
+@using X.PagedList.Mvc;
+@{
+    ViewBag.Title = "人才库管理";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content">
+    <!-- Start Page Header -->
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-3 col-sm-12 text-left">
+                <h1 class="title">@ViewBag.Title</h1>
+                @*<span style="color: green">@ViewBag.info</span>*@
+            </div>
+
+            <div class="col-lg-6 col-sm-8 text-left">
+                <!-- Start 搜索框 -->
+                <form action="JlList" class="searchform" style="margin-top: -10px">
+                    <input name="kword" type="text" class="searchbox" style="border: 1px solid gray" placeholder="搜索:姓名/岗位/手机号">
+                    <button class="searchbutton" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <!-- End 搜索框 -->
+            </div>
+            <div class="col-lg-3 col-sm-4 text-right">
+                <div class="btn-group" role="group" aria-label="..." style="margin-right: 10px">
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#ExcelImport">Excel批量导入</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+    <script>
+
+        $(function () {
+
+            $(".delu").click(function () {
+                if (!confirm("确认删除吗？")) return;
+                var ID = $(this).attr("name");
+                $.post("/Admin/LwDel/", { id: ID }, function (data, status) {
+                    $("#" + ID).remove();
+                    $(success("删除成功！"));
+                });
+            });
+        });
+    </script>
+    <div class="container-widget">
+        <!-- Start Row -->
+        <div class="row">
+            <!-- Start Panel -->
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body table-responsive">
+                        <table id="example0" class="table display table-hover">
+                            <thead>
+                                <tr>
+                                    <th>头像</th>
+                                    <th>用户编号</th>
+                                    <th>姓名</th>
+                                    <th>性别</th>
+                                    <th>年龄</th>
+                                    <th>求职岗位</th>
+                                    <th>联系方式</th>
+                                    <th>工作年限</th>
+                                    <th>编辑</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @if (ViewBag.list != null)
+                                {
+                                    foreach (var jlist in ViewBag.List)
+                                    {
+                                <tr>
+                                    <td><img src="@(jlist.jlPic!=""?jlist.jlPic:"/images/tx/ntouxiang.png")" height="40px" width="40px"></td>
+                                    <td>@jlist.userID</td>
+                                    <td>@jlist.jlName</td>
+                                    <td>
+                                        @jlist.jlGender
+                                    </td>
+                                    <td>@(new BLL.L5Helper().GetAgeByBD(jlist.jlage)) </td>
+                                    <td>@jlist.jlGw</td>
+                                    <td>@jlist.jlPhone</td>
+                                    <td>@jlist.jlWork 年</td>
+                                    <td>
+                                        <a href="/Jianli/Detail/?id=@jlist.jlId" target="_blank">详情</a>
+                                    </td>
+                                </tr>
+                                    }
+                                }
+
+                            </tbody>
+                        </table>
+                        <!--start right -->
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- End Panel -->
+
+
+        </div>
+        <!-- End Row -->
+
+    </div>
+    <!-- END 内容部分  -->
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    @*<div class="text-center">
+            @Html.PagedListPager((IPagedList)Model, page => Url.Action("JlList", new { page }))
+        </div>*@
+
+
+    <div class="text-center">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("JlList", new { page }))
+    </div>
+</div>
+<!--start Modal 批量导入-->
+<div class="modal fade" id="ExcelImport" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel" style="color: #396189">  <i class="fa fa-pencil-square-o"></i>&nbsp;人才库批量导入</h4>
+                <a href="/upload/简批量上传.xlsx">下载模板</a>
+            </div>
+            <div class="modal-body" style="text-align: left;">
+                @using (Html.BeginForm("Import", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input id="location" class="form-control" onclick="$('#i-file').click();">
+                            <label class="input-group-btn">
+                                <input type="button" id="i-check" value="选择文件" class="btn btn-default" onclick="$('#i-file').click();">
+                            </label>
+                        </div>
+                        <input type="file" name="excel" id='i-file' accept=".xls,.xlsx" onchange="$('#location').val($('#i-file').val());" style="display: none">
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="导入到数据库" />
+                }
+                <script>
+                    $("input[type='submit']").click(function () {
+                        $("#ExcelImport").modal().hide();
+                        success("导入中...");
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end Modal 批量导入 -->

@@ -312,6 +312,50 @@ namespace DAL
         }
         #endregion
 
+        #region 根据单页ID获取详情
+        public Article GetObjByAsId(int id)
+        {
+            string sql = "select * from  Art_Single where asId ='{0}'";
+            sql = string.Format(sql, id);
+            SqlDataReader dr = SQLHelper.GetReader(sql);
+            Article obj = null;
+            if (dr.Read())
+            {
+                obj = new Article
+                {
+                    asId = Convert.ToInt32(dr["asId"]),
+                    asName = dr["asName"].ToString(),
+                    asImg = dr["asImg"].ToString(),
+                    asContent = dr["asContent"].ToString(),
+                    asOrder = Convert.ToInt32(dr["asOrder"]),
+                    asAddTime = Convert.ToDateTime(dr["asAddTime"])
+                };
+            }
+
+            return obj;
+        }
+        #endregion
+
+        #region 编辑单页
+        public int SEdit(Article obj)
+        {
+            //asName,asImg,asContent,asAddTime
+            StringBuilder sqlBuilder = new StringBuilder();
+            sqlBuilder.Append("update Art_Single set asName='{0}',asImg='{1}',asContent='{2}'");
+            sqlBuilder.Append(" where asId = {3}");
+            string sql = string.Format(sqlBuilder.ToString(), obj.asName, obj.asImg, obj.asContent, obj.asId);
+            try
+            {
+                return Convert.ToInt32(SQLHelper.Update(sql));
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("数据库操作出现异常！具体信息：\r\n" + ex.Message);
+            }
+        }
+        #endregion
+
+
 
 
 

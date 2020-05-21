@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+
+@if (ViewBag.list != null)
+{
+    foreach (var alist in ViewBag.List)
+    {
+        @alist.jlName
+    }
+}
+

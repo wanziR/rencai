@@ -27,5 +27,14 @@ namespace Models
         public int isZhiDing { set; get; }
         public string aType { set; get; }
         public string aLink { set; get; }
+
+
+        //单页
+        public int asId { set; get; }
+        public int asOrder { set; get; }
+        public string asName { set; get; }
+        public string asImg { set; get; }
+        public string asContent { set; get; }
+        public DateTime asAddTime { set; get; }
     }
 }

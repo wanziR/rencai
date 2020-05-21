@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "列表";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content">
+
+    <!-- Start Page Header -->
+    <div class="page-header">
+        <h1 class="title">@ViewBag.Title</h1>
+        <ol class="breadcrumb">
+            <li class="active">栏目简介</li>
+        </ol>
+
+        <!-- Start Page Header Right Div -->
+        <div class="right">
+            <div class="btn-group" role="group" aria-label="...">
+                <a href="#" class="btn btn-light">栏目</a>
+                <a href="#" class="btn btn-light"><i class="fa fa-refresh"></i></a>
+                <a href="#" class="btn btn-light"><i class="fa fa-search"></i></a>
+                <a href="#" class="btn btn-light" id="topstats"><i class="fa fa-line-chart"></i></a>
+            </div>
+        </div>
+        <!-- End Page Header Right Div -->
+
+    </div>
+    <!-- End Page Header -->
+
+    <div class="container-widget">
+
+        <!-- Start Row -->
+        <div class="row">
+
+            <!-- Start Panel -->
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-title">
+                        数据表
+                    </div>
+                    <div class="panel-body table-responsive">
+
+                        <table id="example0" class="table display">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>籍贯</th>
+                                    <th>工作</th>
+                                    <th>年龄</th>
+                                    <th>日期</th>
+                                    <th>价钱</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>周龙</td>
+                                    <td>甘肃兰州</td>
+                                    <td>网络技术</td>
+                                    <td>32</td>
+                                    <td>2019/01/1</td>
+                                    <td>$320,800</td>
+                                </tr>
+                                <tr>
+                                    <td>周龙</td>
+                                    <td>甘肃兰州</td>
+                                    <td>网络技术</td>
+                                    <td>32</td>
+                                    <td>2019/01/1</td>
+                                    <td>$320,800</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- End Panel -->
+
+
+        </div>
+        <!-- End Row -->
+
+    </div>
+    <!-- END 内容部分  -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+
+</div>

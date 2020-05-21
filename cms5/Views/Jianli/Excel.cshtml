@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Excel";
+    Layout = "~/Views/Shared/_LayoutZg.cshtml";
+}
+@*@using (Html.BeginForm("Import", "Demo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input name="excel" id="excel" type="file"/>
+        <button class="button btn-default">添加到数据库</button>
+    }*@
+
+@using(Html.BeginForm("Import", "Jianli", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        <div class="input-group">
+            <input id="location" class="form-control" onclick="$('#i-file').click();">
+            <label class="input-group-btn">
+                <input type="button" id="i-check" value="选择文件" class="btn btn-primary" onclick="$('#i-file').click();">
+            </label>
+        </div>
+        <input type="file" name="excel" id='i-file' accept=".xls,.xlsx" onchange="$('#location').val($('#i-file').val());" style="display: none">
+    </div>
+    <input type="submit" class="btn btn-danger" value="导入到数据库"/>
+}

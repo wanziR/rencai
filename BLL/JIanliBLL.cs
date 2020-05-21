@@ -26,5 +26,27 @@ namespace BLL
         }
 
         #endregion
+
+        #region --根据姓名判断用户是否存在（Excel导入用）
+        public bool FindByUId(int uId)
+        {
+          return new JianliDAL().FindByUId(uId);
+
+        }
+        #endregion
+
+        #region 详细
+        public Jianli GetObjByUId(string id)
+        {
+           return new JianliDAL().GetObjByUId(id);
+        }
+        #endregion
+
+        #region Excel导入删除
+        public int ExDel(int id)
+        {
+           return new JianliDAL().ExDel(id);
+        }
+        #endregion
     }
 }

@@ -1,0 +1,172 @@
+﻿@model Models.Jianli
+
+@{
+    ViewBag.Title = "简历详情";
+    Layout = "~/Views/Shared/_BsJq.cshtml";
+}
+<script>
+    function myPrint(obj) {
+        var newWindow = window.open("打印窗口", "_blank");
+        var docStr = obj.innerHTML;
+        newWindow.document.write(docStr);
+        newWindow.document.close();
+        newWindow.print();
+        newWindow.close();
+    }
+</script>
+<style>
+    body {
+        background-color: #f5f5f5;
+    }
+</style>
+<div class="container mt10" style="width: 80%; border: 1px solid #eeeeee; border-radius: 10px; margin-top: 20px; padding: 20px;background-color:#ffffff ">
+    <div class="row">
+        <!--start left -->
+        <div class="pr0">
+            <!--start 发布简历 -->
+            <style>
+                .form-group {
+                    padding-right: 50px;
+                }
+
+                .form-group span {
+                    line-height: 30px;
+                }
+
+                .img-chose {
+                    border: 2px solid #eaeaea;
+                }
+
+                input {
+                    border: 0 !important;
+                }
+
+                .row {
+                    margin: 15px 0 0 15px;
+                }
+            </style>
+            <!--start 打印区域 -->
+            <div class="box pl15" id="print">
+                <div class="d-flex flex-row">
+                    <img id="txuser" class="txuser img-circle img-chose" width="80px" src="@Model.jlPic" alt="">
+                    @Model.jlName
+                    <button name='button_export' title='打印' onclick="myPrint(document.getElementById('print'))" class="btn btn-default pull-right" style="margin-top: 30px">打印</button>
+                </div>
+
+                <hr>
+                <h4>基础信息</h4>
+                <div class="row">
+                    <div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 text-right mt15">
+                        <span style="color: red;">&nbsp;*&nbsp;&nbsp;</span><span>姓名:</span>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 text-left mt15">
+                        <span style="font-weight: bold">@Model.jlName</span>
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 text-right mt15">
+                        <span style="color: red;">&nbsp;*&nbsp;&nbsp;</span><span>联系方式:</span>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 text-left mt15">
+                        <span style="font-weight: bold">@Model.jlPhone</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5 col-sm5 col-md-2 col-lg-2 text-right mt15">
+                        <span style="color: red;">&nbsp;*&nbsp;&nbsp;</span><span>性别:</span>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 text-left mt15">
+                        <span style="font-weight: bold">@Model.jlGender</span>
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 text-right mt15">
+                        <span style="color: red;">&nbsp;*&nbsp;&nbsp;</span><span>出生年份:</span>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 text-left mt15">
+                        <span style="font-weight: bold"> @(Convert.ToDateTime(Model.jlage).ToString("yyyy"))</span>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 text-right mt15">
+                        <span style="color: red;">&nbsp;*&nbsp;&nbsp;</span><span>学历:</span>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 text-left mt15">
+                        <span style="font-weight: bold">@Model.jlEdu</span>
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 text-right mt15">
+                        <span style="color: red;">&nbsp;*&nbsp;&nbsp;</span><span>期望薪资:</span>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 text-left mt15">
+                        <span style="font-weight: bold">@Model.jlXinzi</span>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 text-right mt15">
+                        <span style="color: red;">&nbsp;*&nbsp;&nbsp;</span><span>岗位:</span>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 text-left mt15">
+                        <span style="font-weight: bold">@Model.jlGw</span>
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 text-right mt15">
+                        <span style="color: red;">&nbsp;*&nbsp;&nbsp;</span><span>工作年限:</span>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 text-left mt15">
+                        <span style="font-weight: bold">@Model.jlWork 年</span>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 text-right mt15">
+                        <span style="color: red;"></span><span>婚姻:</span>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 text-left mt15">
+                        <span style="font-weight: bold">@Model.jlHunyin</span>
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 text-right mt15">
+                        <span style="color: red;"></span><span>身份证号:</span>
+                    </div>
+
+                    <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 text-left mt15">
+                        <span style="font-weight: bold">@Model.jlIC</span>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 text-right mt15">
+                        <span style="color: red;"></span><span>邮箱:</span>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 text-left mt15">
+                        <span style="font-weight: bold">@Model.jlEmail</span>
+                    </div>
+
+                </div>
+                <hr>
+                <h4>培训经历</h4>
+                <input id="jl_peixun" class="form-control" type="hidden" name="jl_peixun">
+                <div id="px_text" style="padding-left: 20px">
+                    @Model.jl_peixun
+                </div>
+
+
+                <hr>
+                <h4>教育经历</h4>
+
+                <div id="jy_text" style="padding-left: 20px">
+                    @Model.jl_jiaoyu
+                </div>
+                <hr>
+                <h4>工作经历及自我评价</h4>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <textarea readonly placeholder="" name="jlPingJia" class="form-control" rows="4" style="background-color: #ffffff;border: 0">
+@Model.jlPingJia
+</textarea>
+                    </div>
+                </div>
+
+            </div>
+            <!--end 打印区域 -->
+            <!--end 发布简历 -->
+
+        </div>
+
+
+    </div>
+
+</div>
+@Html.Partial("_Modal");

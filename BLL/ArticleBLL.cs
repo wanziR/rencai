@@ -95,10 +95,25 @@ namespace BLL
             return new ArticleDAL().getACId(acName);
         }
         #endregion
+
         #region 根据文章ID浏览次数加1
         public int PvAddById(string id)
         {
             return new ArticleDAL().PvAddById(id);
+        }
+        #endregion
+
+        #region 根据单页ID获取详情
+        public Article GetObjByAsId(int id)
+        {
+           return new ArticleDAL().GetObjByAsId(id);
+        }
+        #endregion
+
+        #region 编辑单页
+        public int SEdit(Article obj)
+        {
+            return new ArticleDAL().SEdit(obj);
         }
         #endregion
 

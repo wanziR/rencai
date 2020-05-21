@@ -1,96 +1,91 @@
-﻿@model Models.Admin
-
-@{
-    ViewBag.Title = "后台管理-主页";
+﻿@{
+    ViewBag.Title = "列表";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+<div class="content">
 
-    <!-- Start 内容头部 -->
-<div class="page-header">
-    <h1 class="title">主页-后台管理 </h1>
-    <ol class="breadcrumb">
-        <li class="active">信息统计页面</li>
-    </ol>
-    <!-- Start 内容头部右侧 Div -->
-    <div class="right">
-        <div class="btn-group" role="group" aria-label="...">
-            <a href="index.html" class="btn btn-light">主页</a>
-            <a href="#" class="btn btn-light"><i class="fa fa-refresh"></i></a>
-            <a href="#" class="btn btn-light"><i class="fa fa-search"></i></a>
-            <a href="#" class="btn btn-light" id="topstats"><i class="fa fa-line-chart"></i></a>
+    <!-- Start Page Header -->
+    <div class="page-header">
+        <h1 class="title">@ViewBag.Title</h1>
+        <ol class="breadcrumb">
+            <li class="active">栏目简介</li>
+        </ol>
+
+        <!-- Start Page Header Right Div -->
+        <div class="right">
+            <div class="btn-group" role="group" aria-label="...">
+                <a href="#" class="btn btn-light">栏目</a>
+                <a href="#" class="btn btn-light"><i class="fa fa-refresh"></i></a>
+                <a href="#" class="btn btn-light"><i class="fa fa-search"></i></a>
+                <a href="#" class="btn btn-light" id="topstats"><i class="fa fa-line-chart"></i></a>
+            </div>
         </div>
+        <!-- End Page Header Right Div -->
+
     </div>
-    <!-- End 内容头部右侧 Div -->
-</div>
-    <!-- End 内容头部 -->
-    <!-- //////////////////////////////////////////////////////////////////////////// -->
-    <!-- START 容器 -->
+    <!-- End Page Header -->
+
     <div class="container-widget">
-        <!-- Start 头部统计  -->
-        <div class="col-md-12">
-            <ul class="topstats clearfix">
-                <li class="arrow"></li>
-                <li class="col-xs-6 col-lg-2">
-                    <span class="title"><i class="fa fa-dot-circle-o"></i> 今日注册</span>
-                    <h3>24</h3>
-                    <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> 从昨天 </span>
-                </li>
-                <li class="col-xs-6 col-lg-2">
-                    <span class="title"><i class="fa fa-calendar-o"></i> 本周注册 </span>
-                    <h3>215</h3>
-                    <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b>从上周</span>
-                </li>
-                <li class="col-xs-6 col-lg-2">
-                    <span class="title"><i class="fa fa-shopping-cart"></i> 销售额度</span>
-                    <h3 class="color-up">696</h3>
-                    <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b>从上个月</span>
-                </li>
-                <li class="col-xs-6 col-lg-2">
-                    <span class="title"><i class="fa fa-users"></i> 访客人数</span>
-                    <h3>960</h3>
-                    <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> 从昨天</span>
-                </li>
-                <li class="col-xs-6 col-lg-2">
-                    <span class="title"><i class="fa fa-eye"></i> 页面浏览</span>
-                    <h3 class="color-up">4230</h3>
-                    <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> 从昨天 </span>
-                </li>
-                <li class="col-xs-6 col-lg-2">
-                    <span class="title"><i class="fa fa-clock-o"></i> 平均时间</span>
-                    <h3 class="color-down">2:10<small>min</small></h3>
-                    <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> 从上周开始 </span>
-                </li>
-            </ul>
-        </div>
-        <!-- End 头部统计 -->
+
         <!-- Start Row -->
         <div class="row">
 
+            <!-- Start Panel -->
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-title">
+                        数据表
+                    </div>
+                    <div class="panel-body table-responsive">
 
-            <!-- Start X -->
-            <div class="col-md-12 col-lg-12">
-                <div class="panel panel-widget blog-post">
-                    <div class="panel-body">
-                        <div class="image-div color10-bg">
-                            <img src="../../images/admin/example1.jpg" class="image" alt="img">
-                            <h1 class="title"><a href="#">欢迎来到五点后台管理系统 ..</a></h1>
-                        </div>
-                        <p class="text">内容管理</p>
-                        <a href="#">更多 </a>
-                        <p class="author">
-                            <img src="../../images/admin/profileimg.png" alt="img">
-                            <span>五点</span>
-                            作者
-                        </p>
+                        <table id="example0" class="table display">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>籍贯</th>
+                                    <th>工作</th>
+                                    <th>年龄</th>
+                                    <th>日期</th>
+                                    <th>价钱</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>周龙</td>
+                                    <td>甘肃兰州</td>
+                                    <td>网络技术</td>
+                                    <td>32</td>
+                                    <td>2019/01/1</td>
+                                    <td>$320,800</td>
+                                </tr>
+                                <tr>
+                                    <td>周龙</td>
+                                    <td>甘肃兰州</td>
+                                    <td>网络技术</td>
+                                    <td>32</td>
+                                    <td>2019/01/1</td>
+                                    <td>$320,800</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
 
                     </div>
+
                 </div>
             </div>
-            <!-- End X -->
+            <!-- End Panel -->
+
 
         </div>
         <!-- End Row -->
 
     </div>
-    <!-- END 容器 -->
-  
+    <!-- END 内容部分  -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+
+</div>
