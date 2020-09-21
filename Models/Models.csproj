@@ -46,6 +46,7 @@
     <Compile Include="Admin.cs" />
     <Compile Include="Jianli.cs" />
     <Compile Include="Laowu.cs" />
+    <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sms.cs" />
     <Compile Include="SysAdmin.cs" />

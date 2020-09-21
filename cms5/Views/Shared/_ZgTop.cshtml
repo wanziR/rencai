@@ -8,7 +8,7 @@
                 </div>
                 <script src="/script/CityList.js"></script>
                 <script>
-						new verCity({});
+                    new verCity({});
                 </script>
             </div>
             <div class="col-xs-9 text-right">
@@ -44,9 +44,6 @@
                     }
                 }
 
-
-
-
                 &nbsp;&nbsp;<em> | </em>&nbsp;&nbsp;
                 @{if (this.User.Identity.IsAuthenticated)
                     { <a href="/zhaogong/userCenter"><i class="glyphicon glyphicon-new-window"></i> 免费发布</a> }
@@ -60,7 +57,6 @@
         </div>
     </div>
 </div>
-
 
 <!----start   模态框 登录注册---->
 <!--登录窗口 -->
@@ -151,66 +147,32 @@
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign" style="margin:0;"></i></span>
                                 <input class="form-control" id="userPwdag" name="userPwdag" type="password" autocomplete="off" placeholder="请再次输入密码" />
                             </div>
-                            <div class="input-group" style="margin-top:15px">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone" style="margin:0;"></i></span>
-                                <input class="form-control" id="TelPhone1" name="userPhone" type="text" autocomplete="off" placeholder="请输入手机号" />
-                            </div>
-                            <div class="input-group " style="margin-top:15px">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-option-horizontal" style="margin:0;"></i></span>
-                                <input id="code1" name="Code" class="form-control" type="text" autocomplete="off" placeholder="请输入短信验证码" />
-                                <span class="input-group-btn">
-                                    <input id="btnSendCode1" type="button" class="btn btn-primary" value="获取验证码" onClick="sendMessage1()" />
-                                </span>
-                            </div>
+                             <div class="input-group " style="margin-top:0px">
+                                @Html.Action("_Sms", "Plugin", new { PhoneId = "REG_PhoneId", smsmeg = "甘肃建设人力网用户注册" })
+                                <div class="REG_PhoneId" hidden></div>
+                             </div>
                             <br>
                             <p>
                                 <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
                             </p>
                         </div>
-                        <script>
-        var phoneReg1 = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/; //手机号正则
-        var count1 = 60; //间隔函数，1秒执行
-        var InterValObj1; //timer变量，控制时间
-        var curCount1; //当前剩余秒数
-        /*第一*/
-        function sendMessage1() {
-            curCount1 = count1;
-            var phone1 = $.trim($('#TelPhone1').val());
-            if (!phoneReg1.test(phone1)) {
-                alert(" 请输入有效的手机号码");
-                return false;
-            }
-            //设置button效果，开始计时
-            $("#btnSendCode1").attr("disabled", "true");
-            $("#btnSendCode1").val(+curCount1 + "秒再获取");
-            InterValObj1 = window.setInterval(SetRemainTime1, 1000); //启动计时器，1秒执行一次
-            //向后台发送处理数据
-            var telphone1 = $('#TelPhone1').val();
-            $.post("/UserInfo/SendSms", { "TelPhone": telphone1 });
-
-        }
-
-        function SetRemainTime1() {
-            if (curCount1 == 0) {
-                window.clearInterval(InterValObj1); //停止计时器
-                $("#btnSendCode1").removeAttr("disabled"); //启用按钮
-                $("#btnSendCode1").val("重新发送");
-            } else {
-                curCount1--;
-                $("#btnSendCode1").val(+curCount1 + "秒再获取");
-            }
-        }
-
-                        </script>
+                     
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-primary uReg">注册</button>
+                        <button id="btn-reg" class="btn btn-primary uReg">注册</button>
                         <button class="btn btn-danger" data-dismiss="modal">取消</button>
                     </div>
                 </div>
             </div>
             <!-- /.modal-content -->
         }
+        <script>
+            $(function(){
+                $("#btn-reg").click(function() {
+                    alert("点了注册！");
+                });
+            })
+        </script>
 
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
@@ -228,16 +190,9 @@
                         <h2 class="text-center" style="font-size:18px;font-weight:bold">忘&nbsp;记&nbsp;密&nbsp;码</h2><br>
                         <div id="msgFg" class="text-center" style="color:red"></div>
                         <div class="modal_content">
-                            <div class="input-group" style="margin-top:15px">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                <input class="form-control" id="TelPhone2" name="userPhone" type="text" autocomplete="off" placeholder="请输入手机号" />
-                            </div>
-                            <div class="input-group " style="margin-top:15px">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-option-horizontal" style="margin:0;"></i></span>
-                                <input id="code1" name="Code" class="form-control" type="text" autocomplete="off" placeholder="请输入短信验证码" />
-                                <span class="input-group-btn">
-                                    <input id="btnSendCode2" type="button" class="btn btn-primary" value="获取验证码" onClick="sendMessage1()" />
-                                </span>
+                            <div class="input-group " style="margin-top:0px">
+                                @Html.Action("_Sms", "Plugin", new { PhoneId = "FG_PhoneId", smsmeg = "甘肃建设人力网找回密码" })
+                                <div class="FG_PhoneId" hidden></div>
                             </div>
                             <div class="input-group" style="margin-top:15px">
                                 <span class="input-group-addon"> <i class="fa fa-lock" style="margin:0;"></i></span>
@@ -253,39 +208,7 @@
                                 <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
                             </p>
                         </div>
-                        <script>
-        var phoneReg2 = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/; //手机号正则
-        var count2 = 60; //间隔函数，1秒执行
-        var InterValObj2; //timer变量，控制时间
-        var curCount2; //当前剩余秒数
-        /*第一*/
-        function sendMessage2() {
-            curCount2 = count2;
-            var phone2 = $.trim($('#TelPhone2').val());
-            if (!phoneReg2.test(phone2)) {
-                alert(" 请输入有效的手机号码");
-                return false;
-            }
-            //设置button效果，开始计时
-            $("#btnSendCode2").attr("disabled", "true");
-            $("#btnSendCode2").val(+curCount2 + "秒再获取");
-            InterValObj2 = window.setInterva2(SetRemainTime2, 1000); //启动计时器，1秒执行一次
-            //向后台发送处理数据
-            var telphone2 = $('#TelPhone2').val();
-            $.post("/UserInfo/SendSms", { "TelPhone": telphone2 });
-
-        }
-        function SetRemainTime1() {
-            if (curCount1 == 0) {
-                window.clearInterval(InterValObj1); //停止计时器
-                $("#btnSendCode2").removeAttr("disabled"); //启用按钮
-                $("#btnSendCode2").val("重新发送");
-            } else {
-                curCount1--;
-                $("#btnSendCode2").val(+curCount1 + "秒再获取");
-            }
-        }
-                        </script>
+                    
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-primary uReg">确定</button>

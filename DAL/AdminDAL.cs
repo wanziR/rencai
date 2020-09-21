@@ -54,7 +54,6 @@ namespace DAL
                     adminAddtime = Convert.ToDateTime(dr["adminAddtime"])
 
                 });
-
             }
             dr.Close();
             return list;

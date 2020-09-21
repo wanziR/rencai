@@ -161,6 +161,8 @@
     <Compile Include="Controllers\JianliController.cs" />
     <Compile Include="Controllers\LaowuController.cs" />
     <Compile Include="Controllers\MobileController.cs" />
+    <Compile Include="Controllers\PageController.cs" />
+    <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\SysAdminController.cs" />
     <Compile Include="Controllers\UserInfoController.cs" />
     <Compile Include="Controllers\ZhaoGongController.cs" />
@@ -285,6 +287,12 @@
     <Content Include="imgs\banner1.jpg" />
     <Content Include="imgs\banner2.jpg" />
     <Content Include="imgs\bannerbg.jpg" />
+    <Content Include="imgs\banner_cxcy.jpg" />
+    <Content Include="imgs\banner_lwwb.jpg" />
+    <Content Include="imgs\banner_pxxx.jpg" />
+    <Content Include="imgs\banner_qzzp.jpg" />
+    <Content Include="imgs\banner_rlwb.jpg" />
+    <Content Include="imgs\banner_xqhz.jpg" />
     <Content Include="imgs\bg_login.png" />
     <Content Include="imgs\cut.png" />
     <Content Include="imgs\cut_hov.png" />
@@ -609,6 +617,8 @@
     <Content Include="mobile\images\news_tit.psd" />
     <Content Include="imgs\zyryzypx.pdf" />
     <Content Include="libman.json" />
+    <Content Include="imgs\banner_lwwb.psd" />
+    <Content Include="imgs\banner_模块.psd" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -1052,6 +1062,9 @@
     <Content Include="Views\Admin\UList.cshtml" />
     <Content Include="Views\Admin\ArticleSEdit.cshtml" />
     <Content Include="upload\简批量上传.xlsx" />
+    <Content Include="Views\Page\Index.cshtml" />
+    <Content Include="Views\Shared\_Sms.cshtml" />
+    <Content Include="Views\Plugin\Sms.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

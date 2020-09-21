@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Sms";
+    Layout = "~/Views/Shared/_BsJq.cshtml";
+}
+@Html.Action("_Sms", "Plugin", new { PhoneId = "REG_PhoneId", smsmeg = "用户注册" })
+<div class="REG_PhoneId"></div>
+
+@Html.Action("_Sms", "Plugin", new { PhoneId = "FG_PhoneId", smsmeg = "找回密码" })
+<div class="FG_PhoneId"></div>
+

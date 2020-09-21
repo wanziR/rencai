@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.code = ViewBag.PhoneId + "_CODE";
+    ViewBag.btnSendCode = ViewBag.PhoneId + "_SEND";
+}
+
+<div class="input-group" style="margin-top: 15px;width: 100%">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone" style="margin:0;"></i></span>
+    <input class="form-control" id="@ViewBag.PhoneId" name="userPhone"  type="text" autocomplete="off" placeholder="请输入手机号" />
+</div>
+<div class="input-group " style="margin-top:15px">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-option-horizontal" style="margin:0;"></i></span>
+    <input id="@ViewBag.code" name="Code" class="form-control" type="text" autocomplete="off" placeholder="请输入短信验证码" />
+    <span class="input-group-btn">
+        <input id="@ViewBag.btnSendCode" type="button" class="btn btn-primary" value="获取验证码" @*onClick="sendMessage()"*@ />
+    </span>
+</div>
+
+<script>
+    $("#@ViewBag.btnSendCode").on("click",function () {
+        curCount = count;
+        var phone = $.trim($('#@ViewBag.PhoneId').val());
+        if (!phoneReg.test(phone)) {
+            alert(" 请输入有效的手机号码");
+            return false;
+        }
+        //设置button效果，开始计时
+        $("#@ViewBag.btnSendCode").attr("disabled", "true");
+        $("#@ViewBag.btnSendCode").val(+curCount + "秒再获取");
+        InterValObj = window.setInterval(function() {
+            if (curCount == 0) {
+                window.clearInterval(InterValObj); //停止计时器
+                $("#@ViewBag.btnSendCode").removeAttr("disabled"); //启用按钮
+                $("#@ViewBag.btnSendCode").val("重新发送");
+            } else {
+                curCount--;
+                $("#@ViewBag.btnSendCode").val(+curCount + "秒再获取");
+            }
+        }, 1000); //启动计时器，1秒执行一次
+        //向后台发送处理数据
+        var telphone = $('#@ViewBag.PhoneId').val();
+        var smsmeg = "@ViewBag.Smsmeg";
+        $.post("/Plugin/SendSms", { "TelPhone": telphone, "smsmeg": smsmeg },function (data, status) {
+            // console.log(data);
+            $(".@ViewBag.PhoneId").text(data);
+        });
+
+    });
+    /*计时*/
+    var phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/; //手机号正则
+    var count = 60; //间隔函数，1秒执行
+    var InterValObj; //timer变量，控制时间
+    var curCount; //当前剩余秒数
+
+</script>
