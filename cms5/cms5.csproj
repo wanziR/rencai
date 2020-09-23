@@ -163,6 +163,7 @@
     <Compile Include="Controllers\MobileController.cs" />
     <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Controllers\PluginController.cs" />
+    <Compile Include="Controllers\PointController.cs" />
     <Compile Include="Controllers\SysAdminController.cs" />
     <Compile Include="Controllers\UserInfoController.cs" />
     <Compile Include="Controllers\ZhaoGongController.cs" />
@@ -1065,6 +1066,8 @@
     <Content Include="Views\Page\Index.cshtml" />
     <Content Include="Views\Shared\_Sms.cshtml" />
     <Content Include="Views\Plugin\Sms.cshtml" />
+    <Content Include="Views\Shared\_UCLeft - 复制%28new%29.cshtml" />
+    <Content Include="Views\Point\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

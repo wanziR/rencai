@@ -113,7 +113,6 @@ namespace cms5.Controllers
         }
         #endregion
 
-
         //#region 验证码注册/登录
         //public ActionResult GetAdd(UserInfo obj)
         //{

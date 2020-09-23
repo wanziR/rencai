@@ -63,6 +63,7 @@
     <Compile Include="Helper\L5Helper.cs" />
     <Compile Include="JIanliBLL.cs" />
     <Compile Include="PluginBLL.cs" />
+    <Compile Include="PointBLL.cs" />
     <Compile Include="ZhaoPinBLL.cs" />
     <Compile Include="ArticleBLL.cs" />
     <Compile Include="AdminBLL.cs" />

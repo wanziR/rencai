@@ -3,79 +3,13 @@
 <div class="col-xs-12  col-lg-3 pr0 mt10">
     <div class="list-group text-left">
 
-        @{
-
-        if (Model.userRole == 1)
-        {
-            <a href="#" class="list-group-item active text-center">
-                <i class="glyphicon glyphicon-cog"></i> <b>管&nbsp;理&nbsp;中&nbsp;心</b>
-            </a>
-            <a href="/ZhaoPin/aZpList" class="list-group-item">
-                <div class="row" style="color:#337ab7">
-                    <div class="col-xs-10 col-lg-10">
-                        <b>招聘信息管理</b>
-                    </div>
-                    <div class="col-xs-2 col-lg-2">
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </div>
-                </div>
-            </a>
-            <a href="/laowu/alwlist" class="list-group-item">
-                <div class="row" style="color:#337ab7">
-                    <div class="col-xs-10 col-lg-10">
-                        <b>个人劳务管理 </b>
-                    </div>
-                    <div class="col-xs-2 col-lg-2">
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </div>
-                </div>
-            </a>
-            <a href="/UserInfo/aUserList" class="list-group-item">
-                <div class="row" style="color:#337ab7">
-                    <div class="col-xs-10 col-lg-10">
-                        <b>用户管理</b>
-                    </div>
-                    <div class="col-xs-2 col-lg-2">
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </div>
-                </div>
-            </a>
-            <a href="/article/aArticleList/?kWord=消息法规" class="list-group-item">
-                <div class="row" style="color:#337ab7">
-                    <div class="col-xs-10 col-lg-10">
-                        <b>消息法规管理</b>
-                    </div>
-                    <div class="col-xs-2 col-lg-2">
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </div>
-                </div>
-            </a>
-            <a href="/article/aArticleList/?kWord=培训通知" class="list-group-item">
-                <div class="row" style="color:#337ab7">
-                    <div class="col-xs-10 col-lg-10">
-                        <b>培训通知管理</b>
-                    </div>
-                    <div class="col-xs-2 col-lg-2">
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </div>
-                </div>
-            </a>
-            <a href="/article/aArticleList/?kWord=合同" class="list-group-item">
-                <div class="row" style="color:#337ab7">
-                    <div class="col-xs-10 col-lg-10">
-                        <b>底部文章管理</b>
-                    </div>
-                    <div class="col-xs-2 col-lg-2">
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </div>
-                </div>
-
-            </a>
-
-    }
-        }
         <a href="#" class="list-group-item active text-center">
-            <i class="glyphicon glyphicon-user"></i> <b>会&nbsp;员&nbsp;中&nbsp;心</b>
+            <i class="glyphicon glyphicon-user"></i> <b>个&nbsp;人&nbsp;中&nbsp;心</b>
+@*             @if (Model.userRole == 1) *@
+@*             { *@
+@*                 <a href="#" style="font-size: 11px;">[进入管理后台]</a> *@
+@*             } *@
+
         </a>
         <a href="/ZhaoGong/UserCenter" class="list-group-item">
             <div class="row">

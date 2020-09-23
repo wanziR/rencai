@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="JianliDAL.cs" />
     <Compile Include="PluginDAL.cs" />
+    <Compile Include="PointDAL.cs" />
     <Compile Include="ZhaoPinDAL.cs" />
     <Compile Include="ArticleDAL.cs" />
     <Compile Include="AdminDAL.cs" />

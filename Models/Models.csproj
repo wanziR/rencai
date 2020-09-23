@@ -51,6 +51,7 @@
     <Compile Include="Sms.cs" />
     <Compile Include="SysAdmin.cs" />
     <Compile Include="UserInfo.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="ZhaoPin.cs" />
     <Compile Include="ZhaoHou.cs" />
     <Compile Include="ZhaoGong.cs" />
