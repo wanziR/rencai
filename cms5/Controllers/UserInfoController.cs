@@ -32,8 +32,8 @@ namespace cms5.Controllers
             obj = new UserInfoBLL().Login(obj);
             if (obj != null)
             {
-                string userPhone = obj.userPhone;
-                FormsAuthentication.SetAuthCookie(userPhone, true);
+                string userName = obj.userName;
+                FormsAuthentication.SetAuthCookie(userName, true);
                 return new ContentResult() { Content = "<script> window.location.href = '/zhaogong/userCenter';</script>" };
                 //return RedirectToAction("userCenter","ZhaoGong",obj);
             }

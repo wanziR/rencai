@@ -117,6 +117,36 @@ namespace DAL
         }
         #endregion
 
+        #region 通过用户名取对像
+        public UserInfo GetObjByUName(string userName)
+        {
+            string sql = "select * from User_Info where userName='{0}'";
+            sql = string.Format(sql, userName);
+            SqlDataReader dr = SQLHelper.GetReader(sql);
+            UserInfo obj = null;
+            if (dr.Read())
+            {
+                obj = new UserInfo
+                {//userId, userName, userPwd, userPhone, userArea, userXin, userRole, isVIP, isShiming, isCompany, isSGgd, isGeren, userAddtime
+
+                    userId = Convert.ToInt32(dr["userId"]),
+                    userName = dr["userName"].ToString(),
+                    userPwd = dr["userPwd"].ToString(),
+                    userArea = dr["userArea"].ToString(),
+                    userPhone = dr["userPhone"].ToString(),
+                    userRole = Convert.ToInt32(dr["userRole"]),
+                    isVIP = Convert.ToInt32(dr["isVIP"]),
+                    isShiming = Convert.ToInt32(dr["isShiming"]),
+                    isCompany = Convert.ToInt32(dr["isCompany"]),
+                    userAddtime = Convert.ToDateTime(dr["userAddtime"])
+                };
+            }
+
+            return obj;
+
+        }
+        #endregion
+
         #region @编辑对像 
         public int Edit(UserInfo obj)
         {

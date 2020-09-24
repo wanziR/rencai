@@ -137,8 +137,8 @@ namespace cms5.Controllers
         [Authorize]
         public ActionResult userCenter(UserInfo obj)
         {
-            string userPhone =this.User.Identity.Name;
-            obj = new UserInfoBLL().GetObjByTel(userPhone);
+            string userName =this.User.Identity.Name;
+            obj = new UserInfoBLL().GetObjByUName(userName);
             return View(obj);
         }
         #endregion

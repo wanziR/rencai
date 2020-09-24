@@ -53,6 +53,14 @@ namespace BLL
         }
         #endregion
 
+        #region 通过用户名取对像
+        public UserInfo GetObjByUName(string userName)
+        {
+          return new UserInfoDAL().GetObjByUName(userName);
+
+        }
+        #endregion
+
         #region @编辑对像 
         public int Edit(UserInfo obj)
         {
