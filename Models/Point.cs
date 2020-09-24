@@ -20,8 +20,5 @@ namespace Models
         public int userId { get; set; }
         public DateTime plAddTime { get; set; }
 
-       
-
-
     }
 }
